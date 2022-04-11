@@ -1,0 +1,16 @@
+@use "color" as *;
+
+$ff: 'Zen Maru Gothic','BIZ UDGothic','Noto Sans JP', sans-serif;
+$kaku-ff: 'BIZ UDGothic','Noto Sans JP', sans-serif;
+
+@mixin txtshadow ( $tst: 0.2px, $tsc: $black ) {
+    text-shadow:
+    $tst  $tst $tst $tsc,
+    -$tst  $tst $tst $tsc,
+    $tst -$tst $tst $tsc,
+    -$tst -$tst $tst $tsc,
+    $tst  0px $tst $tsc,
+    0px  $tst $tst $tsc,
+    -$tst  0px $tst $tsc,
+    0px -$tst $tst $tsc;
+}

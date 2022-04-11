@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.l-main {
+}
+
+.l-main-side {
+}
+
+@include mq () {
+    .l-main-side {
+    }
+}
+

@@ -1,0 +1,206 @@
+@use "global" as *;
+
+.p-notice {
+    padding-right: 0;
+    padding-left: 0;
+}
+.p-notice_inner {
+}
+
+.p-notice_cont {
+    display: flex;
+    justify-content: space-between;
+    height: rem(600);
+}
+
+.p-notice_blog,
+.p-notice_news {
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    padding: rem(80);
+}
+
+.p-notice_news {
+    background-size: rem(1550);
+    background-position: 40% 95%;
+}
+
+.p-notice_blogInner,
+.p-notice_newsInner {
+    border: rem(4) solid $white;
+    width: 100%;
+    max-width: rem(700);
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    backdrop-filter: blur(1px) brightness(60%);
+    transition: 0.5s;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: rem(-4);
+        left: rem(-4);
+        width: 100%;
+        height: 100%;
+        transition: 1s;
+        z-index: -1;
+    }
+}
+
+.p-notice_blogInner {
+    border: rem(4) solid $main;
+    &::before {
+        border: rem(4) solid $white;
+    }
+    &::after {
+        border: rem(4) solid $main;
+    }
+}
+
+.p-notice_newsInner {
+    &::before {
+        border: rem(4) solid $main;
+    }
+    &::after {
+        border: rem(4) solid $white;
+    }
+
+}
+
+
+.p-notice_blogTtl,
+.p-notice_newsTtl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - rem(24)));
+    width: 100%;
+    height: calc(100% - rem(48));
+    text-align: center;
+    padding-top: rem(48);
+    h3 {
+        color: $white;
+        font-size: rem(56);
+        line-height: calc(rem(432) - rem(48)*2); //p-noticeWrapper差分
+    }
+}
+
+.p-noticeWrapper {
+    width: 100%;
+}
+
+.p-noticeLatest {
+    color: $white;
+    text-align: center;
+    font-size: rem(16);
+    font-weight: bold;
+    margin-right: rem(24);
+}
+
+.p-notice_itemLink {
+    display: block;
+    display: flex;
+    align-items: center;
+    max-width: rem(400);
+    height: rem(48);
+    font-size: rem(16);
+    margin: 0 auto;
+    padding-left: rem(8);
+    padding-right: rem(28);
+    transition: 0.5s ease-in-out;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.441);
+        border-radius: rem(5);
+        .p-notice_More {
+            span {
+                position: relative;
+                &::before {
+                    left: rem(39.5);
+                    top: rem(12);
+                    width: rem(8);
+                    height: rem(8);
+                }
+                &::after {
+                    left: rem(22);
+                }
+            }
+            img {
+                position: absolute;
+                width: rem(24);
+                @include arrowAnime;
+            }
+        }
+    }
+}
+
+.p-notice_metaTtl {
+    color: $white;
+}
+
+.p-notice_More {
+    position: relative;
+    margin-left: auto;
+    img {
+        position: absolute;
+        width: rem(24);
+        top: rem(2);
+    }
+    span {
+        position: relative;
+        color: $main;
+        font-size: rem(18);
+        padding-top: rem(8);
+        z-index: 1;
+        top: rem(4);
+        font-weight: bold;
+        transition: 0.5s;
+        &::before {
+            content: "";
+            width: rem(15);
+            height: rem(15);
+            border: rem(1.5) solid $d-yellow;
+            border-radius: 50%;
+            position: absolute;
+            left: rem(36);
+            top: rem(8.5);
+            z-index: -1;
+            transition: 0.5s ease;
+        }
+    }
+}
+
+@include mq (sp) {
+}
+
+@include mq () {
+
+}
+
+@include mq (pc) {
+    .p-notice_cont {
+        flex-direction: column;
+        height: rem(800);
+    }
+    .p-notice_blog,
+    .p-notice_news {
+        width: 100%;
+        padding: rem(40) rem(16);
+        height: 50%;
+    }
+    .p-notice_blogInner,
+    .p-notice_newsInner {
+        max-width: rem(450);
+        margin: 0 auto;
+    }
+    .p-notice_blogTtl,
+    .p-notice_newsTtl {
+        h3 {
+            line-height: calc(rem(312) - rem(48)*2); //p-noticeWrapper差分
+        }
+    }
+
+}

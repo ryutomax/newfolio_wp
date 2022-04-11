@@ -1,0 +1,210 @@
+@use "global" as *;
+
+.p-fv {
+    background-color: $bg-white;
+    height: calc(rem(740) + rem(150)); //＋ headerのH
+    padding-top: rem(150);
+    overflow: hidden;
+}
+
+.p-fv_inner {
+    position: relative;
+    height: 100%;
+}
+
+//bg_img///////////////////////
+
+.p-fv_bgImg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.p-fv_hand,
+.p-fv_wheelR,
+.p-fv_wheelL {
+    position: absolute;
+}
+
+.p-fv_wheelR,
+.p-fv_wheelL {
+    opacity: 0.6;
+    width: 470px;
+}
+
+.p-fv_wheelR {
+    animation: 18s linear infinite rotation;
+    top: rem(200);
+    left: rem(540);
+}
+
+.p-fv_wheelL {
+    animation: 16s linear infinite rotation;
+    top: rem(16);
+    left: rem(64);
+}
+
+@keyframes rotation{
+    0%{ transform:rotate(0);}
+    100%{ transform:rotate(360deg); }
+}
+
+.p-fv_hand {
+    right: 0;
+    width: 55%;
+    border-radius: rem(250) 0 0 0 ;
+    img{
+    }
+}
+//////////////////////////////////////
+
+.p-fv_txt {
+    position: absolute;
+    top: rem(0);
+    left: rem(140);
+    z-index: 10;
+}
+
+.p-fv_copyMain {
+    color: $black;
+    font-size: rem(80);
+    font-weight: bold;
+    margin-bottom: rem(48);
+    line-height: 2;
+    @include txtshadow;
+}
+
+.p-fv_copySub {
+    font-size: rem(24);
+    font-weight: bold;
+    line-height: rem(40);
+    margin-bottom: rem(54);
+}
+
+.p-fv_btn {
+    a {
+        display: flex;
+        align-items: center;
+        width: rem(345);
+        color: $main;
+        font-size: rem(32);
+        background-color: $yellow;
+        border-radius: rem(5);
+        border: rem(2) solid $yellow;
+        line-height: rem(76);
+        padding-right: rem(28);
+        transition: 1s ease-in-out;
+        &::before {
+            content: "≫";
+            position: absolute;
+            font-family: $kaku-ff;
+            right: rem(14);
+            top: 0;
+            transition: right 1s 0.3s;
+        }
+        img {
+            width: rem(32);
+            height: rem(20);
+            margin-left: rem(12);
+        }
+        @include btn-anime-l($main, rem(5));
+        &:hover {
+            color: $yellow;
+            &::before {
+                @include arrowAnime;
+            }
+        }
+    }
+}
+
+@include mq (sp) {
+    .p-fv_wheelR,
+    .p-fv_wheelL {
+        width: 75%;
+    }
+    .p-fv_wheelR {
+        top: rem(352);
+        left: 40%;
+    }
+    .p-fv_wheelL {
+        top: rem(0);
+    }
+}
+
+@include mq () {
+    .p-fv {
+        height: calc(rem(650) + rem(150)); //＋ headerのH
+    }
+    .p-fv_copyMain {
+        font-size: max(rem(24), 10.4vw);
+        margin-bottom: rem(48);
+    }
+    .p-fv_hand {
+        left: 0;
+        right: auto;
+    }
+    .p-fv_copySub {
+        font-size: rem(18);
+        font-weight: bold;
+        line-height: rem(40);
+        margin-bottom: rem(54);
+    }
+    .p-fv_wheelR,
+    .p-fv_wheelL {
+        width: 60%;
+    }
+    .p-fv_wheelR {
+        top: rem(320);
+        left: 40%;
+    }
+    .p-fv_wheelL {
+        top: rem(0);
+    }
+
+    .p-fv_btn {
+        a {
+            width: rem(230);
+            color: $main;
+            font-size: rem(32);
+            line-height: rem(80);
+            padding-right: rem(20);
+            font-size: 1.2rem;
+            line-height: 3.5rem;
+            &::before {
+                content: "≫";
+            }
+        }
+    }
+}
+
+@include mq (pc) {
+    .p-fv_txt {
+        position: absolute;
+        width: 95%;
+        max-width: rem(700);
+        top: rem(40);
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    .p-fv_copyMain {
+        font-size: max(rem(56), 7vw);
+        margin-bottom: rem(48);
+    }
+    .p-fv_hand {
+        width: rem(600);
+    }
+    .p-fv_wheelR,
+    .p-fv_wheelL {
+        width: 45%;
+        img {
+        }
+    }
+    .p-fv_wheelR {
+        top: rem(232);
+        left: 50%;
+    }
+    .p-fv_wheelL {
+        top: rem(0);
+        left: 7%;
+    }
+}

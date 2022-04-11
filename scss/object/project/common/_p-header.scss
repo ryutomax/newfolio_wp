@@ -1,0 +1,305 @@
+@use "global" as *;
+
+.p-header_copy {
+    h1 {
+        font-size: rem(20);
+        color: $main;
+        padding-bottom: rem(8);
+        span{
+            &:nth-child(2) {
+                margin-left: rem(24);
+            }
+        }
+    }
+}
+
+.p-header_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100% - rem(28)); //.p-header_topのh
+}
+
+.p-header_logo {
+}
+
+.p-header_nav {
+
+}
+
+.p-header_navList {
+    display: flex;
+    align-items: center;
+}
+
+.p-header_navItem {
+    a {
+        font-size: rem(20);
+        color: $main;
+        font-weight: bold;
+    }
+    &:not(:last-child, :nth-last-child(2)) {
+        border-right: rem(2) solid #00749415;
+    }
+    &:not(:last-child) {
+        a {
+            display: inline-block;
+            line-height: rem(55);
+            padding-right: rem(16);
+            padding-left: rem(16);
+            @include btn-anime-l ($main, 0);
+            transition: all 0.8s ease-in-out;
+            &::before {
+                content: "";
+                position: absolute;
+                z-index: 10;
+                color: $yellow;
+                font-size: rem(24);
+                opacity: 0;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &:hover {
+                &::after {
+                    z-index: 1;
+                }
+                &::before {
+                    transition: opacity 0.5s 0.5s linear; //早く消すため
+                    opacity:1;
+                }
+            }
+        }
+    }
+    &:first-child {
+        a {
+            &::before {
+                content: "Home";
+            }
+        }
+    }
+    &:nth-child(2) {
+        a {
+            &::before {
+                content: "About";
+            }
+        }
+    }
+    &:nth-child(3) {
+        a {
+            &::before {
+                content: "Strong";
+            }
+        }
+    }
+    &:nth-child(4) {
+        a {
+            &::before {
+                content: "Service";
+            }
+        }
+    }
+    &:nth-child(5) {
+        a {
+            &::before {
+                content: "News";
+            }
+        }
+    }
+    &:last-child {
+        padding-left: 0;
+        a {
+            background-color: $yellow;
+            line-height: rem(54);
+            padding-right: rem(8);
+            padding-left: rem(8);
+            border: rem(2) solid $yellow;
+            @include btn-anime-l ($main, rem(5));
+            transition: all 0.8s ease-in-out;
+            &::before {
+                content: "Contact";
+                position: absolute;
+                z-index: 10;
+                color: $yellow;
+                font-size: rem(24);
+                opacity: 0;
+                text-align: center;
+            }
+            &:hover {
+                &::after {
+                    z-index: 1;
+                }
+                &::before {
+                    opacity:1;
+                    transition: opacity 0.5s 0.5s linear; //早く消すため
+
+                }
+            }
+        }
+    }
+}
+
+.p-header_navBtn{
+    display: none;
+	position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+	background: rgba(255, 255, 255, 0.3);
+	cursor: pointer;
+    width: rem(70);
+    height:rem(70);
+    border-radius: rem(5);
+    transition: 1s;
+    span{
+        display: inline-block;
+        transition: all .4s;/*アニメーションの設定*/
+        position: absolute;
+        &:nth-of-type(1) {
+            top: rem(15);
+            transition: all .4s;/*アニメーションの設定*/
+        }
+        //テキスト
+        &:nth-of-type(2) {
+            top: rem(25);
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $main;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            
+
+        }
+        &:nth-of-type(3) {
+            top: rem(51);
+            transition: all .4s;/*アニメーションの設定*/
+        }
+        &:last-of-type {
+            opacity: 0;
+            color: $main;
+            font-size: rem(14);
+            font-weight: bold;
+            text-transform: uppercase;
+            top: rem(48);
+            left: rem(14);
+        }
+        &:nth-of-type(1),
+        &:nth-of-type(3){
+            height: 3px;
+            background: $main;
+            border-radius: rem(20);
+            width: rem(45);
+            left: rem(12.5);
+        }
+    }
+    &:hover {
+        background: $main;
+        span{
+            &:nth-of-type(1) {
+                top: rem(18);
+            }
+            //テキスト
+            &:nth-of-type(2) {
+                top: rem(24);
+                font-size: 1.2rem;
+                color: $white;
+                transition: all 0.4s 0.2s;/*アニメーションの設定*/
+            }
+            &:nth-of-type(3) {
+                top: rem(48);
+            }
+            &:nth-of-type(1),
+            &:nth-of-type(3){
+                height: 3px;
+                background: $white;
+                border-radius: rem(20);
+                width: rem(45);
+                left: rem(12.5);
+            }
+        }
+    }
+}
+
+
+@include mq (sp) {
+}
+
+@include mq () {
+    .p-header_bottom {
+        height: calc(100% - rem(44)); //.p-header_topのh
+        height: rem(72);
+    }
+    .p-header_copy {
+        h1 {
+            display: flex;
+            flex-direction: column;
+            span{
+                &:nth-child(2) {
+                    margin-top: rem(8);
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    .p-header_logo {
+        width: rem(125);
+        height: rem(70);
+    }
+}
+
+@include mq (pc) {
+    .p-header_navList {
+        flex-direction: column;
+        position: fixed;
+        z-index: 1000;
+        background-color: $bg-white;
+        top: 0;
+        right: -100vw;
+        width:  100vw;
+        height: 100vh;
+        padding-top: rem(120);
+        padding-bottom: rem(24);
+        transition: all 0.6s ease-in-out;
+    }
+    .p-header_navItem {
+        width: 100%;
+        width: rem(320);
+        padding: 0;
+        &:not(:last-child, :nth-last-child(2)) {
+            border-right: none;
+        }
+        &:not(:last-child) {
+            text-align: center;
+            border-bottom: rem(2) solid #00749415;
+            a {
+                display: inline-block;
+                padding: rem(16) 0;
+                width: 100%;
+                @include btn-anime-r ($main, 0);
+                transition: all 0.8s ease-in-out;
+                &:hover {
+                    color: $white;
+                }
+                &::before {
+                    font-size: rem(40);
+                }
+            }
+        }
+        &:last-child {
+            padding-left: 0;
+            margin-top: rem(32);
+            a {
+                line-height: rem(54);
+            }
+        }
+    }
+    .p-header_navBtn {
+        display: block;
+    }
+    .p-header_copy {
+        h1 {
+            span{
+                font-size: rem(18);
+            }
+        }
+    }
+}

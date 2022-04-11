@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.c-logo {
+    width: 150px;
+    height: 75px;
+    @include opa (0.8);
+}

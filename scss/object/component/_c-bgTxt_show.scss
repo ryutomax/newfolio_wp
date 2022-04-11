@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.c-bgTxt_show{
+    display: inline-block;
+	animation-name: bgextendAnimeBase;
+	animation-duration: 2.5s;
+	animation-fill-mode:forwards;
+	position: relative;
+	// overflow: hidden;   /*はみ出た色要素を隠す*/
+	opacity:0;
+    padding: 1% 0;
+}
+
+@keyframes bgextendAnimeBase{
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}

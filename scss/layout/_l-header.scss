@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.l-header {
+    position: absolute;
+    width: 100vw;
+    height: rem(150);
+    padding: rem(8);
+    background-color: $bg-white;
+}
+
+.l-header_inner {
+    max-width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+@include mq (sp) {
+}
+
+@include mq () {
+}
+
+@include mq (pc) {
+}
+

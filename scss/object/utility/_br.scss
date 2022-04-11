@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.u-brTb {
+    display: none;
+}
+
+.u-brSp {
+    display: none;
+}
+
+@include mq (sp) {
+    .u-brSp {
+        display: block;
+    }
+}
+
+@include mq () {
+    .u-brTb {
+        display: block;
+    }
+}
+
+@include mq (pc) {
+
+}
