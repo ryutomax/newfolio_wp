@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.p-activity {
+    &:nth-child(odd) {
+        &::after {
+            content: "";
+            bottom: 0;
+        }
+    }
+}
+
+.p-activity_cont {
+    max-width: rem(900);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.p-activity_txts {
+    margin-bottom: rem(80);
+}
+
+.p-activity_txt{
+    font-size: rem(18);
+    line-height: 1.5;
+    margin-bottom: rem(80);
+    span {
+        font-size: rem(20);
+        font-weight: bold;
+    }
+    &:not(:last-child) {
+        margin-bottom: rem(40);
+    }
+}
+
+
+@include mq (sp) {
+    .p-activity_cont {
+        width: 100%;
+    }
+}
+
+@include mq () {
+}
+
+@include mq (pc) {
+}

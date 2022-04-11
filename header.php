@@ -46,7 +46,7 @@
                         <?php if(is_front_page()): ?>
                         <img src="<?php echo esc_url(get_template_directory_uri() . "/img/logo/logo.png"); ?>" alt="main-logo">
                         <?php else: ?>
-                        <img src="<?php echo esc_url(get_template_directory_uri() . "/img/logo/logo_footer.png"); ?>" alt="main-logo">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . "/img/logo/logo_bg.png"); ?>" alt="main-logo">
                         <?php endif; ?>
                     </h1>
 

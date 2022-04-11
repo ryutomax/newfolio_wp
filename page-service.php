@@ -24,12 +24,13 @@
             <section class="p-activity c-frame">
                 <div class="p-activity_inner">
                     <div class="p-notice_ttl c-secTtl">
-                        <figure class="p-notice_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/ap_img.png"); ?>" alt="ttl-img"></figure>
+                        <figure class="p-notice_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/"); ?>" alt="ttl-img"></figure>
                         <h3>
-                            <span class="js-wave">活</span>
-                            <span class="js-wave">動</span>
-                            <span class="js-wave">方</span>
-                            <span class="js-wave">針</span>
+                            <span class="js-wave">制</span>
+                            <span class="js-wave">作</span>
+                            <span class="js-wave">の</span>
+                            <span class="js-wave">流</span>
+                            <span class="js-wave">れ</span>
                         </h3>
                     </div>
                     <!-- /.p-notice_ttl -->

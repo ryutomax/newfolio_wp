@@ -34,7 +34,7 @@
                 <section class="p-about c-frame">
                     <div class="p-about_inner">
                         <div class="p-about_ttl c-secTtl">
-                            <figure class="p-about_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/about_ttl.png"); ?>" alt="ttl-img"></figure>
+                            <figure class="p-about_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/about_ttl.png"); ?>" alt="ttl-img"></figure>
                             <h3>
                                 <span class="js-wave">私</span>
                                 <span class="js-wave">に</span>
@@ -98,7 +98,7 @@
                                                     <div class="p-about_skills">
                                                         <ul class="p-about_skillTabs">
                                                             <li class="p-about_skillTab js-tab is-borderActive">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img  is-skillActive" src="<?php echo esc_url(get_template_directory_uri() . "/img/html_LS.png"); ?>" alt="html_LS"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img  is-skillActive" src="<?php echo esc_url(get_template_directory_uri() . "/img/home_skill/html_LS.png"); ?>" alt="html_LS"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
                                                                 <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/home_skill/sass.png"); ?>" alt="sass"></span>
@@ -162,7 +162,7 @@
                 <section class="p-strengths c-frame">
                     <div class="p-strengths_inner">
                         <div class="p-strengths_ttl c-secTtl">
-                            <figure class="p-strengths_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/Strengths_img.png"); ?>" alt="ttl-img"></figure>
+                            <figure class="p-strengths_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/Strengths_img.png"); ?>" alt="ttl-img"></figure>
                             <h3>
                                 <span class="js-wave">私</span>
                                 <span class="js-wave">の</span>
@@ -226,7 +226,7 @@
                 <section class="p-service c-frame">
                     <div class="p-service_inner">
                         <div class="p-service_ttl c-secTtl">
-                            <figure class="p-service_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/price&service_ttl.png"); ?>" alt="ttl-img"></figure>
+                            <figure class="p-service_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/price&service_ttl.png"); ?>" alt="ttl-img"></figure>
                             <h3>
                                 <span class="js-wave">料</span>
                                 <span class="js-wave">金</span>
@@ -461,7 +461,7 @@
                 <section class="p-works c-frame">
                     <div class="p-works_inner">
                         <div class="p-works_ttl c-secTtl">
-                            <figure class="p-works_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/works/works_ttl.png"); ?>" alt="ttl-img"></figure>
+                            <figure class="p-works_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/works_ttl.png"); ?>" alt="ttl-img"></figure>
                             <h3>
                                 <span class="js-wave">制</span>
                                 <span class="js-wave">作</span>
@@ -548,7 +548,7 @@
                                     <a class="p-works_itemInner" href="">
                                         <div class="p-works_img">
                                             <figure class="p-works_imgInner">
-                                                <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works_jin.png"); ?>" alt="works">
+                                                <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works/works_jin.png"); ?>" alt="works">
                                             </figure>
                                             <div class="p-works_metaWrapper">
                                                 <ul class="p-works_metas">
@@ -578,7 +578,7 @@
                 <section class="p-notice c-frame">
                     <div class="p-notice_inner">
                         <div class="p-notice_ttl c-secTtl">
-                            <figure class="p-notice_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/N&B_ttl.png"); ?>" alt="ttl-img"></figure>
+                            <figure class="p-notice_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/N&B_ttl.png"); ?>" alt="ttl-img"></figure>
                             <h3>
                                 <span class="js-wave">お</span>
                                 <span class="js-wave">知</span>
@@ -586,7 +586,7 @@
                                 <span class="js-wave">せ</span>
                             </h3>
                         </div>
-                        <!-- /.p-works_ttl -->
+                        <!-- /.p-notice_ttl -->
                         <div class="p-notice_cont">
                             <div class="p-notice_blog" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/top_blog.jpg"); ?>');">
                                 <div class="p-notice_blogInner js-blogFrame">
@@ -601,7 +601,7 @@
                                             </div>
                                             <div class="p-notice_metaTtl">ブログタイトル</div>
                                             <div class="p-notice_More">
-                                                <span>more</span><img src="<?php echo esc_url(get_template_directory_uri() . "/img/Arrow.png"); ?>" alt="Arrow">
+                                                <span>more</span><img src="<?php echo esc_url(get_template_directory_uri() . "/img/arrow/Arrow.png"); ?>" alt="Arrow">
                                             </div>
                                         </a>
                                     </div>
@@ -623,7 +623,7 @@
                                             </div>
                                             <div class="p-notice_metaTtl">ニュースタイトル</div>
                                             <div class="p-notice_More">
-                                                <span>more</span><img src="<?php echo esc_url(get_template_directory_uri() . "/img/Arrow.png"); ?>" alt="Arrow">
+                                                <span>more</span><img src="<?php echo esc_url(get_template_directory_uri() . "/img/arrow/Arrow.png"); ?>" alt="Arrow">
                                             </div>
                                         </a>
                                     </div>

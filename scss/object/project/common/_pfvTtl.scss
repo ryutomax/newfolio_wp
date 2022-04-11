@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.p-fvTtl {
+    height: 500px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 10rem 1rem;
+    &:nth-child(odd) {
+        &::after {
+            content: "";
+            bottom: 0;
+        }
+    }
+}
+
+.p-fvTtl_inner {
+    position: absolute;
+    width: 80%;
+    max-width: rem(900);
+    height: 45%;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: rem(25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h2 {
+        color: $white;
+        font-size: rem(40);
+        text-shadow: rem(2) rem(2) $main;
+    }
+}
+
+@include mq (sp) {
+    .p-fvTtl_inner {
+        h2 {
+            font-size: max(rem(28), 8.3vw);
+        }
+    }
+}
+
+@include mq () {
+    .p-fvTtl {
+        height: 400px;
+    }
+    .p-fvTtl_inner {
+        top: 70%;
+    }
+}
+
+@include mq (pc) {
+}
