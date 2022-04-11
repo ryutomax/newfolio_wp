@@ -1,79 +1,13 @@
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="">
-        <meta name="description" content="">
+        <?php get_header(); ?>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Reggae+One&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
-        
-        <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
-        <link rel="stylesheet" href="css_origin/style.css">
-    </head>
-
-    <body>
-        <header class="l-header js-header-scroll u-zindex_10000">
-            <div class="l-header_inner">
-                <div class="p-header_top">
-                    <div class="p-header_copy js-header-copy">
-                        <h1>
-                            <span>ふじみ野市でホームページ制作</span>
-                            <span>Webサイト制作で集客をサポート</span>
-                        </h1>
-                    </div>
-                    <!-- /.p-header_copy -->
-                </div>
-                <!-- /.p-header_top -->
-                <div class="p-header_bottom js-header-bottom">
-                    <h1 class="p-header_logo c-logo js-header-logo"><img src="img/logo.png" alt="main-logo"></h1>
-                    <nav class="p-header_nav">
-                        <ul class="p-header_navList js-nav__open">
-                            <li class="p-header_navItem">
-                                <a href="/" ontouchstart="">ホーム</a>
-                            </li>
-                            <li class="p-header_navItem">
-                                <a href="/" ontouchstart="">私について</a>
-                            </li>
-                            <li class="p-header_navItem">
-                                <a href="/" ontouchstart="">私の強み</a>
-                            </li>
-                            <li class="p-header_navItem">
-                                <a href="/" ontouchstart="">サービス</a>
-                            </li>
-                            <li class="p-header_navItem">
-                                <a href="/" ontouchstart="">お知らせ</a>
-                            </li>
-                            <li class="p-header_navItem c-btn">
-                                <a href="/" ontouchstart="">お問い合わせ</a>
-                            </li>
-                        </ul>
-                        <div class="p-header_navBtn js-humber u-zindex_1000">
-                            <span></span>
-                            <span>Menu</span>
-                            <span></span>
-                            <span>Close</span>
-                        </div>
-                    </nav>
-                    <!-- /.l-header_logo -->
-                </div>
-                <!-- /.l-header_bottom -->
-
-            </div>
-            <!-- /.l-header_inner -->
-        </header>
         <div class="l-cont">
             <main class="l-cont_main">
                 <section class="p-fv">
                     <div class="p-fv_inner">
                         <div class="p-fv_bgImg">
-                            <figure class="p-fv_hand js-object-fit u-object-fit"><img src="img/hand.png" alt="handshake"></figure>
-                            <figure class="p-fv_wheelL"><img src="img/wheel.png" alt="wheel"></figure>
-                            <figure class="p-fv_wheelR"><img src="img/wheel.png" alt="wheel"></figure>
+                            <figure class="p-fv_hand js-object-fit u-object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/hand.png"); ?>" alt="handshake"></figure>
+                            <figure class="p-fv_wheelL"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/wheel.png"); ?>" alt="wheel"></figure>
+                            <figure class="p-fv_wheelR"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/wheel.png"); ?>" alt="wheel"></figure>
                         </div>
                         <!-- /.p-fv_bgImg -->
                         <div class="p-fv_txt">
@@ -100,7 +34,7 @@
                 <section class="p-about c-frame">
                     <div class="p-about_inner">
                         <div class="p-about_ttl c-secTtl">
-                            <figure class="p-about_ttlImg c-secTtl_img"><img src="img/about_ttl.png" alt="ttl-img"></figure>
+                            <figure class="p-about_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/about_ttl.png"); ?>" alt="ttl-img"></figure>
                             <h3>
                                 <span class="js-wave">私</span>
                                 <span class="js-wave">に</span>
@@ -137,7 +71,7 @@
                                 <div class="p-about_prf-area">
                                     <div class="p-about_prf-l">
                                             <figure class="p-about_prfImg">
-                                                <img src="img/me.png" alt="my-img">
+                                                <img src="<?php echo esc_url(get_template_directory_uri() . "/img/me.png"); ?>" alt="my-img">
                                             </figure>
                                             <div class="p-about_prf-moreTop c-btn">
                                                 <a href="/profile" ontouchstart="">もっと詳しく<span>＞</span></a>
@@ -164,28 +98,28 @@
                                                     <div class="p-about_skills">
                                                         <ul class="p-about_skillTabs">
                                                             <li class="p-about_skillTab js-tab is-borderActive">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img  is-skillActive" src="img/html_LS.png" alt="html_LS"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img  is-skillActive" src="<?php echo esc_url(get_template_directory_uri() . "/img/html_LS.png"); ?>" alt="html_LS"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="img/sass.png" alt="sass"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/sass.png"); ?>" alt="sass"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="img/jquery.png" alt="jquery"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/jquery.png"); ?>" alt="jquery"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="img/javascript.png" alt="javascript"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/javascript.png"); ?>" alt="javascript"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="img/wp.png" alt="wp"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/wp.png"); ?>" alt="wp"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="img/gulp.png" alt="gulp"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/gulp.png"); ?>" alt="gulp"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="img/git.png" alt="git"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/git.png"); ?>" alt="git"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="img/webpack.png" alt="webpack"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/webpack.png"); ?>" alt="webpack"></span>
                                                             </li>
                                                         </ul>
 
@@ -228,7 +162,7 @@
                 <section class="p-strengths c-frame">
                     <div class="p-strengths_inner">
                         <div class="p-strengths_ttl c-secTtl">
-                            <figure class="p-strengths_ttlImg c-secTtl_img"><img src="img/Strengths_img.png" alt="ttl-img"></figure>
+                            <figure class="p-strengths_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/Strengths_img.png"); ?>" alt="ttl-img"></figure>
                             <h3>
                                 <span class="js-wave">私</span>
                                 <span class="js-wave">の</span>
@@ -242,7 +176,7 @@
                                 <li class="p-strengths_item">
                                     <div class="p-strengths_main js-accordion_q">
                                         <p>低価格・高品質に挑戦しています！！</p>
-                                        <img class="js-arrow is-arrowActive" src="img/Arrow_simple.png" alt="Arrow">
+                                        <img class="js-arrow is-arrowActive" src="<?php echo esc_url(get_template_directory_uri() . "/img/Arrow_simple.png"); ?>" alt="Arrow">
                                     </div>
                                     <!-- /.p-strengths_main -->
                                     <div class="p-strengths_desc js-accordion_a is-defaultOpen">
@@ -253,7 +187,7 @@
                                 <li class="p-strengths_item">
                                     <div class="p-strengths_main js-accordion_q">
                                         <p>責任を持って、納品まで丁寧に対応！！</p>
-                                        <img class="js-arrow" src="img/Arrow_simple.png" alt="Arrow">
+                                        <img class="js-arrow" src="<?php echo esc_url(get_template_directory_uri() . "/img/Arrow_simple.png"); ?>" alt="Arrow">
                                     </div>
                                     <!-- /.p-strengths_main -->
                                     <div class="p-strengths_desc js-accordion_a">
@@ -267,7 +201,7 @@
                                 <li class="p-strengths_item">
                                     <div class="p-strengths_main js-accordion_q">
                                         <p>即レス・こまめな連絡を徹底！！</p>
-                                        <img class="js-arrow" src="img/Arrow_simple.png" alt="Arrow">
+                                        <img class="js-arrow" src="<?php echo esc_url(get_template_directory_uri() . "/img/Arrow_simple.png"); ?>" alt="Arrow">
                                     </div>
                                     <!-- /.p-strengths_main -->
                                     <div class="p-strengths_desc js-accordion_a">
@@ -292,7 +226,7 @@
                 <section class="p-service c-frame">
                     <div class="p-service_inner">
                         <div class="p-service_ttl c-secTtl">
-                            <figure class="p-service_ttlImg c-secTtl_img"><img src="img/price&service_ttl.png" alt="ttl-img"></figure>
+                            <figure class="p-service_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/price&service_ttl.png"); ?>" alt="ttl-img"></figure>
                             <h3>
                                 <span class="js-wave">料</span>
                                 <span class="js-wave">金</span>
@@ -527,7 +461,7 @@
                 <section class="p-works c-frame">
                     <div class="p-works_inner">
                         <div class="p-works_ttl c-secTtl">
-                            <figure class="p-works_ttlImg c-secTtl_img"><img src="img/works_ttl.png" alt="ttl-img"></figure>
+                            <figure class="p-works_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/works_ttl.png"); ?>" alt="ttl-img"></figure>
                             <h3>
                                 <span class="js-wave">制</span>
                                 <span class="js-wave">作</span>
@@ -562,7 +496,7 @@
                                     <a class="p-works_itemInner" href="">
                                         <div class="p-works_img">
                                             <figure class="p-works_imgInner">
-                                                <img src="img/works_engress.png" alt="works">
+                                                <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works_engress.png"); ?>" alt="works">
                                             </figure>
                                             <div class="p-works_metaWrapper">
                                                 <ul class="p-works_metas">
@@ -588,7 +522,7 @@
                                     <a class="p-works_itemInner" href="">
                                         <div class="p-works_img">
                                             <figure class="p-works_imgInner">
-                                                <img src="img/works_gokurakutei.png" alt="works">
+                                                <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works_gokurakutei.png"); ?>" alt="works">
                                             </figure>
                                             <div class="p-works_metaWrapper">
                                                 <ul class="p-works_metas">
@@ -614,7 +548,7 @@
                                     <a class="p-works_itemInner" href="">
                                         <div class="p-works_img">
                                             <figure class="p-works_imgInner">
-                                                <img src="img/works_jin.png" alt="works">
+                                                <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works_jin.png"); ?>" alt="works">
                                             </figure>
                                             <div class="p-works_metaWrapper">
                                                 <ul class="p-works_metas">
@@ -644,7 +578,7 @@
                 <section class="p-notice c-frame">
                     <div class="p-notice_inner">
                         <div class="p-notice_ttl c-secTtl">
-                            <figure class="p-notice_ttlImg c-secTtl_img"><img src="img/N&B_ttl.png" alt="ttl-img"></figure>
+                            <figure class="p-notice_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/N&B_ttl.png"); ?>" alt="ttl-img"></figure>
                             <h3>
                                 <span class="js-wave">お</span>
                                 <span class="js-wave">知</span>
@@ -654,7 +588,7 @@
                         </div>
                         <!-- /.p-works_ttl -->
                         <div class="p-notice_cont">
-                            <div class="p-notice_blog" style="background-image: url('img/top_blog.jpg');">
+                            <div class="p-notice_blog" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/top_blog.jpg"); ?>');">
                                 <div class="p-notice_blogInner js-blogFrame">
                                     <a class="p-notice_blogTtl">
                                         <h3>Blog</h3>
@@ -667,7 +601,7 @@
                                             </div>
                                             <div class="p-notice_metaTtl">ブログタイトル</div>
                                             <div class="p-notice_More">
-                                                <span>more</span><img src="img/Arrow.png" alt="Arrow">
+                                                <span>more</span><img src="<?php echo esc_url(get_template_directory_uri() . "/img/Arrow.png"); ?>" alt="Arrow">
                                             </div>
                                         </a>
                                     </div>
@@ -677,7 +611,7 @@
 
                             </div>
                             <!-- /.p-notice_blog -->
-                            <div class="p-notice_news" style="background-image: url('img/top_news.jpg');">
+                            <div class="p-notice_news" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/top_news.jpg"); ?>');">
                                 <div class="p-notice_newsInner js-newsFrame">
                                     <a class="p-notice_newsTtl">
                                         <h3>News</h3>
@@ -689,7 +623,7 @@
                                             </div>
                                             <div class="p-notice_metaTtl">ニュースタイトル</div>
                                             <div class="p-notice_More">
-                                                <span>more</span><img src="img/Arrow.png" alt="Arrow">
+                                                <span>more</span><img src="<?php echo esc_url(get_template_directory_uri() . "/img/Arrow.png"); ?>" alt="Arrow">
                                             </div>
                                         </a>
                                     </div>
@@ -704,7 +638,7 @@
                     <!-- /.p-notice_inner -->
                 </section>
 
-                <section class="p-cta" style="background-image: url('img/CTA_bg.jpg');">
+                <section class="p-cta" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/CTA_bg.jpg"); ?>');">
                     <a class="p-cta_inner" href="/contact">
                         <div class="p-cta_top">
                             <h3>あなたの 分身=広告塔 お作りします<br>ご気軽にどうぞ</h3>
@@ -727,65 +661,4 @@
             </main>
         </div>
         <!-- /.l-cont -->
-        <footer class="l-footer">
-            <div class="l-footer_inner">
-                <div class="p-footer_bgImg">
-                    <figure class="p-footer_wheelL"><img src="img/wheel.png" alt="wheel"></figure>
-                    <figure class="p-footer_wheelR"><img src="img/wheel.png" alt="wheel"></figure>
-                </div>
-                <!-- /.p-fv_bgImg -->
-                <div class="l-footer_inner-L u-zindex_10">
-                    <div class="p-footer_navList">
-                        <ul class="p-footer_navList-L">
-                            <li class="p-footer_navItem">
-                                <a href="" data-txt="ホーム">ホーム</a>
-                            </li>
-                            <li class="p-footer_navItem">
-                                <a href="" data-txt="料金・サービス">料金・サービス</a>
-                            </li>
-                            <li class="p-footer_navItem">
-                                <a href="" data-txt="制作実績">制作実績</a>
-                            </li>
-                            <li class="p-footer_navItem">
-                                <a href="" data-txt="制作の流れ">制作の流れ</a>
-                            </li>
-                        </ul>
-                        <ul class="p-footer_navList-R">
-                            <li class="p-footer_navItem">
-                                <a href="/contact" data-txt="お問い合わせ">お問い合わせ</a>
-                            </li>
-                            <li class="p-footer_navItem">
-                                <a href="" data-txt="お知らせ">お知らせ</a>
-                            </li>
-                            <li class="p-footer_navItem">
-                                <a href="" data-txt="ブログ">ブログ</a>
-                            </li>
-                            <li class="p-footer_navItem">
-                                <a href="" data-txt="プライバシーポリシー">プライバシーポリシー</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /.l-footer_inner-L -->
-                <div class="l-footer_inner-R u-zindex_10">
-                    <h1 class="p-footer_copy">
-                        <span>ふじみ野市でホームページ制作</span>
-                        <span>Webサイト制作で集客をサポート</span>
-                    </h1>
-                    <h1 class="p-footer_logo c-logo"><a href="/"><img src="img/logo_footer.png" alt="main-logo"></a></h1>
-                    <div class="l-footer_copyright">
-                        <small>©︎2022 RTO All Rights Reserved.</small>
-                    </div>
-                </div>
-                <!-- /.l-footer_inner-R -->
-            </div>
-            <!-- /.l-footer_inner -->
-        </footer>
-
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
-        <script src="app/js/bundle.js"></script>
-
-    </body>
-</html>
+        <?php get_footer(); ?>

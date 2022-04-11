@@ -2,18 +2,20 @@
 
 function include_files() {
     // CSSファイルの読み込み
-    wp_enqueue_style('aos', "https://unpkg.com/aos@2.3.1/dist/aos.css", array(), '2.3.1', false);
+    // wp_enqueue_style('aos', "https://unpkg.com/aos@2.3.1/dist/aos.css", array(), '2.3.1', false);
     wp_enqueue_style('swiper', "https://unpkg.com/swiper@8/swiper-bundle.min.css", array(), '8', false);
+    wp_enqueue_style('scroll-hint', "https://unpkg.com/scroll-hint@latest/css/scroll-hint.css", array(), '1.0.0', false);
     wp_enqueue_style('style',get_theme_file_uri('/css_origin/style.css'), array(), '1.0.0', false);
     // WPのjQueryを解除
     // wp_deregister_script('jqeury');
     // JavaScriptファイルの読み込み
     wp_enqueue_script('my-jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array('jquery'), '3.6.0', true);
-    wp_enqueue_script('aos','https://unpkg.com/aos@2.3.1/dist/aos.js', array(), '2.3.1', true);
+    wp_enqueue_script('scroll-hint', 'https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js', '1.0.0', true);
+    wp_enqueue_script('Swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js', '4.3.3', true);
     wp_enqueue_script('my-script', get_theme_file_uri('/app/js/bundle.js'), array('jquery'), '1.0.0', true);
-    if(is_singular('recipe')){
-        wp_enqueue_script('single-script', get_theme_file_uri('/app/js/single.js'), array('jquery'), '1.0.0', true);
-    };
+    // if(is_singular('recipe')){
+    //     wp_enqueue_script('single-script', get_theme_file_uri('/app/js/single.js'), array('jquery'), '1.0.0', true);
+    // };
 }
 add_action('wp_enqueue_scripts', 'include_files');
 

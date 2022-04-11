@@ -30,7 +30,9 @@
     display: inline-block;
 }
 
-.p-works_cont {}
+.p-works_cont {
+    overflow: hidden; //横スクロール回避
+}
 
 .p-works_list {
 }
