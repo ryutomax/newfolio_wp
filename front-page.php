@@ -6,8 +6,8 @@
                     <div class="p-fv_inner">
                         <div class="p-fv_bgImg">
                             <figure class="p-fv_hand js-object-fit u-object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/hand.png"); ?>" alt="handshake"></figure>
-                            <figure class="p-fv_wheelL"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/wheel.png"); ?>" alt="wheel"></figure>
-                            <figure class="p-fv_wheelR"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/wheel.png"); ?>" alt="wheel"></figure>
+                            <figure class="p-fv_wheelL"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/cycle/wheel.png"); ?>" alt="wheel"></figure>
+                            <figure class="p-fv_wheelR"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/cycle/wheel.png"); ?>" alt="wheel"></figure>
                         </div>
                         <!-- /.p-fv_bgImg -->
                         <div class="p-fv_txt">
@@ -101,25 +101,25 @@
                                                                 <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img  is-skillActive" src="<?php echo esc_url(get_template_directory_uri() . "/img/html_LS.png"); ?>" alt="html_LS"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/sass.png"); ?>" alt="sass"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/home_skill/sass.png"); ?>" alt="sass"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/jquery.png"); ?>" alt="jquery"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/home_skill/jquery.png"); ?>" alt="jquery"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/javascript.png"); ?>" alt="javascript"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/home_skill/javascript.png"); ?>" alt="javascript"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/wp.png"); ?>" alt="wp"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/home_skill/wp.png"); ?>" alt="wp"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/gulp.png"); ?>" alt="gulp"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/home_skill/gulp.png"); ?>" alt="gulp"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/git.png"); ?>" alt="git"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/home_skill/git.png"); ?>" alt="git"></span>
                                                             </li>
                                                             <li class="p-about_skillTab js-tab">
-                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/webpack.png"); ?>" alt="webpack"></span>
+                                                                <span class="is-frameAnime"><img class="p-about_skillImg js-skillShow_img" src="<?php echo esc_url(get_template_directory_uri() . "/img/home_skill/webpack.png"); ?>" alt="webpack"></span>
                                                             </li>
                                                         </ul>
 
@@ -176,7 +176,7 @@
                                 <li class="p-strengths_item">
                                     <div class="p-strengths_main js-accordion_q">
                                         <p>低価格・高品質に挑戦しています！！</p>
-                                        <img class="js-arrow is-arrowActive" src="<?php echo esc_url(get_template_directory_uri() . "/img/Arrow_simple.png"); ?>" alt="Arrow">
+                                        <img class="js-arrow is-arrowActive" src="<?php echo esc_url(get_template_directory_uri() . "/img/arrow/Arrow_simple.png"); ?>" alt="Arrow">
                                     </div>
                                     <!-- /.p-strengths_main -->
                                     <div class="p-strengths_desc js-accordion_a is-defaultOpen">
@@ -187,7 +187,7 @@
                                 <li class="p-strengths_item">
                                     <div class="p-strengths_main js-accordion_q">
                                         <p>責任を持って、納品まで丁寧に対応！！</p>
-                                        <img class="js-arrow" src="<?php echo esc_url(get_template_directory_uri() . "/img/Arrow_simple.png"); ?>" alt="Arrow">
+                                        <img class="js-arrow" src="<?php echo esc_url(get_template_directory_uri() . "/img/arrow/Arrow_simple.png"); ?>" alt="Arrow">
                                     </div>
                                     <!-- /.p-strengths_main -->
                                     <div class="p-strengths_desc js-accordion_a">
@@ -201,7 +201,7 @@
                                 <li class="p-strengths_item">
                                     <div class="p-strengths_main js-accordion_q">
                                         <p>即レス・こまめな連絡を徹底！！</p>
-                                        <img class="js-arrow" src="<?php echo esc_url(get_template_directory_uri() . "/img/Arrow_simple.png"); ?>" alt="Arrow">
+                                        <img class="js-arrow" src="<?php echo esc_url(get_template_directory_uri() . "/img/arrow/Arrow_simple.png"); ?>" alt="Arrow">
                                     </div>
                                     <!-- /.p-strengths_main -->
                                     <div class="p-strengths_desc js-accordion_a">
@@ -461,7 +461,7 @@
                 <section class="p-works c-frame">
                     <div class="p-works_inner">
                         <div class="p-works_ttl c-secTtl">
-                            <figure class="p-works_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/works_ttl.png"); ?>" alt="ttl-img"></figure>
+                            <figure class="p-works_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/works/works_ttl.png"); ?>" alt="ttl-img"></figure>
                             <h3>
                                 <span class="js-wave">制</span>
                                 <span class="js-wave">作</span>
@@ -496,7 +496,7 @@
                                     <a class="p-works_itemInner" href="">
                                         <div class="p-works_img">
                                             <figure class="p-works_imgInner">
-                                                <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works_engress.png"); ?>" alt="works">
+                                                <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works/works_engress.png"); ?>" alt="works">
                                             </figure>
                                             <div class="p-works_metaWrapper">
                                                 <ul class="p-works_metas">
@@ -522,7 +522,7 @@
                                     <a class="p-works_itemInner" href="">
                                         <div class="p-works_img">
                                             <figure class="p-works_imgInner">
-                                                <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works_gokurakutei.png"); ?>" alt="works">
+                                                <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works/works_gokurakutei.png"); ?>" alt="works">
                                             </figure>
                                             <div class="p-works_metaWrapper">
                                                 <ul class="p-works_metas">

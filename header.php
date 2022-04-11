@@ -20,10 +20,18 @@
 
         <?php wp_body_open(); ?>
 
+        <?php if(is_front_page()): ?>
         <header class="l-header js-header-scroll u-zindex_10000">
+        <?php else: ?>
+        <header class="l-header js-header-scroll u-zindex_10000 u-bg_blue">
+        <?php endif; ?>
             <div class="l-header_inner">
                 <div class="p-header_top">
+                    <?php if(is_front_page()): ?>
+                    <div class="p-header_copy-home js-header-copy">
+                    <?php else: ?>
                     <div class="p-header_copy js-header-copy">
+                    <?php endif; ?>
                         <h1>
                             <span>ふじみ野市でホームページ制作</span>
                             <span>Webサイト制作で集客をサポート</span>
@@ -33,9 +41,35 @@
                 </div>
                 <!-- /.p-header_top -->
                 <div class="p-header_bottom js-header-bottom">
-                    <h1 class="p-header_logo c-logo js-header-logo"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/logo.png"); ?>" alt="main-logo"></h1>
+
+                    <h1 class="p-header_logo c-logo js-header-logo">
+                        <?php if(is_front_page()): ?>
+                        <img src="<?php echo esc_url(get_template_directory_uri() . "/img/logo/logo.png"); ?>" alt="main-logo">
+                        <?php else: ?>
+                        <img src="<?php echo esc_url(get_template_directory_uri() . "/img/logo/logo_footer.png"); ?>" alt="main-logo">
+                        <?php endif; ?>
+                    </h1>
+
                     <nav class="p-header_nav">
                         <ul class="p-header_navList js-nav__open">
+                            <?php if(is_front_page()): ?>
+                            <li class="p-header_navItem-home">
+                                <a href="/" ontouchstart="">ホーム</a>
+                            </li>
+                            <li class="p-header_navItem-home">
+                                <a href="/" ontouchstart="">私について</a>
+                            </li>
+                            <li class="p-header_navItem-home">
+                                <a href="/" ontouchstart="">私の強み</a>
+                            </li>
+                            <li class="p-header_navItem-home">
+                                <a href="/" ontouchstart="">サービス</a>
+                            </li>
+                            <li class="p-header_navItem-home">
+                                <a href="/" ontouchstart="">お知らせ</a>
+                            </li>
+
+                            <?php else: ?>
                             <li class="p-header_navItem">
                                 <a href="/" ontouchstart="">ホーム</a>
                             </li>
@@ -51,6 +85,8 @@
                             <li class="p-header_navItem">
                                 <a href="/" ontouchstart="">お知らせ</a>
                             </li>
+                            <?php endif; ?>
+
                             <li class="p-header_navItem c-btn">
                                 <a href="/" ontouchstart="">お問い合わせ</a>
                             </li>

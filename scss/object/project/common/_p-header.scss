@@ -1,9 +1,20 @@
 @use "global" as *;
 
+.p-header_copy-home {
+    h1 {
+        color: $main;
+    }
+}
+.p-header_copy {
+    h1 {
+        color: $white;
+    }
+}
+
+.p-header_copy-home,
 .p-header_copy {
     h1 {
         font-size: rem(20);
-        color: $main;
         padding-bottom: rem(8);
         span{
             &:nth-child(2) {
@@ -34,8 +45,20 @@
 
 .p-header_navItem {
     a {
-        font-size: rem(20);
+        color: $white;
+    }
+}
+.p-header_navItem-home {
+    a {
         color: $main;
+    }
+    
+}
+
+.p-header_navItem,
+.p-header_navItem-home {
+    a {
+        font-size: rem(20);
         font-weight: bold;
     }
     &:not(:last-child, :nth-last-child(2)) {
@@ -109,6 +132,7 @@
     &:last-child {
         padding-left: 0;
         a {
+            color: $main;
             background-color: $yellow;
             line-height: rem(54);
             padding-right: rem(8);

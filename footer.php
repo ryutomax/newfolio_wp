@@ -1,8 +1,8 @@
 <footer class="l-footer">
             <div class="l-footer_inner">
                 <div class="p-footer_bgImg">
-                    <figure class="p-footer_wheelL"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/wheel.png"); ?>" alt="wheel"></figure>
-                    <figure class="p-footer_wheelR"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/wheel.png"); ?>" alt="wheel"></figure>
+                    <figure class="p-footer_wheelL"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/cycle/wheel.png"); ?>" alt="wheel"></figure>
+                    <figure class="p-footer_wheelR"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/cycle/wheel.png"); ?>" alt="wheel"></figure>
                 </div>
                 <!-- /.p-fv_bgImg -->
                 <div class="l-footer_inner-L u-zindex_10">
@@ -43,7 +43,7 @@
                         <span>ふじみ野市でホームページ制作</span>
                         <span>Webサイト制作で集客をサポート</span>
                     </h1>
-                    <h1 class="p-footer_logo c-logo"><a href="/"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/logo_footer.png"); ?>" alt="main-logo"></a></h1>
+                    <h1 class="p-footer_logo c-logo"><a href="/"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/logo/logo_footer.png"); ?>" alt="main-logo"></a></h1>
                     <div class="l-footer_copyright">
                         <small>©︎2022 RTO All Rights Reserved.</small>
                     </div>

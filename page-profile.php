@@ -1,6 +1,9 @@
         <?php get_header(); ?>
 
         <main class="l-main">
+            <section class="p-fvTtl" style="background-image: url();">
+<?php echo esc_url(get_template_directory_uri() . "/img/"); ?>
+            </section>
             <div class="p-content__breadcrumb c-breadcrumb">
                 <div class="c-breadcrumb-inner">
                     <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
