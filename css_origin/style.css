@@ -1106,7 +1106,7 @@ a.next.page-numbers {
   border-radius: 0;
   background: #007394;
   content: "";
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .p-header_navItem:not(:last-child) a:hover::after {
@@ -1184,7 +1184,7 @@ a.next.page-numbers {
   border-radius: 0.3125rem;
   background: #007394;
   content: "";
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .p-header_navItem:last-child a:hover::after {
@@ -1376,7 +1376,7 @@ a.next.page-numbers {
   border-radius: 0.3125rem;
   background: #ffe600;
   content: "";
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .p-about_prf-moreTop a:hover::after,
@@ -1472,11 +1472,18 @@ a.next.page-numbers {
 }
 
 .p-about_prfItem-ttl {
+  display: inline-block;
   width: 5.3125rem;
   margin-right: 4rem;
   color: #007394;
   font-weight: bold;
   font-size: 1.25rem;
+}
+
+.p-about_prfItem-ttl::after {
+  margin-left: 1.5rem;
+  content: "≫";
+  font-family: "BIZ UDGothic", "Noto Sans JP", sans-serif;
 }
 
 .p-about_prfItem-desc {
@@ -1485,7 +1492,7 @@ a.next.page-numbers {
 
 .p-about_skills {
   position: relative;
-  max-width: 24.6875rem;
+  max-width: 23.125rem;
 }
 
 .p-about_skillTabs {
@@ -1760,7 +1767,7 @@ a.next.page-numbers {
   border-radius: 0.3125rem;
   background: #007394;
   content: "";
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .p-fv_btn a:hover::after {
@@ -2342,7 +2349,7 @@ a.next.page-numbers {
   border-radius: 0.3125rem;
   background: #007394;
   content: "";
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .p-service_contact a:hover::after {
@@ -2428,7 +2435,7 @@ a.next.page-numbers {
   border-radius: 0.3125rem;
   background: #ffe600;
   content: "";
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .p-service_flowLink a:hover::after {
@@ -2583,7 +2590,7 @@ a.next.page-numbers {
   border-radius: 0.3125rem;
   background: #007394;
   content: "";
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .p-strengths_contact a:hover::after {
@@ -3618,6 +3625,10 @@ a.next.page-numbers {
 
   .p-about_prfItem-desc {
     font-size: 1.5rem;
+  }
+
+  .p-about_skills {
+    max-width: 21.875rem;
   }
 
   .p-about_skillTxt {

@@ -138,11 +138,17 @@
 }
 
 .p-about_prfItem-ttl {
+    display: inline-block;
     font-size: rem(20);
     color: $main;
     font-weight: bold;
     width: rem(85);
     margin-right: rem(64);
+    &::after {
+        content: "≫";
+        font-family: $kaku-ff;
+        margin-left: rem(24);
+    }
 }
 
 .p-about_prfItem-desc {
@@ -150,7 +156,7 @@
 }
 
 .p-about_skills {
-    max-width: rem(395);
+    max-width: rem(370);
     position: relative;
 }
 
@@ -377,6 +383,9 @@
     }
     .p-about_prfItem-desc {
         font-size: rem(24);
+    }
+    .p-about_skills {
+        max-width: rem(350);
     }
     .p-about_skillTxt {
         // left: 50%;

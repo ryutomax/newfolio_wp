@@ -15,6 +15,8 @@ const media = require("gulp-group-css-media-queries");
 const gulpPostcss = require('gulp-postcss');
 const cssDeclarationSorter = require('css-declaration-sorter');
 
+const bs = require("browser-sync");
+
 //----------------------------------------------------------------------
 //  関数定義
 //----------------------------------------------------------------------
@@ -68,7 +70,35 @@ exports.watch = series(watchTask);
 /************************************************************************/
 /*  END OF FILE                                                         */
 
-// // img最適化
+function bsInit(done) {
+    bs.init({
+        proxy: "localhost:10018",       // ローカルにある「Site Domain」に合わせる
+        notify: false,                  // ブラウザ更新時に出てくる通知を非表示にする
+        open: "external",               // ローカルIPアドレスでサーバを立ち上げる
+    });
+
+        done();
+    }
+
+    function bsReload(done) {
+        bs.reload();
+
+        done();
+    }
+
+    function watchTask(done) {
+        watch(["./**", "!./*.css"], series(bsReload));    //	監視対象とするパスはお好みで
+    }
+
+    //----------------------------------------------------------------------
+    //  タスク定義
+    //----------------------------------------------------------------------
+    exports.bs = series(bsInit, bsReload, watchTask);
+
+
+// ========================================
+// img最適化
+// ========================================
 
 // //----------------------------------------------------------------------
 // //  モジュール読み込み

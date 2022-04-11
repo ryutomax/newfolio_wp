@@ -82,19 +82,19 @@
                                     <div class="p-about_prf-r">
                                             <ul class="p-about_prfList">
                                                 <li class="p-about_prfItem">
-                                                    <span class="p-about_prfItem-ttl">名前　≫</span>
+                                                    <span class="p-about_prfItem-ttl">名前</span>
                                                     <span class="p-about_prfItem-desc">佐藤 龍利<br class="u-brTb">(さとう りゅうと)</span>
                                                 </li>
                                                 <li class="p-about_prfItem">
-                                                    <span class="p-about_prfItem-ttl">出身　≫</span>
+                                                    <span class="p-about_prfItem-ttl">出身</span>
                                                     <span class="p-about_prfItem-desc">宮城県仙台市</span>
                                                 </li>
                                                 <li class="p-about_prfItem">
-                                                    <span class="p-about_prfItem-ttl">在住　≫</span>
+                                                    <span class="p-about_prfItem-ttl">在住</span>
                                                     <span class="p-about_prfItem-desc">埼玉県ふじみ野市</span>
                                                 </li>
                                                 <li class="p-about_prfItem">
-                                                    <span class="p-about_prfItem-ttl">スキル≫</span>
+                                                    <span class="p-about_prfItem-ttl">技能</span>
                                                     <div class="p-about_skills">
                                                         <ul class="p-about_skillTabs">
                                                             <li class="p-about_skillTab js-tab is-borderActive">
