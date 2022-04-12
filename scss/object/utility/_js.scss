@@ -59,19 +59,18 @@
 // header変形グループ
 // ========================================
 
-.is-header__op07 {
+.is-header_op07_h80_slidein {
+    height: rem(70);
+    padding: rem(0) rem(8);
     background-color: rgba(245, 245, 245, 0.5);
     transition: 0.5s;
     position: relative;
+    animation: DownAnime 1s forwards;
+    position: fixed;
     backdrop-filter: blur(3px);
     &:hover {
         background-color: $bg-white;
     }
-}
-
-.is-header__h80 {
-    height: rem(70);
-    padding: rem(0) rem(8);
 }
 
 .is-header_txtNone {
@@ -87,11 +86,11 @@
     height: rem(62);
 }
 
-.is-header__slidein{
-	animation: DownAnime 1s forwards;
-    position: fixed;
+.is-header-fc {
+    a {
+        color: $main;
+    }
 }
-
 
 
 

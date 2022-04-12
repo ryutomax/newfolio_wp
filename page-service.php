@@ -21,10 +21,10 @@
                 </div>
             </div>
 
-            <section class="p-activity c-frame">
-                <div class="p-activity_inner">
-                    <div class="p-notice_ttl c-secTtl">
-                        <figure class="p-notice_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/"); ?>" alt="ttl-img"></figure>
+            <section class="p-flow c-frame">
+                <div class="p-flow_inner">
+                    <div class="p-flow_ttl c-secTtl">
+                        <figure class="p-flow_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/flow_ttl.png"); ?>" alt="ttl-img"></figure>
                         <h3>
                             <span class="js-wave">制</span>
                             <span class="js-wave">作</span>
@@ -34,16 +34,71 @@
                         </h3>
                     </div>
                     <!-- /.p-notice_ttl -->
-                    <div class="p-activity_cont">
-                        <div class="p-activity_txts">
-                            <p class="p-activity_txt"><span>私</span>は自転車がとても大好きです.それは時間や渋滞等に巻き込まれずに、気の身気のまま移動することができるからというのが大きいです。自転車は自由の象徴だと思うのです。</p>
-                            <p class="p-activity_txt"><span>自</span>転車はペダルを漕ぐと後輪が回転し始め、同時に前輪が動き始めて自転車自体が前へ進みます。これは私（わたし）とお取引先（あなた）の関係に通じる部分があると考えています。HP制作を通じ、自転車の前後ホイールのように足並みを揃えてわたしとあなたは動き出し、目標へと前進できると私は思っています。</p>
-                            <p class="p-activity_txt"><span>二</span>つのホイールが同時に回転し前進する自転車のように、私（わたし）とお取引先（あなた）がHP制作を介して共により前へ、良い方向へ進んで行ければと心から思いながら日々活動しております。</p>
-                        </div>
-                        <!-- /.p-activity_txts -->
-                        <figure class="p-activity_img">
-                            <img src="<?php echo esc_url(get_template_directory_uri() . "/img/cycle/cycle_img.png"); ?>" alt="cycle">
-                        </figure>
+                    <div class="p-flow_cont">
+                        <ul class="p-flow_list">
+                            <li class="p-flow_item">
+                                <figure class="p-flow_img js-object-fit">
+                                    <img src="<?php echo esc_url(get_template_directory_uri() . "/img/flow/flow_contact.jpg"); ?>" alt="お問い合わせ">
+                                </figure>
+                                <div class="p-flow_wrapper">
+                                    <h4 class="p-flow_itemTtl">お問い合わせ</h4>
+                                    <div class="p-flow_txt">
+                                        <p>お問い合わせフォームよりご連絡ください.ご気軽にお問い合わせください.<br>※2日以内に返信いたします.</p>
+                                    </div>
+                                    <!-- /.p-flow_txt -->
+                                    <div class="p-flow_btn c-btn">
+                                        <a href="/contact" ontouchstart="">お問い合わせ</a>
+                                    </div>
+                                    <div class="p-flow_bgTxt"><p>Contact</p></div>
+                                </div>
+                                <!-- /.p-flow_txt -->
+                            </li>
+                            <li class="p-flow_item">
+                                <figure class="p-flow_img js-object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/flow/flow_hearing.jpg"); ?>" alt="ヒアリング"></figure>
+                                <div class="p-flow_wrapper">
+                                    <h4 class="p-flow_itemTtl">ヒアリング</h4>
+                                    <div class="p-flow_txt">
+                                        <p>お問い合わせの情報を基に、イメージや目的などをヒアリングし、大まかなレイアウトなどを決め、見積もりを出します.<br>基本的にリモートでの対応とさせていただきます.</p>
+                                    </div>
+                                    <!-- /.p-flow_txt -->
+                                    <div class="p-flow_bgTxt"><p>Hearing</p></div>
+                                </div>
+                            </li>
+                            <li class="p-flow_item">
+                                <figure class="p-flow_img js-object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/flow/flow_contract.jpg"); ?>" alt="契約"></figure>
+                                <div class="p-flow_wrapper">
+                                    <h4 class="p-flow_itemTtl">ご契約</h4>
+                                    <div class="p-flow_txt">
+                                        <p>基本的に業務委託契約という形で契約をお願いをしております.<br>また、リモートでお手続き可能な電子署名サービスを用いた契約を推奨させていただいております.</p>
+                                    </div>
+                                    <!-- /.p-flow_txt -->
+                                    <div class="p-flow_bgTxt"><p>Contract</p></div>
+                                </div>
+                            </li>
+                            <li class="p-flow_item">
+                                <figure class="p-flow_img js-object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/flow/flow_coding.jpg"); ?>" alt="制作・修正"></figure>
+                                <div class="p-flow_wrapper">
+                                    <h4 class="p-flow_itemTtl">制作・修正</h4>
+                                    <div class="p-flow_txt">
+                                        <p>ご契約後、ヒアリングで得たご希望をもとに認識を合わせ、修正を加えながら意向に合った制作を進めさせていただきます.<br>制作中も不安を感じないように、こまめに進捗ご連絡します.</p>
+                                    </div>
+                                    <!-- /.p-flow_txt -->
+                                    <div class="p-flow_bgTxt"><p>Product</p></div>
+                                </div>
+                            </li>
+                            <li class="p-flow_item">
+                                <figure class="p-flow_img js-object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/flow/flow_support.jpg"); ?>" alt="サポート"></figure>
+                                <div class="p-flow_wrapper">
+                                    <h4 class="p-flow_itemTtl">納品・サポート</h4>
+                                    <div class="p-flow_txt">
+                                        <p>実装したサイトをご確認いただき、修正がなければ納品となります.納品日から1ヶ月間は無償で不具合の修正等対応いたします.<br>ご気軽にご相談ください！！</p>
+                                    </div>
+                                    <!-- /.p-flow_txt -->
+                                    <div class="p-flow_bgTxt"><p>Support</p></div>
+                                </div>
+                                <!-- /.p-flow_txt -->
+                            </li>
+                        </ul>
                     </div>
                     <!-- /.p-activity_cont -->
                 </div>

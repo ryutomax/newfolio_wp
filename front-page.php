@@ -5,7 +5,7 @@
                 <section class="p-fv">
                     <div class="p-fv_inner">
                         <div class="p-fv_bgImg">
-                            <figure class="p-fv_hand js-object-fit u-object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/hand.png"); ?>" alt="handshake"></figure>
+                            <figure class="p-fv_hand js-object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/CTA_bg.jpg"); ?>" alt="handshake"></figure>
                             <figure class="p-fv_wheelL"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/cycle/wheel.png"); ?>" alt="wheel"></figure>
                             <figure class="p-fv_wheelR"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/cycle/wheel.png"); ?>" alt="wheel"></figure>
                         </div>
@@ -64,10 +64,6 @@
                         <!-- /.p-about_txt -->
                         <div class="p-about_prf">
                             <div class="p-about_prf-wapper">
-                                <div class="p-about_prf-ttl">
-                                    <h4>- Profile -</h4>
-                                </div>
-                                <!-- /.p-about_prf-ttl -->
                                 <div class="p-about_prf-area">
                                     <div class="p-about_prf-l">
                                             <figure class="p-about_prfImg">
@@ -123,24 +119,24 @@
                                                             </li>
                                                         </ul>
 
-                                                        <p class="p-about_skillTxt js-tab-cont">内部SEOを意識し、タグの使い分けを念頭に置いたコーディングを実施します。<span class="p-about_skillTtl">HTML</span></p>
+                                                        <p class="p-about_skillTxt js-tab-cont">内部SEOを意識し、タグの使い分けを念頭に置いたコーディングを実施します.<span class="p-about_skillTtl">HTML</span></p>
 
-                                                        <p class="p-about_skillTxt js-tab-cont">Dart Sassを標準で使用し、保守性、予測しやすいスタイルを当ててることを意識しています。<span class="p-about_skillTtl">Sass</span></p>
+                                                        <p class="p-about_skillTxt js-tab-cont">Dart Sassを標準で使用し、保守性、予測しやすいスタイルを当ててることを意識しています.<span class="p-about_skillTtl">Sass</span></p>
 
-                                                        <p class="p-about_skillTxt js-tab-cont">Javascript（jQuery）やプラグインを用いて、簡単なアニメーションに実装ができます。
+                                                        <p class="p-about_skillTxt js-tab-cont">Javascript（jQuery）やプラグインを用いて、簡単なアニメーションに実装ができます.
                                                         （スムーススクロール、モーダル、アコーディオン、スライダー　etc...）<span class="p-about_skillTtl">jQuery</span></p>
 
-                                                        <p class="p-about_skillTxt js-tab-cont">基本的にはjQueryを使用しますが、javascriptでアニメーションを実装することもあります。<span class="p-about_skillTtl">javascript</span></p>
+                                                        <p class="p-about_skillTxt js-tab-cont">基本的にはjQueryを使用しますが、javascriptでアニメーションを実装することもあります.<span class="p-about_skillTtl">javascript</span></p>
 
-                                                        <p class="p-about_skillTxt js-tab-cont">テンプレートタグや関数を用いてWPサイト構築を行っています。
+                                                        <p class="p-about_skillTxt js-tab-cont">テンプレートタグや関数を用いてWPサイト構築を行っています.
                                                         (カスタム投稿、ACF、ページネーション、パンくずリスト、お問い合わせフォーム  etc...)<span class="p-about_skillTtl">WordPress</span></p>
 
-                                                        <p class="p-about_skillTxt js-tab-cont">VScodeのターミナルでGulp環境構築、設定を行っています。
+                                                        <p class="p-about_skillTxt js-tab-cont">VScodeのターミナルでGulp環境構築、設定を行っています.
                                                         （Sassコンパイル・CSS 最適化(圧縮/オートプレフィックス等)・画像最適化　etc...）<span class="p-about_skillTtl">Gulp</span></p>
 
-                                                        <p class="p-about_skillTxt js-tab-cont">VScodeをローカルとし、Github経由でGitにてバージョン管理を実施しています。<span class="p-about_skillTtl">git</span></p>
+                                                        <p class="p-about_skillTxt js-tab-cont">VScodeをローカルとし、Github経由でGitにてバージョン管理を実施しています.<span class="p-about_skillTtl">git</span></p>
 
-                                                        <p class="p-about_skillTxt js-tab-cont">分割したjsモジュールのバンドルに使用しています。<span class="p-about_skillTtl">webpack</span></p>
+                                                        <p class="p-about_skillTxt js-tab-cont">分割したjsモジュールのバンドルに使用しています.<span class="p-about_skillTtl">webpack</span></p>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -180,7 +176,7 @@
                                     </div>
                                     <!-- /.p-strengths_main -->
                                     <div class="p-strengths_desc js-accordion_a is-defaultOpen">
-                                        <p>中間業者が入らず、広告費・人件費も抑えれるため<br><span class="p-strengths_underline js-underL_scroll u-zindex_10">比較的お安く</span>ご提供できます。<br>お話し合いをしていく中で、<br class="u-brTb">あなたの<span class="p-strengths_underline js-underL_scroll  u-zindex_10">思いを忠実</span>に再現します。</p>
+                                        <p>中間業者が入らず、広告費・人件費も抑えれるため<br><span class="p-strengths_underline js-underL_scroll u-zindex_10">比較的お安く</span>ご提供できます.<br>お話し合いをしていく中で、<br class="u-brTb">あなたの<span class="p-strengths_underline js-underL_scroll  u-zindex_10">思いを忠実</span>に再現します.</p>
                                     </div>
                                     <!-- /.p-strengths_desc -->
                                 </li>
@@ -193,7 +189,7 @@
                                     <div class="p-strengths_desc js-accordion_a">
                                         <p>
                                             医療従事者として従事した体験を活かし、<br>
-                                            とことん<span class="js-underL_click">あなたの視点</span>に立ち、<span class="js-underL_click">責任</span>をもって取り組みます。
+                                            とことん<span class="js-underL_click">あなたの視点</span>に立ち、<span class="js-underL_click">責任</span>をもって取り組みます.
                                         </p>
                                     </div>
                                     <!-- /.p-strengths_desc -->
@@ -205,7 +201,7 @@
                                     </div>
                                     <!-- /.p-strengths_main -->
                                     <div class="p-strengths_desc js-accordion_a">
-                                        <p>ご連絡が<span class="js-underL_click">確認でき次第</span>、ご返信いたします。<br>また進行具合も<span class="js-underL_click">随時ご連絡</span>します。</p>
+                                        <p>ご連絡が<span class="js-underL_click">確認でき次第</span>、ご返信いたします.<br>また進行具合も<span class="js-underL_click">随時ご連絡</span>します.</p>
                                     </div>
                                     <!-- /.p-strengths_desc -->
                                 </li>
@@ -288,17 +284,17 @@
                                     <tr class="p-service_table-topRow">
                                         <td class="p-service_tableSec"><p>詳細</p></td>
                                         <td>
-                                            保守性、予測が容易なコーディングを心がけ実践しております。
-                                            <br>軽微なコードの修正もお任せ下さい。
-                                            <br>もちろんレスポンシブ対応も可能です。
+                                            保守性、予測が容易なコーディングを心がけ実践しております.
+                                            <br>軽微なコードの修正もお任せ下さい.
+                                            <br>もちろんレスポンシブ対応も可能です.
                                         </td>
                                         <td>
-                                            LP、コーポレートサイトの制作はお任せください。
-                                            <br>WordPressサイトの構築、既存サイトのWordPress移行も対応しております。
+                                            LP、コーポレートサイトの制作はお任せください.
+                                            <br>WordPressサイトの構築、既存サイトのWordPress移行も対応しております.
                                         </td>
                                         <td>
-                                            ノーコードツールの『STUDIO』を用いてHP制作を行います。<br>
-                                            記事更新機能・お問い合わせフォーム等も実装できます。
+                                            ノーコードツールの『STUDIO』を用いてHP制作を行います.<br>
+                                            記事更新機能・お問い合わせフォーム等も実装できます.
                                         </td>
                                     </tr>
                                     <tr class="p-service_table-midleRow">
@@ -473,14 +469,14 @@
                         <div class="p-works_txt">
                             <p class="p-works_txtUpper c-bgTxt_show js-bgLRextend_scroll">
                                 <span class="js-bgShow_txt_scroll">
-                                    これまで制作したサイトです。(架空サイトも含む) <br>
-                                    スキル判断の材料にしていただけると幸いです。
+                                    これまで制作したサイトです.(架空サイトも含む) <br>
+                                    スキル判断の材料にしていただけると幸いです.
                                 </span>
                             </p>
                             <p class="p-works_txtPass c-bgTxt_show js-bgLRextend_scroll">
                                 <span class="js-bgShow_txt_scroll">
                                     <span class="p-works_Pass_upper">
-                                        認証を求められた際は、お手数ですが以下をご入力ください。<br>
+                                        認証を求められた際は、お手数ですが以下をご入力ください.<br>
                                     </span>
                                     <span class="p-works_pass">
                                         User : rto <br>

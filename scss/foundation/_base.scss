@@ -29,6 +29,8 @@ img {
 }
 
 button,
-input {
+input,
+textarea {
     cursor: pointer;
+    font-family: $ff;
 }

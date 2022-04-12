@@ -1,0 +1,164 @@
+@use "global" as *;
+
+.p-flow {
+    //三角打ち消し
+    &:nth-child(odd) {
+        &::after {
+            content: "";
+            bottom: 0;
+        }
+    }
+}
+
+.p-flow_ttl {
+    margin-bottom: rem(128);
+}
+
+.p-flow_ttlImg {
+    width: rem(100);
+}
+
+.p-flow_cont {
+    max-width: rem(900);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.p-flow_list {}
+
+.p-flow_item {
+    display: flex;
+    width: 100%;
+    max-width: rem(700);
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 16px 16px $main;
+    &:nth-child(2n) {
+        flex-direction: row-reverse;
+        box-shadow: -16px 16px $main;
+    }
+    &:not(:last-child) {
+        margin-bottom: rem(160);
+        //三角
+        &::after {
+            content: "";
+            bottom: rem(-128);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 0;
+            width: 0;
+            position: absolute;
+            border-style: solid;
+            border-width: 50px 150px 0 150px;
+            border-color: $main transparent transparent transparent;
+        }
+    }
+}
+
+.p-flow_img {
+    height: rem(250);
+    width: 45%;
+}
+
+.p-flow_wrapper {
+    width: 55%;
+    padding: rem(32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.p-flow_itemTtl{
+    position: absolute;
+    font-size: rem(32);
+    font-weight: bold;
+    color: $main;
+    top: rem(-16);
+}
+
+.p-flow_txt {
+    line-height: 1.3;
+}
+
+.p-flow_btn {
+    margin-top: rem(16);
+    a {
+        background-color: $yellow;
+        color: $main;
+        line-height: rem(54);
+        outline: rem(2) solid $yellow;
+        @include btn-anime-l ($main, rem(5));
+            transition: all 0.8s ease-in-out;
+            &::before {
+                content: "Contact";
+                position: absolute;
+                z-index: 10;
+                color: $yellow;
+                font-size: rem(24);
+                opacity: 0;
+                text-align: center;
+            }
+            &:hover {
+                &::after {
+                    z-index: 1;
+                }
+                &::before {
+                    opacity:1;
+                    transition: opacity 0.5s 0.5s linear; //早く消すため
+
+                }
+            }
+    }
+}
+
+.p-flow_bgTxt {
+    position: absolute;
+    font-size: min(rem(96), 11vw);
+    color: rgba(0, 116, 148, 0.1);
+    font-weight: bold;
+}
+
+
+@include mq (sp) {
+}
+
+@include mq () {
+    .p-flow_item {
+        &:not(:last-child) {
+            //三角
+            &::after {
+                content: "";
+                border-width: 50px 100px 0 100px;
+            }
+        }
+    }
+    .p-flow_img {
+        height: rem(250);
+        width: 100%;
+    }
+    .p-flow_wrapper {
+        position: absolute;
+        width: 100%;
+        height: rem(250);
+        padding: rem(32);
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    .p-flow_itemTtl{
+        font-size: max(rem(32), 5.8vw);
+        top: -10%;
+    }
+    .p-flow_txt {
+        text-shadow: 2px 2px 16px #c2c2c2;
+    }
+    .p-flow_bgTxt {
+        color: rgba(0, 116, 148, 0.2);
+        font-size: min(rem(96), 18vw);
+    }
+}
+
+@include mq (pc) {
+    .p-flow_wrapper {
+        padding: rem(16) rem(32);
+    }
+}

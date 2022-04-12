@@ -21,9 +21,9 @@
         <?php wp_body_open(); ?>
 
         <?php if(is_front_page()): ?>
-        <header class="l-header js-header-scroll u-zindex_10000">
+        <header class="l-header-home js-header-scroll u-zindex_10000">
         <?php else: ?>
-        <header class="l-header js-header-scroll u-zindex_10000 u-bg_blue">
+        <header class="l-header js-header-scroll u-zindex_10000">
         <?php endif; ?>
             <div class="l-header_inner">
                 <div class="p-header_top">
@@ -70,19 +70,19 @@
                             </li>
 
                             <?php else: ?>
-                            <li class="p-header_navItem">
+                            <li class="p-header_navItem js-header-fc">
                                 <a href="/" ontouchstart="">ホーム</a>
                             </li>
-                            <li class="p-header_navItem">
+                            <li class="p-header_navItem js-header-fc">
                                 <a href="/" ontouchstart="">私について</a>
                             </li>
-                            <li class="p-header_navItem">
+                            <li class="p-header_navItem js-header-fc">
                                 <a href="/" ontouchstart="">私の強み</a>
                             </li>
-                            <li class="p-header_navItem">
+                            <li class="p-header_navItem js-header-fc">
                                 <a href="/" ontouchstart="">サービス</a>
                             </li>
-                            <li class="p-header_navItem">
+                            <li class="p-header_navItem js-header-fc">
                                 <a href="/" ontouchstart="">お知らせ</a>
                             </li>
                             <?php endif; ?>

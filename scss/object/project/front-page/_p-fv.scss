@@ -28,7 +28,7 @@
 
 .p-fv_wheelR,
 .p-fv_wheelL {
-    opacity: 0.6;
+    opacity: 0.5;
     width: 470px;
 }
 
@@ -51,9 +51,16 @@
 
 .p-fv_hand {
     right: 0;
-    width: 55%;
+    width: 100%;
+    height: rem(740);
     border-radius: rem(250) 0 0 0 ;
-    img{
+    // position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.305);
     }
 }
 //////////////////////////////////////
@@ -71,12 +78,13 @@
     font-weight: bold;
     margin-bottom: rem(48);
     line-height: 2;
-    @include txtshadow;
+    text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.5);
 }
 
 .p-fv_copySub {
     font-size: rem(24);
     font-weight: bold;
+    text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.5);
     line-height: rem(40);
     margin-bottom: rem(54);
 }
@@ -142,6 +150,7 @@
     .p-fv_hand {
         left: 0;
         right: auto;
+        background-position: 75% 0;
     }
     .p-fv_copySub {
         font-size: rem(18);
@@ -189,9 +198,6 @@
     .p-fv_copyMain {
         font-size: max(rem(56), 7vw);
         margin-bottom: rem(48);
-    }
-    .p-fv_hand {
-        width: rem(600);
     }
     .p-fv_wheelR,
     .p-fv_wheelL {

@@ -21,7 +21,6 @@
     max-width: 830px;
     margin: 0 auto;
     font-size: rem(24);
-    font-weight: bold;
     line-height: 1.75;
     margin-bottom: rem(72);
 }
@@ -51,9 +50,9 @@
     max-width: 1180px;
     margin: 0 auto;
     background-color: $bg-white;
-    border: rem(2) solid $main;
     border-radius: rem(10);
     padding: rem(40) 6.25rem;
+    box-shadow: 16px 16px $main;
 }
 
 .p-about_prf-l {

@@ -1,0 +1,336 @@
+@use "global" as *;
+
+.p-contact {
+    //三角打ち消し
+    &:nth-child(odd) {
+        &::after {
+            content: "";
+            bottom: 0;
+        }
+    }
+}
+
+.p-contact-inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.p-contact-top-ttl {
+    width: 192px;
+}
+
+.p-contact-desc {
+    margin-bottom: 5rem;
+}
+
+.p-contact-item {
+    margin-bottom: 3rem;
+    &:nth-child(6) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.p-contact-nameTop {
+    display: flex;
+    align-items: center;
+}
+
+.p-contact-required {
+    font-size: rem(12);
+    padding: rem(6) rem(8);
+    background-color: $main;
+    border-radius: rem(5);
+    color: $white;
+    margin-left: rem(8);
+}
+
+// ========================================
+// input
+// ========================================
+.p-contact-input {
+    width: 100%;
+    height: 50px;
+    margin-top: rem(16);
+    padding-left: 1.25rem;
+    border: solid rem(2) $main;
+    border-radius: rem(2);
+    font-size: 1rem;
+    // =========================
+    // placeholder
+    // =========================
+    &::placeholder {
+        color: $l-black;
+        font-size: 0.75rem;
+    }
+    &:focus {
+        border: solid rem(2.5) $yellow;
+    }
+}
+
+// ========================================
+// エラーメッセージ
+// ========================================
+.mw_wp_form .error {
+    margin-top: 0.5rem;
+}
+
+.p-contact-select {
+    margin-top: 1.25rem;
+    span {
+        &:not(:last-child) {
+            margin-bottom: 1.125rem;
+        }
+    }
+}
+
+// ========================================
+// ラジオボタン
+// ========================================
+input[type=radio] {
+    display: none;
+}
+.mwform-radio-field-text {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 30px;
+    padding-left: 2.5rem;
+    position: relative;
+    width: auto;
+    height: rem(25);
+    &::before {
+        background: #fff;
+        border: rem(1.5) solid $main;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        width: 19px;
+        height: 19px;
+        left: 0;
+        margin-top: -10px;
+        position: absolute;
+        top: 50%;
+    }
+    &::after {
+        background: $main;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: 16px;
+        left: rem(3);
+        opacity: 0;
+        position: absolute;
+        top: 22.5%;
+        width: 16px;
+        transition: .5s;
+    }
+}
+
+input[type=radio]:checked + .mwform-radio-field-text::before {
+    border-color: $main;
+}
+
+input[type=radio]:checked + .mwform-radio-field-text::after {
+    opacity: 1;
+}
+
+// ========================================
+// textarea
+// ========================================
+.p-contact-textarea {
+    resize: none;
+    width: 100%;
+    height: 240px;
+    margin-top: 0.75rem;
+    padding-top: 1.375rem;
+    padding-left: 1.4375rem;
+    font-size: 0.75rem;
+    border: solid rem(2) $main;
+    border-radius: rem(2);
+    // =========================
+    // placeholder
+    // =========================
+    &::placeholder {
+        color: $l-black;
+    }
+    &:focus {
+        border: solid rem(2.5) $yellow;
+    }
+}
+
+// ========================================
+// プライバシーポリシー
+// ========================================
+.p-contact-privacy{
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.p-contact-privacy__txt {
+    margin-bottom: 1.875rem;
+    a {
+        color: $main;
+        text-decoration: underline;
+        line-height: 1.6875;
+    }
+}
+
+// ========================================
+// checkbox
+// ========================================
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+// ========================================
+// labelのclass
+// ========================================
+.mwform-checkbox-field-text {
+    font-size: 0.95rem;
+}
+span.mwform-checkbox-field-text {
+    display: inline-block;
+    padding-right: 30px;
+    padding-left: 2.8175rem;
+    position: relative;
+    cursor: pointer;
+    width: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    p {
+        font-weight: bold;
+    }
+    &::before {
+        position: absolute;
+        background: $white;
+        border: 1px solid $main;
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        left: 10px;
+        margin-top: -10px;
+        top: 50%;
+    }
+    &::after {
+        border-right: 3px solid $main;
+        border-bottom: 3px solid $main;
+        content: '';
+        display: block;
+        height: 12px;
+        left: 15px;
+        margin-top: -9px;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        transform: rotate(45deg);
+        width: 6px;
+    }
+}
+
+input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
+    opacity: 1;
+    transition: 1s ease;
+}
+
+//////////////////////////////////////////////////
+
+// =========================
+// 送信ボタン
+// =========================
+
+.p-contact-submit {
+    display: flex;
+    justify-content: center;
+}
+
+.p-contact-btn_input,
+.p-contact-btn_back {
+    display: block;
+    width: 200px;
+    height: 50px;
+    background-color: $main;
+    padding: 0;
+    border-radius: rem(4);
+    border: 1px solid $main;
+    color: $white;
+    font-size: rem(16);
+    margin: 0 rem(32);  //
+    font-weight: bold;
+    transition: all 0.8s ease-in-out;
+    &:last-child {
+        margin-bottom: rem(32); //
+    }
+    //確認・送信ボタン
+    input {
+        width: 100%;
+        height: 100%;
+        color: $white;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        background: transparent;
+        position: relative;
+        z-index: 1;
+        transition: all 0.8s ease-in-out;
+        &:hover {
+            color: $main;
+        }
+    }
+    @include btn-anime-l ($yellow, rem(4));
+    &:hover {
+        color: $main;
+    }
+
+}
+
+// ========================================
+// 完了画面
+// ========================================
+
+.p-contact_ttlImg {
+    width: rem(125);
+}
+.p-contact_thanks {
+    text-align: center;
+    font-size: rem(24);
+    margin-bottom: rem(40);
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.p-contact_back {
+    text-align: center;
+    a {
+        text-decoration: underline;
+        @include txt-border;
+        &::after {
+            height: 1px;
+        }
+    }
+}
+
+/////////////////////////////////////
+
+@include mq () {
+    .p-contact-submit {
+        flex-direction: column; //
+    }
+    .p-contact-btn_input,
+    .p-contact-btn_back {
+        margin: 0 auto;
+        &:first-child {
+            margin-bottom: rem(32);
+        }
+    }
+    .p-contact-thanks {
+        font-size: rem(24);
+    }
+}
+
+@include mq (pc) {
+    .p-contact-thanks {
+        font-size: rem(32);
+    }
+}

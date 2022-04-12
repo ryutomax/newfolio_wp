@@ -1,11 +1,16 @@
 @use "global" as *;
 
-.l-header {
+.l-header-home,
+.l-header{
     position: absolute;
     width: 100vw;
     height: rem(150);
     padding: rem(8);
     background-color: $bg-white;
+}
+
+.l-header {
+    background-color: $main;
 }
 
 .l-header_inner {

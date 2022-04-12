@@ -1,9 +1,8 @@
 @use "global" as *;
 
-.u-object-fit {
+.js-object-fit {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100%;
     padding-top: 0;
 }

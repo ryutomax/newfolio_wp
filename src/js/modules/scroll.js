@@ -28,30 +28,30 @@ $(function ($) {
 function FixedAnime() {
     $(window).scroll(function () {
         var headerH = $(".js-header-scroll").outerHeight(true);      //headerの高さを取得
+
         var $header = $('.js-header-scroll');
         var $headerCopy = $('.js-header-copy');
         var $headerLogo = $('.js-header-logo');
         var $headerbottom = $('.js-header-bottom');
+        var $headerfc = $('.js-header-fc');
 
         // header高以上スクロールしたら処理
         if ($(window).scrollTop() > headerH) {
-        $header.addClass('is-header__op07');
-        $header.addClass('is-header__h80');
-        $header.addClass('is-header__slidein');
+        $header.addClass('is-header_op07_h80_slidein');
         $headerCopy.addClass('is-header_txtNone');
         $headerLogo.addClass('is-header-logo');
         $headerbottom.addClass('is-header-bottom');
+        $headerfc.addClass('is-header-fc');
 
         // $header.removeAttr('data-aos');       //AOS削除
 
         } else {
 
-        $header.removeClass('is-header__op07');
-        $header.removeClass('is-header__h80');
-        $header.removeClass('is-header__slidein');
+        $header.removeClass('is-header_op07_h80_slidein');
         $headerCopy.removeClass('is-header_txtNone');
         $headerLogo.removeClass('is-header-logo');
         $headerbottom.removeClass('is-header-bottom');
+        $headerfc.removeClass('is-header-fc');
         }
     });
 		/* ウィンドウサイズ860以上の処理を記述 */
@@ -68,6 +68,17 @@ function FixedAnime() {
 //スクロール途中からヘッダーの高さを変化させる関数を呼ぶ
 $(window).on('load', function () {
 	FixedAnime();
+    // var $header = $('.js-header-scroll');
+    // var $headerCopy = $('.js-header-copy');
+    // var $headerLogo = $('.js-header-logo');
+    // var $headerbottom = $('.js-header-bottom');
+    // var $headerfc = $('.js-header-fc');
+
+    // $header.addClass('is-header_op07_h80_slidein');
+    // $headerCopy.addClass('is-header_txtNone');
+    // $headerLogo.addClass('is-header-logo');
+    // $headerbottom.addClass('is-header-bottom');
+    // $headerfc.addClass('is-header-fc');
 });
 
 // ========================================

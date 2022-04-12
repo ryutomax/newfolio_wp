@@ -39,7 +39,7 @@
             border-width: 24px 0 24px 12px;
             transition: 1s;
         }
-        //ずらし　hover時枠線
+        //ずらし hover時枠線
         &::before {
             right: rem(-14);
             top: -3px;
@@ -71,8 +71,9 @@
         color: $main;
         display: inline-block;
         position: relative;
+        font-weight: bold;
         background-color: $white;
-        padding-left: rem(16);
+        padding-left: rem(20);
         padding-right: rem(8);
         &::after {
             content: "";

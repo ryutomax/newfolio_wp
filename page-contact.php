@@ -1,11 +1,13 @@
         <?php get_header(); ?>
 
         <main class="l-main">
-            <section class="c-top-ttl">
-                <div class="c-top-ttl-inner" style="background-image: url(<?php echo get_template_directory_uri();?>/img/cta@2x.png);">
-                    <h2 class="p-contact-top-ttl c-top-ttl-main">お問い合わせ<br class="u-db-sp">・資料請求</h2>
+            <section class="p-fvTtl" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/top/top_contact.png"); ?>');">
+                <div class="p-fvTtl_inner" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/top/top_in_contact.png"); ?>');">
+                    <h2><?php the_title(); ?></h2>
                 </div>
+                <!-- /.p-fvTtl_inner -->
             </section>
+
             <div class="c-breadcrumb">
                 <div class="c-breadcrumb-inner">
                     <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
@@ -18,9 +20,11 @@
                 </div>
             </div>
 
-            <section class="p-contact">
+            <section class="p-contact c-frame">
                 <div class="p-contact-inner">
-                    <div class="p-contact-desc"><p>弊社に興味を持って頂きありがとうございます。商談やサービスのご利用、資料請求について下記のフォームよりお問い合わせください。</p></div>
+                    <div class="p-contact-desc">
+                        <p>ご相談・お問い合わせはこちらのフォームをご利用ください.</p>
+                    </div>
 
                     <div class="p-contact-cont">
 

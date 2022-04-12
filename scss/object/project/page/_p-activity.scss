@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .p-activity {
+    //三角打ち消し
     &:nth-child(odd) {
         &::after {
             content: "";
