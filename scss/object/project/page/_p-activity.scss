@@ -1,15 +1,5 @@
 @use "global" as *;
 
-.p-activity {
-    //三角打ち消し
-    &:nth-child(odd) {
-        &::after {
-            content: "";
-            bottom: 0;
-        }
-    }
-}
-
 .p-activity_cont {
     max-width: rem(900);
     width: 80%;

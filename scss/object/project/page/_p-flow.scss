@@ -1,15 +1,5 @@
 @use "global" as *;
 
-.p-flow {
-    //三角打ち消し
-    &:nth-child(odd) {
-        &::after {
-            content: "";
-            bottom: 0;
-        }
-    }
-}
-
 .p-flow_ttl {
     margin-bottom: rem(128);
 }

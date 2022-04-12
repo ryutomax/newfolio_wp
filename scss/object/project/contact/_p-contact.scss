@@ -1,14 +1,5 @@
 @use "global" as *;
 
-.p-contact {
-    //三角打ち消し
-    &:nth-child(odd) {
-        &::after {
-            content: "";
-            bottom: 0;
-        }
-    }
-}
 
 .p-contact-inner {
     max-width: 700px;
@@ -300,13 +291,18 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     line-height: 1.5;
 }
 
+.p-contact_thanksTxt {
+    &:first-child {
+        margin-bottom: rem(64);
+    }
+}
+
 .p-contact_back {
     text-align: center;
     a {
-        text-decoration: underline;
-        @include txt-border;
+        @include txt-border($black, 5%);
         &::after {
-            height: 1px;
+            bottom: rem(-4);
         }
     }
 }

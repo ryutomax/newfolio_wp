@@ -97,28 +97,28 @@
     &:first-child {
         a {
             &::before {
-                content: "Home";
+                content: "About";
             }
         }
     }
     &:nth-child(2) {
         a {
             &::before {
-                content: "About";
+                content: "Strong";
             }
         }
     }
     &:nth-child(3) {
         a {
             &::before {
-                content: "Strong";
+                content: "Service";
             }
         }
     }
     &:nth-child(4) {
         a {
             &::before {
-                content: "Service";
+                content: "Works";
             }
         }
     }

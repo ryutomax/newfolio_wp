@@ -1,31 +1,26 @@
         <?php get_header(); ?>
 
         <main class="l-main">
-            <div class="p-content__breadcrumb c-breadcrumb">
-                <div class="c-breadcrumb-inner">
-                    <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-                        <?php
-                            if(function_exists('bcn_display')){
-                                bcn_display();
-                            }
-                        ?>
-                    </div>
-                </div>
-            </div>
 
-            <section class="p-complete">
-                <div class="p-complete-inner">
-                    <div class="p-complete-cont">
-                        <div class="p-complete-txt">
-                            <p>お問い合わせいただきありがとうございます<br>内容を確認した後、担当者よりご連絡いたします</p>
-                        </div>
-                        <!-- /.p-complete-txt -->
-                        <div class="p-complete-link"><a href="#">ホームへ戻る</a></div>
+            <!-- fvのテンプレート呼び出し -->
+            <?php get_template_part('template_parts/fvTtl'); ?>
+
+            <!-- パンくずリストのテンプレート呼び出し -->
+            <?php get_template_part('template_parts/breadcrumb'); ?>
+
+            <section class="p-privacy c-frame_page">
+                <div class="p-privacy-inner">
+                    <div class="p-privacy-cont">
+                        <?php the_content(); ?>
                     </div>
                     <!-- /.p-complete-cont -->
                 </div>
                 <!-- /.p-complete-inner -->
             </section>
+
+            <!-- ctaのテンプレート呼び出し -->
+            <?php get_template_part('template_parts/cta'); ?>
+
         </main>
 
         <?php get_footer(); ?>

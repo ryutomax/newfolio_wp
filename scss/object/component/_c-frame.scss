@@ -56,6 +56,11 @@
     }
 }
 
+.c-frame_page {
+    background-color: $bg-white;
+    padding: 10rem 1rem;
+}
+
 
 @include mq (sp) {
 }

@@ -31,7 +31,7 @@
                     </div>
                     <!-- /.p-fv_inner -->
                 </section>
-                <section class="p-about c-frame">
+                <section class="p-about c-frame" id="about">
                     <div class="p-about_inner">
                         <div class="p-about_ttl c-secTtl">
                             <figure class="p-about_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/about_ttl.png"); ?>" alt="ttl-img"></figure>
@@ -70,7 +70,7 @@
                                                 <img src="<?php echo esc_url(get_template_directory_uri() . "/img/me.png"); ?>" alt="my-img">
                                             </figure>
                                             <div class="p-about_prf-moreTop c-btn">
-                                                <a href="/profile" ontouchstart="">もっと詳しく<span>＞</span></a>
+                                                <a href="<?php echo esc_url( home_url('/profile')); ?>" ontouchstart="">もっと詳しく<span>＞</span></a>
                                             </div>
                                             <!-- /.p-about_prf-more -->
                                     </div>
@@ -141,7 +141,7 @@
                                                 </li>
                                             </ul>
                                             <div class="p-about_prf-moreBottom c-btn">
-                                                <a href="/profile" ontouchstart="">もっと詳しく<span>＞</span></a>
+                                                <a href="<?php echo esc_url( home_url('/profile')); ?>" ontouchstart="">もっと詳しく<span>＞</span></a>
                                             </div>
                                     </div>
                                     <!-- /.p-about_prf-r -->
@@ -155,7 +155,7 @@
                     <!-- /.p-about_inner -->
                 </section>
 
-                <section class="p-strengths c-frame">
+                <section class="p-strengths c-frame" id="strengths">
                     <div class="p-strengths_inner">
                         <div class="p-strengths_ttl c-secTtl">
                             <figure class="p-strengths_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/Strengths_img.png"); ?>" alt="ttl-img"></figure>
@@ -211,7 +211,7 @@
                         <div class="p-strengths_bottom">
                             <p class="p-strengths_txt">その他の疑問やお問い合わせはこちらから</p>
                             <div class="p-strengths_contact c-btn">
-                                <a href="/contact">お問い合わせ<span>≫</span></a>
+                                <a href="<?php echo esc_url( home_url('/contact')); ?>">お問い合わせ<span>≫</span></a>
                             </div>
                         </div>
                         <!-- /.p-strengths_bottom -->
@@ -219,7 +219,7 @@
                     <!-- /.p-strengths_inner -->
                 </section>
 
-                <section class="p-service c-frame">
+                <section class="p-service c-frame" id="service">
                     <div class="p-service_inner">
                         <div class="p-service_ttl c-secTtl">
                             <figure class="p-service_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/price&service_ttl.png"); ?>" alt="ttl-img"></figure>
@@ -443,18 +443,18 @@
                         </div>
                         <!-- /.p-service_table -->
                         <div class="p-service_contact c-btn">
-                            <a href="/contact">ご相談はこちら<span>≫</span></a>
+                            <a href="<?php echo esc_url( home_url('/contact')); ?>">ご相談はこちら<span>≫</span></a>
                         </div>
                         <!-- /.p-service_flowLink -->
                         <div class="p-service_flowLink c-btn">
-                            <a href="/service">制作の流れへ<span>≫</span></a>
+                            <a href="<?php echo esc_url( home_url('/service')); ?>">制作の流れへ<span>≫</span></a>
                         </div>
                         <!-- /.p-service_flowLink -->
                     </div>
                     <!-- /.p-service_inner -->
                 </section>
 
-                <section class="p-works c-frame">
+                <section class="p-works c-frame" id="works">
                     <div class="p-works_inner">
                         <div class="p-works_ttl c-secTtl">
                             <figure class="p-works_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/works_ttl.png"); ?>" alt="ttl-img"></figure>
@@ -515,7 +515,7 @@
                                     </a>
                                 </li>
                                 <li class="p-works_item swiper-slide">
-                                    <a class="p-works_itemInner" href="">
+                                    <a class="p-works_itemInner" href="<?php echo esc_url( home_url('/profile')); ?>" >
                                         <div class="p-works_img">
                                             <figure class="p-works_imgInner">
                                                 <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works/works_gokurakutei.png"); ?>" alt="works">
@@ -571,7 +571,7 @@
                     <!-- /.p-works_inner -->
                 </section>
 
-                <section class="p-notice c-frame">
+                <section class="p-notice c-frame" id="notice">
                     <div class="p-notice_inner">
                         <div class="p-notice_ttl c-secTtl">
                             <figure class="p-notice_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/N&B_ttl.png"); ?>" alt="ttl-img"></figure>
@@ -634,26 +634,9 @@
                     <!-- /.p-notice_inner -->
                 </section>
 
-                <section class="p-cta" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/CTA_bg.jpg"); ?>');">
-                    <a class="p-cta_inner" href="/contact">
-                        <div class="p-cta_top">
-                            <h3>あなたの 分身=広告塔 お作りします<br>ご気軽にどうぞ</h3>
-                        </div>
-                        <!-- /.p-cta_top -->
-                        <div class="p-cta_mid">
-                            <div class="p-cta_contact c-btn">
-                                <button><span>≪</span>お問い合わせ<span>≫</span></button>
-                            </div>
-                            <!-- /.p-cta_contact -->
-                        </div>
-                        <!-- /.p-cta_mid -->
-                        <div class="p-cta_bottom">
-                            <p class="p-cta_bottom-txt">確認でき次第直ちにご連絡差し上げます！！</p>
-                        </div>
-                        <!-- /.p-cta_bottom -->
-                    </a>
-                    <!-- /.p-cta_inner -->
-                </section>
+                <!-- ctaのテンプレート呼び出し -->
+                <?php get_template_part('template_parts/cta'); ?>
+
             </main>
         </div>
         <!-- /.l-cont -->

@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <section class="p-activity c-frame">
+            <section class="p-activity c-frame_page">
                 <div class="p-activity_inner">
                     <div class="p-notice_ttl c-secTtl">
                         <figure class="p-notice_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/ap_img.png"); ?>" alt="ttl-img"></figure>
@@ -48,6 +48,10 @@
                 </div>
                 <!-- /.p-activity_inner -->
             </section>
+
+            <!-- ctaのテンプレート呼び出し -->
+            <?php get_template_part('template_parts/cta'); ?>
+
         </main>
 
         <?php get_footer(); ?>

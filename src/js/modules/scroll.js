@@ -2,16 +2,24 @@
 // スムーススクロール
 // ========================================
 $(function ($) {
-    $('.js-news').on('click',function(){
-        const faqTop = $('.p-news').offset().top;
+    $('.js-scroll_about').on('click',function(){
+        const faqTop = $('#about').offset().top;
         $("html,body").animate({scrollTop: faqTop-80},1000);
     });
-    $('.js-recipe').on('click',function(){
-        const faqTop = $('.p-recipe').offset().top;
+    $('.js-scroll_strengthse').on('click',function(){
+        const faqTop = $('#strength').offset().top;
         $("html,body").animate({scrollTop: faqTop-80},1000);
     });
-    $('.js-products').on('click',function(){
-        const faqTop = $('.p-products').offset().top;
+    $('.js-scroll_service').on('click',function(){
+        const faqTop = $('#service').offset().top;
+        $("html,body").animate({scrollTop: faqTop-80},1000);
+    });
+    $('.js-scroll_works').on('click',function(){
+        const faqTop = $('#works').offset().top;
+        $("html,body").animate({scrollTop: faqTop-80},1000);
+    });
+    $('.js-scroll_notice').on('click',function(){
+        const faqTop = $('#notice').offset().top;
         $("html,body").animate({scrollTop: faqTop-80},1000);
     });
 });

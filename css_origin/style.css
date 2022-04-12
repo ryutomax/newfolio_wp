@@ -408,6 +408,11 @@ textarea {
   content: "";
 }
 
+.c-frame_page {
+  padding: 10rem 1rem;
+  background-color: #f8f7f7;
+}
+
 .c-logo {
   width: 150px;
   height: 75px;
@@ -1094,22 +1099,22 @@ a.next.page-numbers {
 
 .p-header_navItem:first-child a::before,
 .p-header_navItem-home:first-child a::before {
-  content: "Home";
+  content: "About";
 }
 
 .p-header_navItem:nth-child(2) a::before,
 .p-header_navItem-home:nth-child(2) a::before {
-  content: "About";
+  content: "Strong";
 }
 
 .p-header_navItem:nth-child(3) a::before,
 .p-header_navItem-home:nth-child(3) a::before {
-  content: "Strong";
+  content: "Service";
 }
 
 .p-header_navItem:nth-child(4) a::before,
 .p-header_navItem-home:nth-child(4) a::before {
-  content: "Service";
+  content: "Works";
 }
 
 .p-header_navItem:nth-child(5) a::before,
@@ -1304,13 +1309,8 @@ a.next.page-numbers {
 
 .p-fvTtl_inner h2 {
   color: #ffffff;
-  font-size: 3.5rem;
+  font-size: 3rem;
   text-shadow: 0.125rem 0.125rem #007394;
-}
-
-.p-contact:nth-child(odd)::after {
-  bottom: 0;
-  content: "";
 }
 
 .p-contact-inner {
@@ -1629,6 +1629,10 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   text-align: center;
 }
 
+.p-contact_thanksTxt:first-child {
+  margin-bottom: 4rem;
+}
+
 .p-contact_back {
   text-align: center;
 }
@@ -1636,16 +1640,15 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 .p-contact_back a {
   display: inline-block;
   position: relative;
-  text-decoration: underline;
   text-decoration: none;
 }
 
 .p-contact_back a::after {
   position: absolute;
-  bottom: rem(-4);
+  bottom: rem(0);
   left: 0;
   width: 100%;
-  height: 25%;
+  height: 5%;
   transform: scale(0, 1);
   transform-origin: top top;
   background: #343434;
@@ -1659,7 +1662,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 }
 
 .p-contact_back a::after {
-  height: 1px;
+  bottom: -0.25rem;
 }
 
 .p-about_txt {
@@ -1690,6 +1693,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   max-width: 1180px;
   margin: 0 auto;
   padding: 2.5rem 6.25rem;
+  border: 0.25px solid #007394;
   border-radius: 0.625rem;
   background-color: #f8f7f7;
   box-shadow: 16px 16px #007394;
@@ -3111,11 +3115,6 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   transition-timing-function: linear !important;
 }
 
-.p-activity:nth-child(odd)::after {
-  bottom: 0;
-  content: "";
-}
-
 .p-activity_cont {
   width: 80%;
   max-width: 56.25rem;
@@ -3139,11 +3138,6 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
 .p-activity_txt:not(:last-child) {
   margin-bottom: 2.5rem;
-}
-
-.p-flow:nth-child(odd)::after {
-  bottom: 0;
-  content: "";
 }
 
 .p-flow_ttl {
@@ -3277,6 +3271,44 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   color: rgba(0, 116, 148, 0.1);
   font-weight: bold;
   font-size: min(6rem, 11vw);
+}
+
+.p-privacy-cont {
+  max-width: 56.25rem;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 0.3125rem;
+  background-color: #e9f2f4;
+}
+
+.p-privacy-cont h3 {
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 0.3125rem solid #007394;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.p-privacy-cont p,
+.p-privacy-cont li {
+  line-height: 1.5;
+}
+
+.p-privacy-cont p {
+  margin-bottom: 2rem;
+}
+
+.p-privacy-cont li {
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
+  padding-left: 1em;
+  list-style-position: inside;
+  list-style-type: decimal;
+  text-indent: -1em;
+}
+
+.p-privacy-cont li:last-child {
+  margin-bottom: 2rem;
 }
 
 .p-detail {
@@ -4581,6 +4613,14 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   .p-flow_bgTxt {
     color: rgba(0, 116, 148, 0.2);
     font-size: min(6rem, 18vw);
+  }
+
+  .p-privacy-cont {
+    padding: 2rem 1rem;
+  }
+
+  .p-privacy-cont h3 {
+    font-size: 1.5rem;
   }
 
   .p-content-list {

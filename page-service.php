@@ -1,6 +1,7 @@
         <?php get_header(); ?>
 
         <main class="l-main">
+
             <section class="p-fvTtl" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/top/top_other.png"); ?>');">
                 <div class="p-fvTtl_inner" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/top/top_in_other.png"); ?>');">
                     <h2><?php the_title(); ?></h2>
@@ -21,7 +22,7 @@
                 </div>
             </div>
 
-            <section class="p-flow c-frame">
+            <section class="p-flow c-frame_page">
                 <div class="p-flow_inner">
                     <div class="p-flow_ttl c-secTtl">
                         <figure class="p-flow_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/flow_ttl.png"); ?>" alt="ttl-img"></figure>
@@ -104,6 +105,10 @@
                 </div>
                 <!-- /.p-activity_inner -->
             </section>
+
+            <!-- ctaのテンプレート呼び出し -->
+            <?php get_template_part('template_parts/cta'); ?>
+
         </main>
 
         <?php get_footer(); ?>

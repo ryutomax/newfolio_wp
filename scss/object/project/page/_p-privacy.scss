@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.p-privacy-cont {
+    max-width: rem(900);
+    margin: 0 auto;
+    background-color: $bg-blue;
+    border-radius: rem(5);
+    padding: rem(32);
+
+    h3 {
+        font-size: rem(32);
+        line-height: 1.5;
+        padding-left: rem(16);
+        border-left: rem(5) solid $main;
+        margin-bottom: rem(32);
+    }
+    p,
+    li {
+        line-height: 1.5;
+    }
+    p {
+        margin-bottom: rem(32);
+    }
+    li {
+        list-style-type: decimal;
+        list-style-position: inside;
+        text-indent: -1em;
+        padding-left: 1em;
+        margin-left: rem(32);
+        margin-bottom: rem(8);
+        &:last-child {
+            margin-bottom: rem(32);
+        }
+    }
+}
+
+@include mq (sp) {
+}
+
+@include mq () {
+    .p-privacy-cont {
+        padding: rem(32) rem(16);
+        h3 {
+            font-size: rem(24);
+        }
+    }
+}
+
+@include mq (pc) {
+}
