@@ -7,7 +7,9 @@
 .p-sidebar_inner {
     max-width: rem(300);
     margin-right: auto;
-    height: rem(500);
+    position: sticky;
+    top: rem(70);
+    // height: rem(500);
 }
 
 .p-sidebar_relation,
@@ -36,6 +38,18 @@
     padding: rem(24) rem(28);
 }
 
+.p-sidebar_catList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.p-sidebar_catItem {
+    a {
+        border-radius: rem(5);
+    }
+}
+
 .p-sidebar_relationItem {
     overflow: hidden;
     &:not(:last-child) {
@@ -62,25 +76,73 @@
 .p-sidebar_metaTtl {
     position: absolute;
     bottom: 0;
+    font-size: rem(16);
     background-color: $main;
     color: $white;
     padding: rem(4);
     transition: 0.5s;
 }
 
+
+
+.p-sidebar_catItem {
+    margin: rem(8);
+    a {
+        display: block;
+        background-color: $main;
+        color: $white;
+        font-size: rem(24);
+        padding: rem(4);
+    }
+}
+
 @include mq (sp) {
 }
 
 @include mq () {
+    .p-sidebar_inner {
+    }
+    .p-sidebar_metaTtl {
+        font-size: rem(16);
+    }
 }
 
 @include mq (pc) {
     .p-sidebar {
         width: 100vw;
+        padding-top: 0;
     }
     .p-sidebar_inner {
-        max-width: rem(600);
+        max-width: rem(900);
         margin: 0 auto;
         height: auto;
+    }
+    .p-sidebar_metaTtl {
+        font-size: rem(32);
+    }
+
+    .p-sidebar_relation,
+    .p-sidebar_cat {
+        padding: rem(16);
+    }
+
+    .p-sidebar_relationItem {
+        max-width: rem(500);
+        width: 90%;
+        margin: 0 auto;
+        &:not(:last-child) {
+            margin-bottom: rem(40);
+        }
+    }
+    .p-sidebar_relationTtl,
+    .p-sidebar_catTtl {
+        max-width: rem(600);
+        margin: 0 auto;
+    }
+
+    .p-sidebar_catList {
+        margin: 0 auto;
+        max-width: rem(500);
+        width: 90%;
     }
 }

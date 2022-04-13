@@ -1,29 +1,62 @@
-        <?php get_header(); ?>
-        <main class="l-main">
+<?php get_header(); ?>
+<main class="l-main">
 
-            <!-- fvのテンプレート呼び出し -->
-            <?php get_template_part('template_parts/fvTtl'); ?>
+    <!-- fvのテンプレート呼び出し -->
+    <?php get_template_part('template_parts/fvTtl'); ?>
 
-            <!-- パンくずリストのテンプレート呼び出し -->
-            <?php get_template_part('template_parts/breadcrumb'); ?>
+    <!-- パンくずリストのテンプレート呼び出し -->
+    <?php get_template_part('template_parts/breadcrumb'); ?>
 
-            <section class="p-content">
-                <div class="p-content-inner">
-                    <div class="p-content-head">
-                        <div class="p-news-content__ttl-wp c-sec-ttl"><h2><?php the_title(); ?></h2></div>
-                        <div class="p-news-content__date-wp">
+    <div class="l-cont u-flex">
+        <div class="l-cont_main">
+
+            <section class="p-singleBlog c-frame_page">
+
+                <div class="p-singleBlog_inner">
+                    <div class="p-singleBlog_top">
+                        <div class="p-singleBlog_cat">
+                            <span>カテゴリ</span>
+                        </div>
+                        <!-- /.p-singleBlog_cat -->
+                        <div class="p-singleBlog_ttl c-sec-ttl">
+                            <h1><?php the_title(); ?></h1>
+                        </div>
+                        <!-- /.p-singleBlog_ttl -->
+                        <div class="p-singleBlog_date">
                             <time datetime="<?php the_time('Y-m-d'); ?>">
                                 <?php the_time('Y-m-d'); ?>
                             </time>
                         </div>
-                        <!-- /.p-news-content__date-wp -->
+                        <!-- /.p-singleBlog_date -->
                     </div>
-                    <!-- /.p-content-head -->
-                    <div class="p-news-content__post p-content-post">
+                    <!-- /.p-singleBlog_top -->
+
+                    <figure class="p-singleBlog_thumnail js-object-fit">
+                    <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
+                        <?php the_post_thumbnail( 'thumbnail' ); ?>
+                    <?php else: ?><!-- アイキャッチが無い時-->
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/img/blog_thumnail.jpg'); ?>" alt="アイキャッチがない時の画像です。" />
+                    <?php endif; ?>
+                    </figure>
+                    
+                    <div class="p-singleBlog_post c-content_post">
                         <?php the_content(); ?>
                     </div>
                     <!-- /.p-content-wrap -->
                 </div>
-                <!-- /.p-content-inner -->
+                <!-- /.p-singleBlog_inner -->
             </section>
-        <?php get_footer(); ?>
+
+        </div>
+        <!-- /.l-cont_main -->
+
+        <?php get_sidebar(); ?>
+
+    </div>
+    <!-- /.l-cont -->
+
+    <!-- ctaのテンプレート呼び出し -->
+    <?php get_template_part('template_parts/cta'); ?>
+
+</main>
+<?php get_footer(); ?>

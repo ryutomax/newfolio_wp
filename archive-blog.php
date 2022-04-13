@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-
-
     <main class="l-main">
         <!-- fvのテンプレート呼び出し -->
         <?php get_template_part('template_parts/fvTtl'); ?>
@@ -35,7 +33,7 @@
                                     </div>
                                     <!-- /.p-contBlog_imgWrap -->
                                     <div class="p-contBlog_meta">
-                                        <div class="p-contBlog_cat c-tag-img_tag"><span>カテゴリ</span></div>
+                                        <div class="p-contBlog_cat"><span>カテゴリ</span></div>
                                         <h3 class="p-contBlog_ttl">ブログタイトル</h3>
                                         <div class="p-contBlog_date"><time datetime="<?php the_time('Y-m-d'); ?>">2022.2.22</time></div>
                                     </div>
@@ -121,6 +119,7 @@
                     <!-- /.p-contBlog-inner -->
                 </section>
             </div>
+            <!-- /.l-cont_main -->
 
             <?php get_sidebar(); ?>
 

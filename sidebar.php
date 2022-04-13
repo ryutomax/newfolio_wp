@@ -47,7 +47,25 @@
                 <h3>カテゴリー</h3>
             </div>
             <!-- /.p-sidebar_catTtl -->
-            <ul class="p-sidebar_catLst">
+            <ul class="p-sidebar_catList">
+                <li class="p-sidebar_catItem">
+                    <a href="">カテゴリー</a>
+                </li>
+                <li class="p-sidebar_catItem">
+                    <a href="">カテゴリー</a>
+                </li>
+                <li class="p-sidebar_catItem">
+                    <a href="">カテゴリー</a>
+                </li>
+                <li class="p-sidebar_catItem">
+                    <a href="">カテゴリー</a>
+                </li>
+                <li class="p-sidebar_catItem">
+                    <a href="">カテゴリー</a>
+                </li>
+                <li class="p-sidebar_catItem">
+                    <a href="">カテゴリー</a>
+                </li>
             </ul>
         </section>
         <!-- /.p-sidebar_cat -->

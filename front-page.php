@@ -1,7 +1,6 @@
         <?php get_header(); ?>
 
-        <div class="l-cont">
-            <main class="l-cont_main">
+            <main class="l-main">
                 <section class="p-fv">
                     <div class="p-fv_inner">
                         <div class="p-fv_bgImg">
@@ -719,6 +718,5 @@
                 <?php get_template_part('template_parts/cta'); ?>
 
             </main>
-        </div>
-        <!-- /.l-cont -->
+            
         <?php get_footer(); ?>

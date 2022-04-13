@@ -69,5 +69,7 @@
 }
 
 @include mq (pc) {
-
+    .c-frame_page {
+        padding: 3rem 1rem;
+    }
 }
