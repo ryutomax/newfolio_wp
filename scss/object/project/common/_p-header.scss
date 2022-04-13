@@ -75,6 +75,7 @@
             &::before {
                 content: "";
                 position: absolute;
+                font-family: $kaku-ff;
                 z-index: 10;
                 color: $yellow;
                 font-size: rem(24);
@@ -143,6 +144,7 @@
             &::before {
                 content: "Contact";
                 position: absolute;
+                font-family: $kaku-ff;
                 z-index: 10;
                 color: $yellow;
                 font-size: rem(24);
@@ -250,6 +252,7 @@
         height: calc(100% - rem(44)); //.p-header_topのh
         height: rem(72);
     }
+    .p-header_copy-home,
     .p-header_copy {
         h1 {
             display: flex;

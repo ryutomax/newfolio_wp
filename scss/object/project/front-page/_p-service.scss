@@ -332,6 +332,7 @@
         &::before {
             content: "Contact";
             position: absolute;
+            font-family: $kaku-ff;
             z-index: 10;
             color: $yellow;
             font-size: rem(32);
@@ -375,6 +376,7 @@
         &::before {
             content: "Flow";
             position: absolute;
+            font-family: $kaku-ff;
             z-index: 10;
             color: $main;
             font-size: rem(32);
@@ -417,13 +419,13 @@
         &::before {
             width: 35px;/*画像の幅*/
             height: 35px;/*画像の高さ*/
-            top: rem(-10);
+            top: rem(-8);
             left: rem(-26);
         }
         &::after {
             width: 35px;/*画像の幅*/
             height: 35px;/*画像の高さ*/
-            top: rem(-10);
+            top: rem(-8);
             right: rem(-34);
         }
     }

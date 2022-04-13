@@ -1,19 +1,11 @@
         <?php get_header(); ?>
         <main class="l-main">
 
-            <div class="p-content__breadcrumb c-breadcrumb">
-                <div class="c-breadcrumb-inner">
-                    <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-                        <?php
-                            if(function_exists('bcn_display')){
-                                
-                                bcn_display();
-                            }
-                        ?>
-                    </div>
-                    <!-- <p class="c-breadcrumb-main">ホーム＞ブログ</p> -->
-                </div>
-            </div>
+            <!-- fvのテンプレート呼び出し -->
+            <?php get_template_part('template_parts/fvTtl'); ?>
+
+            <!-- パンくずリストのテンプレート呼び出し -->
+            <?php get_template_part('template_parts/breadcrumb'); ?>
 
             <section class="p-content">
                 <div class="p-content-inner">
@@ -34,4 +26,4 @@
                 </div>
                 <!-- /.p-content-inner -->
             </section>
-        <?php get_footer('cta'); ?>
+        <?php get_footer(); ?>
