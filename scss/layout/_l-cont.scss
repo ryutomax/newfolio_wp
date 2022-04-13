@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.l-cont_main {
+    width: 70vw;
+}
+
+@include mq (sp) {
+}
+
+@include mq () {
+}
+
+@include mq (pc) {
+
+    .l-cont {
+        flex-direction: column;
+    }
+
+    .l-cont_main {
+        width: 100vw;
+    }
+}
