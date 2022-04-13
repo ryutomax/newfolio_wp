@@ -93,7 +93,43 @@ $(window).on('load', function () {
 // ヘッダー変形 終了
 // ========================================
 
-// タイトル Waveアニメーション////////////////////////////////
+// =========================
+// スライドインアニメ
+// =========================
+function slideInAnime(){
+
+    //動きの指定
+    $('.js-fadeIn_shadow').each(function(){
+        const elemPos = $(this).offset().top + 100;//要素より50px下
+        const scroll = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+            $(this).addClass('is-fadeIn_shadow');
+        } else {
+            // $(this).removeClass('is-fadeIn_shadow');// 画面外に出たらfadeInというクラス名を外す
+        }
+    });
+
+    $('.js-fadeIn_shadow_2n').each(function(){
+        const elemPos = $(this).offset().top + 100;//要素より50px下
+        const scroll = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+            $(this).addClass('is-fadeIn_shadow_2n');
+        } else {
+            // $(this).removeClass('is-fadeIn_shadow_2n');// 画面外に出たらfadeInというクラス名を外す
+        }
+    });
+}
+// スクロール
+    $(window).scroll(function (){ slideInAnime();});
+
+// ロード
+    $(window).on('load', function(){ slideInAnime();});
+
+// =========================
+// タイトル Waveアニメーション
+// =========================
 
 function waveAnime(){
 
@@ -115,7 +151,9 @@ function waveAnime(){
 // ロード
     $(window).on('load', function(){ waveAnime();});
 
-// テキスト BGアニメーション////////////////////////////////
+// =========================
+// テキスト BGアニメーション
+// =========================
 function BgFadeAnime(){
 
     //=============

@@ -46,6 +46,7 @@
     border: solid rem(2) $main;
     border-radius: rem(2);
     font-size: 1rem;
+    transition: 0.5s;
     // =========================
     // placeholder
     // =========================
@@ -138,6 +139,7 @@ input[type=radio]:checked + .mwform-radio-field-text::after {
     font-size: 0.75rem;
     border: solid rem(2) $main;
     border-radius: rem(2);
+    transition: 0.5s;
     // =========================
     // placeholder
     // =========================
@@ -239,6 +241,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 .p-contact-btn_input,
 .p-contact-btn_back {
     display: block;
+    position: relative;
     width: 200px;
     height: 50px;
     background-color: $main;
@@ -250,6 +253,18 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     margin: 0 rem(32);  //
     font-weight: bold;
     transition: all 0.8s ease-in-out;
+    &::before {
+        font-family: $kaku-ff;
+        color: $main;
+        opacity: 0;
+        position: absolute;
+        z-index: 1;
+        height: rem(14);
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.8s ease-in-out;
+        transition: top 0.05s ;
+    }
     &:last-child {
         margin-bottom: rem(32); //
     }
@@ -272,8 +287,38 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     @include btn-anime-l ($yellow, rem(4));
     &:hover {
         color: $main;
+        &::before {
+            color: $main;
+            opacity: 1;
+            top: 35%;
+        }
     }
 
+}
+
+.p-contact-btn_input {
+    &::before {
+        content: "≫";
+        right: rem(4);
+    }
+    &:hover {
+        &::before {
+            @include arrowAnime;
+        }
+    }
+}
+
+.p-contact-btn_back {
+    &::before {
+        content: "≪";
+        left: rem(20);
+    }
+    &:hover {
+        &::before {
+
+            @include arrowAnimeL;
+        }
+    }
 }
 
 // ========================================

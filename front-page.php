@@ -479,7 +479,7 @@
                                         認証を求められた際は、お手数ですが以下をご入力ください.<br>
                                     </span>
                                     <span class="p-works_pass">
-                                        User : rto <br>
+                                        User : r-to-web <br>
                                         Pass : pass
                                     </span>
                                 </span>
@@ -489,7 +489,7 @@
                         <div class="p-works_cont swiper-container">
                             <ul class="p-works_list swiper-wrapper">
                                 <li class="p-works_item swiper-slide">
-                                    <a class="p-works_itemInner" href="">
+                                    <a class="p-works_itemInner" href="<?php echo esc_url('https://ryu-to-web.com/engress/'); ?>" target="_blank">
                                         <div class="p-works_img">
                                             <figure class="p-works_imgInner">
                                                 <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works/works_engress.png"); ?>" alt="works">
@@ -498,6 +498,7 @@
                                                 <ul class="p-works_metas">
                                                     <li class="p-works_meta">WordPress使用</li>
                                                     <li class="p-works_meta">デザインカンプをもとに制作</li>
+                                                    <li class="p-works_meta">レスポンシブデザイン</li>
                                                     <li class="p-works_meta">記事更新機能</li>
                                                     <li class="p-works_meta">お問い合わせフォーム</li>
                                                     <li class="p-works_meta">カスタム投稿</li>
@@ -515,7 +516,7 @@
                                     </a>
                                 </li>
                                 <li class="p-works_item swiper-slide">
-                                    <a class="p-works_itemInner" href="<?php echo esc_url( home_url('/profile')); ?>" >
+                                    <a class="p-works_itemInner" href="<?php echo esc_url('https://ryu-to-web.com/gokurakutei/'); ?>" target="_blank">
                                         <div class="p-works_img">
                                             <figure class="p-works_imgInner">
                                                 <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works/works_gokurakutei.png"); ?>" alt="works">
@@ -524,6 +525,7 @@
                                                 <ul class="p-works_metas">
                                                     <li class="p-works_meta">WordPress使用</li>
                                                     <li class="p-works_meta">デザインカンプをもとに制作</li>
+                                                    <li class="p-works_meta">レスポンシブデザイン</li>
                                                     <li class="p-works_meta">記事更新機能</li>
                                                     <li class="p-works_meta">お問い合わせフォーム</li>
                                                     <li class="p-works_meta">ページネーション</li>
@@ -535,13 +537,13 @@
                                         </div>
                                         <!-- /.p-works_img -->
                                         <div class="p-works_itemTtl">
-                                            <h3>◯温泉旅館(架空)</h3>
+                                            <h3>◯極楽亭(架空)</h3>
                                         </div>
                                         <!-- /.p-works_ttl -->
                                     </a>
                                 </li>
                                 <li class="p-works_item swiper-slide">
-                                    <a class="p-works_itemInner" href="">
+                                    <a class="p-works_itemInner" href="<?php echo esc_url('https://acupuncture-salon-jin.studio.site'); ?>" target="_blank">
                                         <div class="p-works_img">
                                             <figure class="p-works_imgInner">
                                                 <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works/works_jin.png"); ?>" alt="works">
@@ -550,8 +552,10 @@
                                                 <ul class="p-works_metas">
                                                     <li class="p-works_meta">Nocodeツール『STUDIO』使用</li>
                                                     <li class="p-works_meta">デザインから制作</li>
+                                                    <li class="p-works_meta">レスポンシブデザイン</li>
                                                     <li class="p-works_meta">記事更新機能</li>
                                                     <li class="p-works_meta">お問い合わせフォーム</li>
+                                                    <li class="p-works_meta">スムーススクロール</li>
                                                 </ul>
                                                 <!-- /.p-works_imgMeta -->
                                             </div>
@@ -560,6 +564,83 @@
                                         <!-- /.p-works_img -->
                                         <div class="p-works_itemTtl">
                                             <h3>◯鍼灸サロンJIN 様</h3>
+                                        </div>
+                                        <!-- /.p-works_ttl -->
+                                    </a>
+                                </li>
+                                <li class="p-works_item swiper-slide">
+                                    <a class="p-works_itemInner" href="<?php echo esc_url('https://ryu-to-web.com/tyukyu_ex/'); ?>" target="_blank">
+                                        <div class="p-works_img">
+                                            <figure class="p-works_imgInner">
+                                                <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works/works_tyukyu_ex.png"); ?>" alt="works">
+                                            </figure>
+                                            <div class="p-works_metaWrapper">
+                                                <ul class="p-works_metas">
+                                                    <li class="p-works_meta">静的サイト</li>
+                                                    <li class="p-works_meta">デザインカンプをもとに制作</li>
+                                                    <li class="p-works_meta">レスポンシブデザイン</li>
+                                                    <li class="p-works_meta">予約フォーム</li>
+                                                    <li class="p-works_meta">下層ページ実装</li>
+                                                    <li class="p-works_meta">スクロールアニメーション</li>
+                                                    <li class="p-works_meta">タブ切り替え</li>
+                                                </ul>
+                                                <!-- /.p-works_imgMeta -->
+                                            </div>
+                                            <!-- /.p-works_metaWrapper -->
+                                        </div>
+                                        <!-- /.p-works_img -->
+                                        <div class="p-works_itemTtl">
+                                            <h3>◯石井花壇(架空)</h3>
+                                        </div>
+                                        <!-- /.p-works_ttl -->
+                                    </a>
+                                </li>
+                                <li class="p-works_item swiper-slide">
+                                    <a class="p-works_itemInner" href="<?php echo esc_url('https://ryu-to-web.com/yourcoding/'); ?>" target="_blank">
+                                        <div class="p-works_img">
+                                            <figure class="p-works_imgInner">
+                                                <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works/works_yourcoding.png"); ?>" alt="works">
+                                            </figure>
+                                            <div class="p-works_metaWrapper">
+                                                <ul class="p-works_metas">
+                                                    <li class="p-works_meta">静的サイト</li>
+                                                    <li class="p-works_meta">デザインカンプをもとに制作</li>
+                                                    <li class="p-works_meta">レスポンシブデザイン</li>
+                                                    <li class="p-works_meta">スムーススクロール</li>
+                                                    <li class="p-works_meta">スクロールアニメーション</li>
+                                                    <li class="p-works_meta">スライダー</li>
+                                                    <li class="p-works_meta">アコーディオン</li>
+                                                </ul>
+                                                <!-- /.p-works_imgMeta -->
+                                            </div>
+                                            <!-- /.p-works_metaWrapper -->
+                                        </div>
+                                        <!-- /.p-works_img -->
+                                        <div class="p-works_itemTtl">
+                                            <h3>◯ユアコーディング(架空)</h3>
+                                        </div>
+                                        <!-- /.p-works_ttl -->
+                                    </a>
+                                </li>
+                                <li class="p-works_item swiper-slide">
+                                    <a class="p-works_itemInner" href="<?php echo esc_url('https://ryu-to-web.com/ishii-clinic'); ?>" target="_blank">
+                                        <div class="p-works_img">
+                                            <figure class="p-works_imgInner">
+                                                <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works/works_ishii-clinic.png"); ?>" alt="works">
+                                            </figure>
+                                            <div class="p-works_metaWrapper">
+                                                <ul class="p-works_metas">
+                                                    <li class="p-works_meta">静的サイト</li>
+                                                    <li class="p-works_meta">デザインカンプをもとに制作</li>
+                                                    <li class="p-works_meta">レスポンシブデザイン</li>
+                                                </ul>
+                                                <!-- /.p-works_imgMeta -->
+                                            </div>
+                                            <!-- /.p-works_metaWrapper -->
+                                        </div>
+                                        <!-- /.p-works_img -->
+                                        <div class="p-works_itemTtl">
+                                            <h3>◯石井クリニック(架空)</h3>
                                         </div>
                                         <!-- /.p-works_ttl -->
                                     </a>

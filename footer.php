@@ -1,4 +1,4 @@
-<footer class="l-footer">
+        <footer class="l-footer">
             <div class="l-footer_inner">
                 <div class="p-footer_bgImg">
                     <figure class="p-footer_wheelL"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/cycle/wheel.png"); ?>" alt="wheel"></figure>

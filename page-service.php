@@ -37,7 +37,7 @@
                     <!-- /.p-notice_ttl -->
                     <div class="p-flow_cont">
                         <ul class="p-flow_list">
-                            <li class="p-flow_item">
+                            <li class="p-flow_item js-fadeIn_shadow">
                                 <figure class="p-flow_img js-object-fit">
                                     <img src="<?php echo esc_url(get_template_directory_uri() . "/img/flow/flow_contact.jpg"); ?>" alt="お問い合わせ">
                                 </figure>
@@ -54,7 +54,7 @@
                                 </div>
                                 <!-- /.p-flow_txt -->
                             </li>
-                            <li class="p-flow_item">
+                            <li class="p-flow_item js-fadeIn_shadow_2n">
                                 <figure class="p-flow_img js-object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/flow/flow_hearing.jpg"); ?>" alt="ヒアリング"></figure>
                                 <div class="p-flow_wrapper">
                                     <h4 class="p-flow_itemTtl">ヒアリング</h4>
@@ -65,7 +65,7 @@
                                     <div class="p-flow_bgTxt"><p>Hearing</p></div>
                                 </div>
                             </li>
-                            <li class="p-flow_item">
+                            <li class="p-flow_item js-fadeIn_shadow">
                                 <figure class="p-flow_img js-object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/flow/flow_contract.jpg"); ?>" alt="契約"></figure>
                                 <div class="p-flow_wrapper">
                                     <h4 class="p-flow_itemTtl">ご契約</h4>
@@ -76,7 +76,7 @@
                                     <div class="p-flow_bgTxt"><p>Contract</p></div>
                                 </div>
                             </li>
-                            <li class="p-flow_item">
+                            <li class="p-flow_item js-fadeIn_shadow_2n">
                                 <figure class="p-flow_img js-object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/flow/flow_coding.jpg"); ?>" alt="制作・修正"></figure>
                                 <div class="p-flow_wrapper">
                                     <h4 class="p-flow_itemTtl">制作・修正</h4>
@@ -87,7 +87,7 @@
                                     <div class="p-flow_bgTxt"><p>Product</p></div>
                                 </div>
                             </li>
-                            <li class="p-flow_item">
+                            <li class="p-flow_item js-fadeIn_shadow">
                                 <figure class="p-flow_img js-object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/flow/flow_support.jpg"); ?>" alt="サポート"></figure>
                                 <div class="p-flow_wrapper">
                                     <h4 class="p-flow_itemTtl">納品・サポート</h4>

@@ -350,3 +350,52 @@
         opacity: 0.3;
     }
 }
+
+// =========================
+// スライドインアニメ
+// =========================
+
+.is-fadeIn_shadow {
+    animation-name: fadeIn;
+    animation-delay: 0.5s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        box-shadow: 16px 16px $main;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.is-fadeIn_shadow_2n {
+    animation-name: fadeIn_2n;
+    animation-delay: 0.5s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn_2n {
+    0% {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        box-shadow: -16px 16px $main;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
