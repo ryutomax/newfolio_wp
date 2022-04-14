@@ -1,40 +1,26 @@
 <?php get_header(); ?>
 
+    <main class="l-main">
+        <!-- fvのテンプレート呼び出し -->
+        <?php get_template_part('template_parts/fvTtl'); ?>
 
-<main class="l-main">
+        <!-- パンくずリストのテンプレート呼び出し -->
+        <?php get_template_part('template_parts/breadcrumb'); ?>
 
-    <section class="c-top-ttl">
-        <div class="c-top-ttl-inner" style="background-image: url(<?php echo get_template_directory_uri();?>/img/blog@2x.png);">
-            <h2 class="c-top-ttl-main">ブログ</h2>
-        </div>
-    </section>
+        <div class="l-cont u-flex">
+            <div class="l-cont_main">
 
-    <div class="c-breadcrumb">
-        <div class="c-breadcrumb-inner">
-            <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-                <?php
-                    if(function_exists('bcn_display')){
+                <section class="p-contBlog c-frame_page">
+                    <div class="p-contBlog_inner">
+                        <div class="p-contBlog_ttl c-secTtl">
+                            <figure class="p-contBlog_ttlImg c-secTtl_img"><img src="<?php echo esc_url(get_template_directory_uri() . "/img/ttl_upper/blog-list_ttl.png"); ?>" alt="ttl-img"></figure>
+                            <h3>
+                                <?php single_cat_title( '', true ); ?>一覧
+                            </h3>
+                        </div>
 
-                        bcn_display();
-                    }
-                ?>
-            </div>
-            <!-- <p class="c-breadcrumb-main">ホーム＞ブログ</p> -->
-        </div>
-    </div>
-
-    <section class="p-content">
-        <div class="p-content-inner">
-            <div class="p-content-ttl c-sec-ttl">
-                <h2>
-                    <?php single_cat_title( '', true ); ?>
-                    一覧
-                </h2>
-            </div>
-
-            <div class="p-content-wrap">
-                <ul class="p-content__list-wp">
-                    <?php
+                        <ul class="p-contBlog_cards">
+                        <?php
                         $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
 
                         $category = get_the_category();
@@ -58,79 +44,62 @@
                             while ( $the_query->have_posts() ) : $the_query->the_post();
 
                     ?>
-
-                    <li class="p-content__item-wp">
-                        <figure class="p-content__img-wp c-tag-img">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
-                                <?php the_post_thumbnail( 'thumbnail' ); ?>
-                                <?php else: ?><!-- アイキャッチが無い時-->
-                                <img src="<?php echo get_template_directory_uri();?>/img/noimage.png" alt="アイキャッチがない時の画像です。" />
-                                <?php endif; ?>
-                            </a>
-                            <span class="p-content__cat-wp c-tag-img__tag">
-                                <!-- カテゴリ名のみ取得 ///////////////////////////////////// -->
-                            <?php
-                                $category = get_the_category();
-                                echo $category[0]->name;
-                            ?>
-
-                            </span>
-                        </figure>
-                        <div class="p-content__txt-wp">
-                            <div class="p-content__date-wp"><time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time></div>
-
-                            <h3 class="p-content__ttl-wp">
-                                <a href="<?php the_permalink(); ?>">
-                                <?php
-                                    if(mb_strlen($post->post_title, 'UTF-8')>40){
-                                    $title= mb_substr($post->post_title, 0, 40, 'UTF-8');
-                                            echo $title.'・・・';
-                                    }else{
-                                            echo $post->post_title;
-                                    }
-                                ?>
+                            <li class="p-contBlog_card">
+                                <a  class="p-contBlog_cardInner" href="<?php the_permalink(); ?>">
+                                    <div class="p-contBlog_imgWrap">
+                                        <figure class="p-contBlog_img c-tag-img js-object-fit">
+                                        <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
+                                            <?php the_post_thumbnail( 'thumbnail' ); ?>
+                                        <?php else: ?><!-- アイキャッチが無い時-->
+                                            <img src="<?php echo get_template_directory_uri();?>/img/blog_thumnail.jpg" alt="アイキャッチがない時の画像です。" />
+                                        <?php endif; ?>
+                                        </figure>
+                                    </div>
+                                    <!-- /.p-contBlog_imgWrap -->
+                                    <div class="p-contBlog_meta">
+                                        <div class="p-contBlog_cat">
+                                            <span>
+                                                <?php
+                                                    $category = get_the_category();
+                                                    echo $category[0]->name;
+                                                ?>
+                                            </span>
+                                        </div>
+                                        <h3 class="p-contBlog_ttl">
+                                        <?php
+                                            if(mb_strlen($post->post_title, 'UTF-8')>30){
+                                            $title= mb_substr($post->post_title, 0, 30, 'UTF-8');
+                                                    echo $title.'・・・';
+                                            }else{
+                                                    echo $post->post_title;
+                                            }
+                                        ?>
+                                        </h3>
+                                        <div class="p-contBlog_date"><time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time></div>
+                                    </div>
                                 </a>
-                            </h3>
-
-                            <div class="p-content__exc-wp">
-                                <p>
-                                    <!-- 文章のみ取得 /////////////////////////////////////-->
-                                <?php
-                                    $content  = get_the_content();
-                                    $text     = strip_tags( strip_shortcodes( $content ) );
-                                ?>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <?php endwhile; ?>
-                    <?php else: ?>
-                        <p>記事がありません。</p>
-                    <?php endif; ?>
-                    <?php wp_reset_postdata(); ?>
-                </ul>
+                            </li>
+                            <?php endwhile; ?>
+                            <?php else: ?>
+                                <p>準備中のため記事がありません。</p>
+                            <?php endif; ?>
+                            <?php wp_reset_postdata(); ?>
+                        </ul>
+                    </div>
+                    <!-- /.p-contBlog-inner -->
+                </section>
             </div>
-            <!-- /.p-content-wrap -->
-            <div class="p-content-pagination c-pagination">
-                <?php
-                    the_posts_pagination(
-                        array(
-                            'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
-                            'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
-                            'prev_text'     => __( '前へ'), // 「前へ」リンクのテキスト
-                            'next_text'     => __( '次へ'), // 「次へ」リンクのテキスト
-                            'type'          => 'list', // 戻り値の指定 (plain/list)
-                        )
-                    );
-                ?>
-            </div>
-            <!-- /.p-content-pagination  -->
+            <!-- /.l-cont_main -->
+
+            <?php get_sidebar(); ?>
+
         </div>
-        <!-- /.p-content-inner -->
+        <!-- /.l-cont -->
 
-    </section>
-</main>
+        <!-- ctaのテンプレート呼び出し -->
+        <?php get_template_part('template_parts/cta'); ?>
 
-<?php get_footer('cta'); ?>
+    </main>
+
+
+<?php get_footer(); ?>

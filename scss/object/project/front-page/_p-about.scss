@@ -94,6 +94,8 @@
         }
         span {
             position: absolute;
+            font-size: rem(16);
+            font-family: $kaku-ff;
             right: rem(8);
             z-index: 1;
         }

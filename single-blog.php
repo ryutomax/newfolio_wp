@@ -38,7 +38,7 @@
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/img/blog_thumnail.jpg'); ?>" alt="アイキャッチがない時の画像です。" />
                     <?php endif; ?>
                     </figure>
-                    
+
                     <div class="p-singleBlog_post c-content_post">
                         <?php the_content(); ?>
                     </div>

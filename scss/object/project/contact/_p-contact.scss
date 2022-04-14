@@ -290,7 +290,6 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
         &::before {
             color: $main;
             opacity: 1;
-            top: 35%;
         }
     }
 
@@ -299,10 +298,11 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 .p-contact-btn_input {
     &::before {
         content: "≫";
-        right: rem(4);
+        right: rem(12);
     }
     &:hover {
         &::before {
+            top: 35%;
             @include arrowAnime;
         }
     }
@@ -311,11 +311,11 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 .p-contact-btn_back {
     &::before {
         content: "≪";
-        left: rem(20);
+        left: rem(12);
     }
     &:hover {
         &::before {
-
+            top: 28%;
             @include arrowAnimeL;
         }
     }

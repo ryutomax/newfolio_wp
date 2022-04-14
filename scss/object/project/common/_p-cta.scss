@@ -50,7 +50,7 @@
 
 .p-cta_contact {
     button {
-        width: rem(450);
+        width: rem(400);
         background-color: hsla(54, 100%, 50%, 0.70);
         font-size: rem(36);
         font-weight: bold;
@@ -95,6 +95,8 @@
         span {
             position: absolute;
             color: rgba(0, 0, 0, 0);
+            font-family: $kaku-ff;
+            font-size: rem(24);
             top: rem(-1);
             z-index: 10;
             &:first-child {
@@ -133,6 +135,15 @@
             font-size: rem(28);
             &::before {
                 font-size: rem(32);
+            }
+        }
+        span {
+            font-size: rem(18);
+            &:first-child {
+                left: rem(24);
+            }
+            &:last-child{
+                right: rem(24);
             }
         }
     }

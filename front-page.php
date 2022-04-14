@@ -69,7 +69,7 @@
                                                 <img src="<?php echo esc_url(get_template_directory_uri() . "/img/me.png"); ?>" alt="my-img">
                                             </figure>
                                             <div class="p-about_prf-moreTop c-btn">
-                                                <a href="<?php echo esc_url( home_url('/profile')); ?>" ontouchstart="">もっと詳しく<span>＞</span></a>
+                                                <a href="<?php echo esc_url( home_url('/profile')); ?>" ontouchstart="">もっと詳しく<span>≫</span></a>
                                             </div>
                                             <!-- /.p-about_prf-more -->
                                     </div>
@@ -140,7 +140,7 @@
                                                 </li>
                                             </ul>
                                             <div class="p-about_prf-moreBottom c-btn">
-                                                <a href="<?php echo esc_url( home_url('/profile')); ?>" ontouchstart="">もっと詳しく<span>＞</span></a>
+                                                <a href="<?php echo esc_url( home_url('/profile')); ?>" ontouchstart="">もっと詳しく<span>≫</span></a>
                                             </div>
                                     </div>
                                     <!-- /.p-about_prf-r -->

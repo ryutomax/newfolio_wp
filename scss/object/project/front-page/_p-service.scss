@@ -356,7 +356,8 @@
     }
     span {
         position: absolute;
-        right: rem(24);
+        right: rem(20);
+        font-size: rem(18);
         z-index: 10;
         font-family: $kaku-ff;
         font-weight: bold;
@@ -400,7 +401,8 @@
     }
     span {
         position: absolute;
-        right: rem(24);
+        right: rem(20);
+        font-size: rem(18);
         font-family: $kaku-ff;
         font-weight: bold;
         z-index: 10;
