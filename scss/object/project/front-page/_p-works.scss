@@ -79,7 +79,7 @@
 
 .p-works_meta {
     color: $white;
-    font-size: rem(18);
+    font-size: rem(16);
     line-height: 1.5;
     text-shadow: 2px 2px 3px $navy;
     &::before {
@@ -94,6 +94,8 @@
     margin-top: rem(24);
     margin-left: rem(16);
     position: relative;
+    padding-left:1em;
+	text-indent:-1em;
 }
 
 .p-works_inner .swiper-container .swiper-wrapper {
@@ -101,9 +103,6 @@
 }
 
 @include mq (sp) {
-    .p-works_meta {
-        font-size: rem(14);
-    }
 }
 
 @include mq () {
@@ -118,6 +117,9 @@
 
 @include mq (pc) {
     .p-works_meta {
-        font-size: rem(16);
+        font-size: rem(14);
+    }
+    .p-works_itemTtl {
+        font-size: rem(20);
     }
 }

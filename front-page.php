@@ -488,6 +488,34 @@
                         <div class="p-works_cont swiper-container">
                             <ul class="p-works_list swiper-wrapper">
                                 <li class="p-works_item swiper-slide">
+                                    <a class="p-works_itemInner" href="<?php echo esc_url('https://ryu-to-web.com/recipe_jnl/'); ?>" target="_blank">
+                                        <div class="p-works_img">
+                                            <figure class="p-works_imgInner">
+                                                <img src="<?php echo esc_url(get_template_directory_uri() . "/img/works/works_JNL.png"); ?>" alt="works">
+                                            </figure>
+                                            <div class="p-works_metaWrapper">
+                                                <ul class="p-works_metas">
+                                                    <li class="p-works_meta">WordPress使用</li>
+                                                    <li class="p-works_meta">一部デザインも関与</li>
+                                                    <li class="p-works_meta">レスポンシブデザイン</li>
+                                                    <li class="p-works_meta">記事更新機能</li>
+                                                    <li class="p-works_meta">お問い合わせフォーム</li>
+                                                    <li class="p-works_meta">カスタム投稿</li>
+                                                    <li class="p-works_meta">カスタムフィールド</li>
+                                                    <li class="p-works_meta">ページネーション</li>
+                                                    <li class="p-works_meta">パンくずリスト</li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.p-works_metaWrapper -->
+                                        </div>
+                                        <!-- /.p-works_img -->
+                                        <div class="p-works_itemTtl">
+                                            <h3>◯株式会社 ジャパン<br>ナチュラル研究所　様</h3>
+                                        </div>
+                                        <!-- /.p-works_ttl -->
+                                    </a>
+                                </li>
+                                <li class="p-works_item swiper-slide">
                                     <a class="p-works_itemInner" href="<?php echo esc_url('https://ryu-to-web.com/engress/'); ?>" target="_blank">
                                         <div class="p-works_img">
                                             <figure class="p-works_imgInner">
@@ -669,19 +697,39 @@
                                     <a class="p-notice_blogTtl" href="<?php echo esc_url(home_url('/blog')); ?>">
                                         <h3>Blog</h3>
                                     </a>
+                                    <?php
+                                        $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
+
+                                        $query_args = array(
+                                                'orderby' => 'post_date',   //日付順に並び替え
+                                                'order'=>'DESC',            //上記パラメータについて昇順か降順かを指定
+                                                'post_status'=> 'publish',  //公開された投稿もしくは固定ページ
+                                                'post_type'=> 'blog',
+                                                'posts_per_page'=>1,
+                                                'paged'=>$paged
+                                            );
+                                        $the_query = new WP_Query($query_args);
+                                        if ( $the_query->have_posts() ) :
+                                            while ( $the_query->have_posts() ) : $the_query->the_post();
+                                    ?>
                                     <div class="p-noticeWrapper">
                                         <!-- /.p-noticeLatest -->
-                                        <a class="p-notice_itemLink">
+                                        <a class="p-notice_itemLink" href="<?php the_permalink(); ?>" ontouchstart="">
                                             <div class="p-noticeLatest">
                                                 <p>Latest</p>
                                             </div>
-                                            <div class="p-notice_metaTtl">ブログタイトル</div>
+                                            <div class="p-notice_metaTtl"><?php the_title(); ?></div>
                                             <div class="p-notice_More">
                                                 <span>more</span><img src="<?php echo esc_url(get_template_directory_uri() . "/img/arrow/Arrow.png"); ?>" alt="Arrow">
                                             </div>
                                         </a>
                                     </div>
                                     <!-- /.p-notice_news-wapper -->
+                                    <?php endwhile; ?>
+                                    <?php else: ?>
+                                    <p>ブログ投稿がありません。</p>
+                                    <?php endif; ?>
+                                    <?php wp_reset_postdata(); ?>
                                 </div>
                                 <!-- /.p-notice_blogInner -->
 
@@ -692,18 +740,38 @@
                                     <a class="p-notice_newsTtl" href="<?php echo esc_url(home_url('/news')); ?>">
                                         <h3>News</h3>
                                     </a>
+                                    <?php
+                                        $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
+
+                                        $query_args = array(
+                                                'orderby' => 'post_date',   //日付順に並び替え
+                                                'order'=>'DESC',            //上記パラメータについて昇順か降順かを指定
+                                                'post_status'=> 'publish',  //公開された投稿もしくは固定ページ
+                                                'post_type'=> 'news',
+                                                'posts_per_page'=>1,
+                                                'paged'=>$paged
+                                            );
+                                        $the_query = new WP_Query($query_args);
+                                        if ( $the_query->have_posts() ) :
+                                            while ( $the_query->have_posts() ) : $the_query->the_post();
+                                    ?>
                                     <div class="p-noticeWrapper">
-                                        <a class="p-notice_itemLink" href="">
+                                        <a class="p-notice_itemLink" href="<?php the_permalink(); ?>" ontouchstart="">
                                             <div class="p-noticeLatest">
                                                 <p>Latest</p>
                                             </div>
-                                            <div class="p-notice_metaTtl">ニュースタイトル</div>
+                                            <div class="p-notice_metaTtl"><?php the_title(); ?></div>
                                             <div class="p-notice_More">
                                                 <span>more</span><img src="<?php echo esc_url(get_template_directory_uri() . "/img/arrow/Arrow.png"); ?>" alt="Arrow">
                                             </div>
                                         </a>
                                     </div>
                                     <!-- /.p-notice_news-wapper -->
+                                    <?php endwhile; ?>
+                                    <?php else: ?>
+                                    <p>ニュース投稿がありません。</p>
+                                    <?php endif; ?>
+                                    <?php wp_reset_postdata(); ?>
                                 </div>
                                 <!-- /.p-notice_newsInner -->
                             </div>

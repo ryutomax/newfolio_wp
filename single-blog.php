@@ -15,7 +15,12 @@
                 <div class="p-singleBlog_inner">
                     <div class="p-singleBlog_top">
                         <div class="p-singleBlog_cat">
-                            <span>カテゴリ</span>
+                            <span>
+                                <?php
+                                    $category = get_the_category();
+                                    echo $category[0]->name;
+                                ?>
+                            </span>
                         </div>
                         <!-- /.p-singleBlog_cat -->
                         <div class="p-singleBlog_ttl c-sec-ttl">

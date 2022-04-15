@@ -3502,7 +3502,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
 .p-works_meta {
   color: #ffffff;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.5;
   text-shadow: 2px 2px 3px #2C3848;
 }
@@ -3517,7 +3517,9 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   position: relative;
   margin-top: 1.5rem;
   margin-left: 1rem;
+  padding-left: 1em;
   font-size: 1.5rem;
+  text-indent: -1em;
 }
 
 .p-works_inner .swiper-container .swiper-wrapper {
@@ -5037,7 +5039,11 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   }
 
   .p-works_meta {
-    font-size: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .p-works_itemTtl {
+    font-size: 1.25rem;
   }
 
   .p-flow_wrapper {
@@ -5487,10 +5493,6 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
   .p-fv_wheelL {
     top: 0rem;
-  }
-
-  .p-works_meta {
-    font-size: 0.875rem;
   }
 
   .p-activity_cont {
