@@ -33,7 +33,9 @@ function my_exam_validation_rule( $Validation, $data, $Data ) {
 	$Validation->set_rule( 'プライバシーポリシー', 'required', array( 'message' => '※チェックを入れてください。' ) );
 	return $Validation;
 }
+// mwform_validation_mw-wp-form-OOO
 add_filter( 'mwform_validation_mw-wp-form-22', 'my_exam_validation_rule', 10, 3 );
+
 // ========================================
 // バリデーション 終了
 // ========================================

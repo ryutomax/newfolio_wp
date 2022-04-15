@@ -72,7 +72,7 @@
                     $the_query = new WP_Query($args);
                     if($the_query -> have_posts()) :
                 ?>
-            
+
                 <li class="p-sidebar_relationItem">
                     <a href="<?php the_permalink(); ?>" class="p-sidebar_relationInner" ontouchstart="">
                         <div class="p-sidebar_imgWrapper">
