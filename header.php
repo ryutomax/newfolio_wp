@@ -74,7 +74,7 @@
                                 <a href="<?php echo esc_url(home_url('/'));?>#about" ontouchstart="">私について</a>
                             </li>
                             <li class="p-header_navItem js-header-fc js-scroll_strengths">
-                                <a href="<?php echo esc_url(home_url('/'));?>#strength" ontouchstart="">私の強み</a>
+                                <a href="<?php echo esc_url(home_url('/'));?>#strengths" ontouchstart="">私の強み</a>
                             </li>
                             <li class="p-header_navItem js-header-fc js-scroll_service">
                                 <a href="<?php echo esc_url(home_url('/'));?>#service" ontouchstart="">サービス</a>

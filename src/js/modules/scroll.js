@@ -6,8 +6,8 @@ $(function ($) {
         const faqTop = $('#about').offset().top;
         $("html,body").animate({scrollTop: faqTop-80},1000);
     });
-    $('.js-scroll_strengthse').on('click',function(){
-        const faqTop = $('#strength').offset().top;
+    $('.js-scroll_strengths').on('click',function(){
+        const faqTop = $('#strengths').offset().top;
         $("html,body").animate({scrollTop: faqTop-80},1000);
     });
     $('.js-scroll_service').on('click',function(){
