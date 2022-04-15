@@ -87,6 +87,12 @@
         font-size: rem(56);
         font-family: $kaku-ff;
         line-height: calc(rem(432) - rem(48)*2); //p-noticeWrapper差分
+        transition: 0.5s ease-in-out;
+    }
+    &:hover {
+        h3 {
+            text-shadow: rem(4) rem(4) rem(10) $black;
+        }
     }
 }
 
@@ -116,6 +122,9 @@
     &:hover {
         background-color: rgba(255, 255, 255, 0.441);
         border-radius: rem(5);
+        .p-notice_metaTtl {
+            text-shadow: rem(4) rem(4) rem(10) $black;
+        }
         .p-notice_More {
             span {
                 position: relative;
@@ -140,6 +149,8 @@
 
 .p-notice_metaTtl {
     color: $white;
+    font-weight: normal;
+    transition: 0.5s ease-in-out;
 }
 
 .p-notice_More {

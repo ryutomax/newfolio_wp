@@ -4,16 +4,16 @@
     text-align: center;
     margin-bottom: rem(72);
     h3 {
-        font-size: rem(48);
+        font-size: rem(40);
     }
 }
 
 .c-secTtl_img {
     display: inline-block;
-    width: rem(180);
-    height: rem(100);
+    height: rem(90);
     margin-bottom: rem(4);
     img {
+        height: 100%;
     }
 }
 
@@ -27,14 +27,12 @@
     .c-secTtl {
         margin-bottom: rem(64);
         h3 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        p {
-            font-size: 1.5rem;
+            font-size: rem(32);
             font-weight: bold;
         }
+    }
+    .c-secTtl_img {
+        height: rem(75);
     }
 }
 @include mq (pc) {
