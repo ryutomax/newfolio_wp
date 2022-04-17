@@ -65,14 +65,29 @@ function my_main_query( $query ) {
 //ページネーション
 //=======================
     function custom_pagination_html( $template ) {
-        $template = '
-        <nav class="c-pagination-inner" role="navigation">
+
+        $template =
+        '<nav class="c-pagination_inner" role="navigation">
             <h2 class="screen-reader-text">%2$s</h2>
             %3$s
         </nav>';
+
         return $template;
     }
     add_filter('navigation_markup_template','custom_pagination_html');
+
+//=======================
+// Breadcrumb NavXT 拡張
+//=======================
+function my_static_breadcrumb_adder($breadcrumb_trail){
+    if ( is_category() || is_tag()) {
+        $item = new bcn_breadcrumb( 'ブログ', NULL, array('archive'), esc_url(home_url('/blog')), NULL, true );
+        $stuck = array_pop( $breadcrumb_trail->breadcrumbs ); // ホーム 一時退避
+        $breadcrumb_trail->breadcrumbs[] = $item; //任意 追加
+        $breadcrumb_trail->breadcrumbs[] = $stuck; //ホーム 戻す
+    }
+}
+add_action('bcn_after_fill','my_static_breadcrumb_adder');
 
 //=======================
 //投稿一覧 タグ絞り込み実装
@@ -97,18 +112,6 @@ function my_main_query( $query ) {
         unset( $_GET['tag'] );
         }
     }
-//=======================
-// Breadcrumb NavXT 拡張
-//=======================
-    function my_static_breadcrumb_adder($breadcrumb_trail){
-        if ( is_category() || is_tag()) {
-            $item = new bcn_breadcrumb( 'レシピ', NULL, array('archive'), esc_url(home_url('/recipe')), NULL, true );
-            $stuck = array_pop( $breadcrumb_trail->breadcrumbs ); // ホーム 一時退避
-            $breadcrumb_trail->breadcrumbs[] = $item; //任意 追加
-            $breadcrumb_trail->breadcrumbs[] = $stuck; //ホーム 戻す
-        }
-    }
-    add_action('bcn_after_fill','my_static_breadcrumb_adder');
 
 //=========================
 // 管理画面アイテム消去

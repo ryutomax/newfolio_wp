@@ -71,7 +71,6 @@
             padding-right: rem(16);
             padding-left: rem(16);
             @include btn-anime-l ($main, 0);
-            transition: all 0.8s ease-in-out;
             &::before {
                 content: "";
                 position: absolute;
@@ -140,7 +139,6 @@
             padding-left: rem(8);
             border: rem(2) solid $yellow;
             @include btn-anime-l ($main, rem(5));
-            transition: all 0.8s ease-in-out;
             &::before {
                 content: "Contact";
                 position: absolute;
@@ -245,6 +243,30 @@
 
 
 @include mq (sp) {
+    .p-header_navList {
+        padding-top: rem(100);
+    }
+    .p-header_navItem,
+    .p-header_navItem-home {
+        &:not(:last-child) {
+            a {
+                padding: rem(8) 0;
+                &::before {
+                    font-size: rem(32);
+                }
+            }
+        }
+    }
+    .p-header_navBtn {
+        display: block;
+    }
+    .p-header_copy {
+        h1 {
+            span{
+                font-size: rem(18);
+            }
+        }
+    }
 }
 
 @include mq () {
@@ -283,7 +305,7 @@
         height: 100vh;
         padding-top: rem(120);
         padding-bottom: rem(24);
-        transition: all 0.6s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
     .p-header_navItem,
     .p-header_navItem-home {
@@ -302,7 +324,6 @@
                 padding: rem(16) 0;
                 width: 100%;
                 @include btn-anime-r ($main, 0);
-                transition: all 0.8s ease-in-out;
                 &:hover {
                     color: $white;
                 }

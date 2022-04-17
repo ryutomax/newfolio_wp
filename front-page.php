@@ -23,13 +23,14 @@
                             </div>
                             <!-- /.p-fv_copy -->
                             <div class="p-fv_btn c-btn">
-                                <a href="/contact" ontouchstart="">無料相談はこちら</a>
+                                <a href="<?php echo esc_url(home_url("/contact")); ?>" ontouchstart="">無料相談はこちら</a>
                             </div>
                         </div>
                         <!-- /.p-fv_txt -->
                     </div>
                     <!-- /.p-fv_inner -->
                 </section>
+
                 <section class="p-about c-frame" id="about">
                     <div class="p-about_inner">
                         <div class="p-about_ttl c-secTtl">
@@ -47,16 +48,16 @@
                         <div class="p-about_txt">
                             <p class="p-about_txt-top c-bgTxt_show js-bgLRextend_scroll">
                                 <span class="js-bgShow_txt_scroll">
-                                    初めまして.リュートと申します.<br>
-                                    HP制作のフリーランスとして活動しております.<br>
+                                    初めまして.佐藤　龍利（さとう　りゅうと）と申します.<br>
+                                    現在、フリーでWeb制作をしております。<br>
                                     大学卒業後、国試を経て約３年間診療放射線技師として従事しておりました.
                                 </span>
                             </p>
                             <p class="p-about_txt-bottom c-bgTxt_show js-bgLRextend_scroll">
                                 <span class="js-bgShow_txt_scroll">
                                     パソコン一つで生き抜くスキルを身につけたいという夢を捨て切れず、<br>
-                                    HP制作で人生を全うしようと現在に至ります.<br>
-                                    <span class="js-underL_scroll">"誠心誠意"</span>、HP制作に向き合って参る所存です.
+                                    大好きなWeb制作で人生を全うしようと現在に至ります.<br>
+                                    <span class="js-underL_scroll">"誠心誠意"</span>、Web制作に向き合って参る所存です.
                                 </span>
                             </p>
                         </div>
@@ -786,5 +787,4 @@
                 <?php get_template_part('template_parts/cta'); ?>
 
             </main>
-            
         <?php get_footer(); ?>

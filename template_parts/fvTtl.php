@@ -1,6 +1,6 @@
-<?php if(is_page()): ?>
+<?php if(is_page() || is_404()): ?>
 
-    <?php if( is_page( array('contact','confirm','thanks') ) ): ?>
+    <?php if( is_page( array('contact','confirm','thanks') ) || is_404() ): ?>
 
     <section class="p-fvTtl" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/top/top_contact.png"); ?>');">
         <div class="p-fvTtl_inner" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/top/top_in_contact.png"); ?>');">
@@ -16,6 +16,10 @@
 
             <h2 class="p-fvTtl_ttl_pp">プライバシー<br class="u-brTb">ポリシー</h2>
 
+        <?php elseif( is_404() ): ?>
+
+            <h2 class="p-fvTtl_ttl">Sorry</h2>
+
         <?php else: ?>
 
             <h2><?php the_title(); ?></h2>
@@ -25,9 +29,9 @@
         <!-- /.p-fvTtl_inner -->
     </section>
 
-<?php elseif(is_singular() || is_post_type_archive() ): ?>
+<?php elseif(is_singular() || is_post_type_archive() || is_category() ): ?>
 
-    <?php if(is_singular('blog') || is_post_type_archive('blog')): ?>
+    <?php if(is_singular('blog') || is_post_type_archive('blog') || is_category() ): ?>
 
     <section class="p-fvTtl" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/top/top_blog.png"); ?>');">
         <div class="p-fvTtl_inner" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/top/top_in_blog.png"); ?>');">

@@ -27,8 +27,6 @@ $(function ($) {
 // スムースクロール終了
 // ========================================
 
-
-
 // ========================================
 // ヘッダー変形
 // ========================================
@@ -76,19 +74,7 @@ function FixedAnime() {
 //スクロール途中からヘッダーの高さを変化させる関数を呼ぶ
 $(window).on('load', function () {
 	FixedAnime();
-    // var $header = $('.js-header-scroll');
-    // var $headerCopy = $('.js-header-copy');
-    // var $headerLogo = $('.js-header-logo');
-    // var $headerbottom = $('.js-header-bottom');
-    // var $headerfc = $('.js-header-fc');
-
-    // $header.addClass('is-header_op07_h80_slidein');
-    // $headerCopy.addClass('is-header_txtNone');
-    // $headerLogo.addClass('is-header-logo');
-    // $headerbottom.addClass('is-header-bottom');
-    // $headerfc.addClass('is-header-fc');
 });
-
 // ========================================
 // ヘッダー変形 終了
 // ========================================

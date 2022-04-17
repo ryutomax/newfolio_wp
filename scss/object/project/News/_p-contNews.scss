@@ -3,7 +3,7 @@
 .p-contNews_inner {
     max-width: rem(900);
     margin: 0 auto;
-    padding: rem(32);
+    padding: rem(128) rem(32);
     background-color: $white;
 }
 
@@ -43,8 +43,8 @@
     }
     &:hover {
         opacity: 0.9;
-        transform: translate(rem(4), rem(4));
-        box-shadow: rem(12) rem(12) $main;
+        transform: translate(rem(2), rem(2));
+        box-shadow: rem(14) rem(14) $main;
         &::before,
         &::after {
         content: "";

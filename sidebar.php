@@ -42,7 +42,9 @@
                     </a>
                 </li>
                 <?php else: ?>
-                    <p>準備中のため記事がありません。</p>
+                    <li class="p-sidebar_relationItem">
+                        <p>該当する記事がありません。</p>
+                    </li>
                 <?php endif; ?>
                 <?php wp_reset_postdata(); ?>
             </ul>
@@ -76,7 +78,7 @@
                 <li class="p-sidebar_relationItem">
                     <a href="<?php the_permalink(); ?>" class="p-sidebar_relationInner" ontouchstart="">
                         <div class="p-sidebar_imgWrapper">
-                            <figure class="p-sidebar_img">
+                            <figure class="p-sidebar_img js-object-fit">
                                 <img src="<?php echo esc_url(get_template_directory_uri() . '/img/blog_thumnail.jpg');?>" alt="thumnail">
                             </figure>
                             <h3 class="p-sidebar_metaTtl">
@@ -94,7 +96,9 @@
                     </a>
                 </li>
                 <?php else: ?>
-                    <p>準備中のため記事がありません。</p>
+                    <li class="p-sidebar_relationItem">
+                        <p>該当する記事がありません。</p>
+                    </li>
                 <?php endif; ?>
                 <?php wp_reset_postdata(); ?>
             </ul>

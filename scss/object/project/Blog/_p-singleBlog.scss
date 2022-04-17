@@ -8,7 +8,7 @@
     max-width: rem(900);
     margin-left: auto;
     background-color: $white;
-    padding: rem(64) rem(48);
+    padding: rem(128) rem(48);
 }
 
 .p-singleBlog_top {
@@ -139,7 +139,7 @@
 
 @include mq () {
     .p-singleBlog_inner {
-        padding: rem(64) rem(16);
+        padding: rem(80) rem(16);
     }
     .p-singleBlog_thumnail {
         height: rem(250);
@@ -147,6 +147,9 @@
 }
 
 @include mq (pc) {
+    .p-singleBlog {
+        padding-bottom: 0;
+    }
     .p-singleBlog_inner {
         margin-left: auto;
         margin: 0 auto;

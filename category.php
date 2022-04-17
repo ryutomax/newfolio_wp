@@ -35,7 +35,7 @@
                                 'post_status'=> 'publish',  //公開された投稿もしくは固定ページ
                                 'post_type'=> 'blog',
                                 'category_name'  => $cat_slug ,
-                                'posts_per_page'=>10,
+                                'posts_per_page'=>6,
                                 'paged'=>$paged
 
                             );
@@ -85,6 +85,10 @@
                             <?php endif; ?>
                             <?php wp_reset_postdata(); ?>
                         </ul>
+
+                        <!-- ページネーションのテンプレート呼び出し -->
+                        <?php get_template_part('template_parts/pagination'); ?>
+
                     </div>
                     <!-- /.p-contBlog-inner -->
                 </section>

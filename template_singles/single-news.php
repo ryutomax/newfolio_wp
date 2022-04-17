@@ -23,6 +23,10 @@
                         <?php the_content(); ?>
                     </div>
                     <!-- /.p-content-wrap -->
+
+                    <!-- prevNextのテンプレートの呼び出し -->
+                    <?php get_template_part('template_parts/prevNext'); ?>
+
                 </div>
                 <!-- /.p-content-inner -->
             </section>

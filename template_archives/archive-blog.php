@@ -82,6 +82,10 @@
                             <?php endif; ?>
                             <?php wp_reset_postdata(); ?>
                         </ul>
+
+                        <!-- ページネーションのテンプレート呼び出し -->
+                        <?php get_template_part('template_parts/pagination'); ?>
+
                     </div>
                     <!-- /.p-contBlog-inner -->
                 </section>

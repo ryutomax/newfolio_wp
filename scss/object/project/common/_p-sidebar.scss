@@ -9,7 +9,6 @@
     margin-right: auto;
     position: sticky;
     top: rem(70);
-    // height: rem(500);
 }
 
 .p-sidebar_relation,
@@ -71,6 +70,7 @@
 
 .p-sidebar_img {
     transition: 0.5s;
+    height: rem(150);
 }
 
 .p-sidebar_metaTtl {
@@ -97,9 +97,19 @@
 }
 
 @include mq (sp) {
+    .p-sidebar_img {
+        height: rem(200);
+    }
+    .p-sidebar_relationList {
+        padding: rem(24) 0;
+    }
 }
 
 @include mq () {
+    .p-sidebar {
+        width: 100vw;
+        padding-top: 0;
+    }
     .p-sidebar_inner {
     }
     .p-sidebar_metaTtl {
@@ -118,7 +128,7 @@
         height: auto;
     }
     .p-sidebar_metaTtl {
-        font-size: rem(32);
+        font-size: rem(20);
     }
 
     .p-sidebar_relation,
@@ -127,12 +137,15 @@
     }
 
     .p-sidebar_relationItem {
-        max-width: rem(500);
-        width: 90%;
+        max-width: rem(450);
+        width: 100%;
         margin: 0 auto;
         &:not(:last-child) {
             margin-bottom: rem(40);
         }
+    }
+    .p-sidebar_img {
+        height: rem(300);
     }
     .p-sidebar_relationTtl,
     .p-sidebar_catTtl {

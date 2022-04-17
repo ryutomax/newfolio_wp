@@ -33,7 +33,7 @@
                                 'order'=>'DESC',            //上記パラメータについて昇順か降順かを指定
                                 'post_status'=> 'publish',  //公開された投稿もしくは固定ページ
                                 'post_type'=> 'news',
-                                'posts_per_page'=>10,
+                                'posts_per_page'=>7,
                                 'paged'=>$paged
                             );
                         $the_query = new WP_Query($query_args);
@@ -65,6 +65,10 @@
                     <?php endif; ?>
                     <?php wp_reset_postdata(); ?>
                 </ul>
+
+                <!-- ページネーションのテンプレート呼び出し -->
+                <?php get_template_part('template_parts/pagination'); ?>
+                
             </div>
             <!-- /.p-contNews_inner -->
 
