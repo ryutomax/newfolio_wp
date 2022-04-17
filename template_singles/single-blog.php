@@ -44,10 +44,10 @@
                     <?php endif; ?>
                     </figure>
 
-                    <div class="p-singleBlog_post c-content_post">
+                    <div class="p-singleBlog_post c-postCont">
                         <?php the_content(); ?>
                     </div>
-                    <!-- /.p-contact-wrap -->
+                    <!-- /.p-singleBlog_post -->
 
                     <!-- prevNextのテンプレートの呼び出し -->
                     <?php get_template_part('template_parts/prevNext'); ?>

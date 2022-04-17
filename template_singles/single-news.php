@@ -18,17 +18,17 @@
                         </div>
                         <!-- /.p-news-content__date-wp -->
                     </div>
-                    <!-- /.p-contact-head -->
-                    <div class="p-singleNews_post">
+                    <!-- /.p-singleNews_top -->
+                    <div class="p-singleNews_post c-postCont">
                         <?php the_content(); ?>
                     </div>
-                    <!-- /.p-contact-wrap -->
+                    <!-- /.p-singleNews_post -->
 
                     <!-- prevNextのテンプレートの呼び出し -->
                     <?php get_template_part('template_parts/prevNext'); ?>
 
                 </div>
-                <!-- /.p-contact-inner -->
+                <!-- /.p-singleNews_inner -->
             </section>
         <!-- ctaのテンプレート呼び出し -->
         <?php get_template_part('template_parts/cta'); ?>
