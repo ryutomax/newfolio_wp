@@ -1,4 +1,4 @@
-<div class="p-content__breadcrumb c-breadcrumb">
+<div class="p-contact__breadcrumb c-breadcrumb">
     <div class="c-breadcrumb-inner">
         <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
             <?php

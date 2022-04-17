@@ -47,7 +47,7 @@
                     <div class="p-singleBlog_post c-content_post">
                         <?php the_content(); ?>
                     </div>
-                    <!-- /.p-content-wrap -->
+                    <!-- /.p-contact-wrap -->
 
                     <!-- prevNextのテンプレートの呼び出し -->
                     <?php get_template_part('template_parts/prevNext'); ?>

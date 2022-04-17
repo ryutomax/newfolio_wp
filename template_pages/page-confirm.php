@@ -17,9 +17,9 @@
                 <?php the_content(); ?>
 
             </div>
-            <!-- /.p-content-wrap -->
+            <!-- /.p-contact-wrap -->
         </div>
-        <!-- /.p-content-inner -->
+        <!-- /.p-contact-inner -->
     </section>
 
 </main>

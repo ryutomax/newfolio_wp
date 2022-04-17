@@ -17,4 +17,4 @@
                         ?>
 
                     </div>
-                    <!-- /.p-content-pagination  -->
+                    <!-- /.p-contact-pagination  -->
