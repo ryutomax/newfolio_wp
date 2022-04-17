@@ -9,17 +9,17 @@
     <?php get_template_part('template_parts/breadcrumb'); ?>
 
     <section class="p-contact c-frame_page">
-        <div class="p-contact-inner">
-            <div class="p-contact-desc"><p>お問い合わせ内容をご確認ください</p></div>
+        <div class="p-contact_inner">
+            <div class="p-contact_desc"><p>お問い合わせ内容をご確認ください</p></div>
 
-            <div class="p-contact-cont">
+            <div class="p-contact_cont">
 
                 <?php the_content(); ?>
 
             </div>
-            <!-- /.p-contact-wrap -->
+            <!-- /.p-contact_wrap -->
         </div>
-        <!-- /.p-contact-inner -->
+        <!-- /.p-contact_inner -->
     </section>
 
 </main>

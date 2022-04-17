@@ -1865,33 +1865,33 @@ a.next.page-numbers::after {
   font-size: 1.5rem;
 }
 
-.p-contact-inner {
+.p-contact_inner {
   max-width: 700px;
   margin: 0 auto;
 }
 
-.p-contact-top-ttl {
+.p-contact_top-ttl {
   width: 192px;
 }
 
-.p-contact-desc {
+.p-contact_desc {
   margin-bottom: 5rem;
 }
 
-.p-contact-item {
+.p-contact_item {
   margin-bottom: 3rem;
 }
 
-.p-contact-item:nth-child(6) {
+.p-contact_item:nth-child(6) {
   margin-bottom: 1.5rem;
 }
 
-.p-contact-nameTop {
+.p-contact_nameTop {
   display: flex;
   align-items: center;
 }
 
-.p-contact-required {
+.p-contact_required {
   margin-left: 0.5rem;
   padding: 0.375rem 0.5rem;
   border-radius: 0.3125rem;
@@ -1900,7 +1900,7 @@ a.next.page-numbers::after {
   font-size: 0.75rem;
 }
 
-.p-contact-input {
+.p-contact_input {
   width: 100%;
   height: 50px;
   margin-top: 1rem;
@@ -1911,22 +1911,22 @@ a.next.page-numbers::after {
   transition: 0.5s;
 }
 
-.p-contact-input::-moz-placeholder {
+.p-contact_input::-moz-placeholder {
   color: #747474;
   font-size: 0.75rem;
 }
 
-.p-contact-input:-ms-input-placeholder {
+.p-contact_input:-ms-input-placeholder {
   color: #747474;
   font-size: 0.75rem;
 }
 
-.p-contact-input::placeholder {
+.p-contact_input::placeholder {
   color: #747474;
   font-size: 0.75rem;
 }
 
-.p-contact-input:focus {
+.p-contact_input:focus {
   border: solid 0.15625rem #ffe600;
 }
 
@@ -1934,11 +1934,11 @@ a.next.page-numbers::after {
   margin-top: 0.5rem;
 }
 
-.p-contact-select {
+.p-contact_select {
   margin-top: 1.25rem;
 }
 
-.p-contact-select span:not(:last-child) {
+.p-contact_select span:not(:last-child) {
   margin-bottom: 1.125rem;
 }
 
@@ -1993,7 +1993,7 @@ input[type=radio]:checked + .mwform-radio-field-text::after {
   opacity: 1;
 }
 
-.p-contact-textarea {
+.p-contact_textarea {
   width: 100%;
   height: 240px;
   margin-top: 0.75rem;
@@ -2006,33 +2006,33 @@ input[type=radio]:checked + .mwform-radio-field-text::after {
   transition: 0.5s;
 }
 
-.p-contact-textarea::-moz-placeholder {
+.p-contact_textarea::-moz-placeholder {
   color: #747474;
 }
 
-.p-contact-textarea:-ms-input-placeholder {
+.p-contact_textarea:-ms-input-placeholder {
   color: #747474;
 }
 
-.p-contact-textarea::placeholder {
+.p-contact_textarea::placeholder {
   color: #747474;
 }
 
-.p-contact-textarea:focus {
+.p-contact_textarea:focus {
   border: solid 0.15625rem #ffe600;
 }
 
-.p-contact-privacy {
+.p-contact_privacy {
   margin-top: 5rem;
   margin-bottom: 3rem;
   text-align: center;
 }
 
-.p-contact-privacy__txt {
+.p-contact_privacyTxt {
   margin-bottom: 1.875rem;
 }
 
-.p-contact-privacy__txt a {
+.p-contact_privacyTxt a {
   color: #007394;
   line-height: 1.6875;
   text-decoration: underline;
@@ -2094,13 +2094,13 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   transition: 1s ease;
 }
 
-.p-contact-submit {
+.p-contact_submit {
   display: flex;
   justify-content: center;
 }
 
-.p-contact-btn_input,
-.p-contact-btn_back {
+.p-contact_btnInput,
+.p-contact_btnBack {
   display: block;
   z-index: 1;
   position: relative;
@@ -2118,8 +2118,8 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   transition: all 0.8s ease-in-out;
 }
 
-.p-contact-btn_input::before,
-.p-contact-btn_back::before {
+.p-contact_btnInput::before,
+.p-contact_btnBack::before {
   z-index: 1;
   position: absolute;
   top: 50%;
@@ -2132,13 +2132,13 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   transition: top 0.05s;
 }
 
-.p-contact-btn_input:last-child,
-.p-contact-btn_back:last-child {
+.p-contact_btnInput:last-child,
+.p-contact_btnBack:last-child {
   margin-bottom: 2rem;
 }
 
-.p-contact-btn_input input,
-.p-contact-btn_back input {
+.p-contact_btnInput input,
+.p-contact_btnBack input {
   z-index: 1;
   position: relative;
   width: 100%;
@@ -2151,13 +2151,13 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   transition: all 0.8s ease-in-out;
 }
 
-.p-contact-btn_input input:hover,
-.p-contact-btn_back input:hover {
+.p-contact_btnInput input:hover,
+.p-contact_btnBack input:hover {
   color: #007394;
 }
 
-.p-contact-btn_input::after,
-.p-contact-btn_back::after {
+.p-contact_btnInput::after,
+.p-contact_btnBack::after {
   z-index: -1;
   position: absolute;
   top: 0;
@@ -2170,34 +2170,34 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   transition: all 0.4s ease-in-out;
 }
 
-.p-contact-btn_input:hover::after,
-.p-contact-btn_back:hover::after {
+.p-contact_btnInput:hover::after,
+.p-contact_btnBack:hover::after {
   left: 0;
   width: 100%;
 }
 
-.p-contact-btn_input:active,
-.p-contact-btn_back:active {
+.p-contact_btnInput:active,
+.p-contact_btnBack:active {
   top: 2px;
 }
 
-.p-contact-btn_input:hover,
-.p-contact-btn_back:hover {
+.p-contact_btnInput:hover,
+.p-contact_btnBack:hover {
   color: #007394;
 }
 
-.p-contact-btn_input:hover::before,
-.p-contact-btn_back:hover::before {
+.p-contact_btnInput:hover::before,
+.p-contact_btnBack:hover::before {
   color: #007394;
   opacity: 1;
 }
 
-.p-contact-btn_input::before {
+.p-contact_btnInput::before {
   right: 0.75rem;
   content: "≫";
 }
 
-.p-contact-btn_input:hover::before {
+.p-contact_btnInput:hover::before {
   -webkit-animation-name: arrowAnime;
   -webkit-animation-duration: 1s;
   -webkit-animation-iteration-count: infinite;
@@ -2221,12 +2221,12 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   }
 }
 
-.p-contact-btn_back::before {
+.p-contact_btnBack::before {
   left: 0.75rem;
   content: "≪";
 }
 
-.p-contact-btn_back:hover::before {
+.p-contact_btnBack:hover::before {
   -webkit-animation-name: arrowAnimeL;
   -webkit-animation-duration: 1s;
   -webkit-animation-iteration-count: infinite;
@@ -4951,7 +4951,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     margin: 0 auto;
   }
 
-  .p-contact-thanks {
+  .p-contact_thanks {
     font-size: 2rem;
   }
 
@@ -5281,21 +5281,21 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     font-size: 1rem;
   }
 
-  .p-contact-submit {
+  .p-contact_submit {
     flex-direction: column;
   }
 
-  .p-contact-btn_input,
-  .p-contact-btn_back {
+  .p-contact_btnInput,
+  .p-contact_btnBack {
     margin: 0 auto;
   }
 
-  .p-contact-btn_input:first-child,
-  .p-contact-btn_back:first-child {
+  .p-contact_btnInput:first-child,
+  .p-contact_btnBack:first-child {
     margin-bottom: 2rem;
   }
 
-  .p-contact-thanks {
+  .p-contact_thanks {
     font-size: 1.5rem;
   }
 
