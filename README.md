@@ -1,2 +1,1 @@
-# newfolio
 # newfolio_wp
