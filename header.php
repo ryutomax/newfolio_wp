@@ -10,7 +10,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Anek+Odia:wght@400;700&family=BIZ+UDGothic:wght@400;700&family=Inconsolata:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&family=Rajdhani:wght@400;700&family=Reggae+One&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
-        
         <?php wp_head(); ?>
 
     </head>

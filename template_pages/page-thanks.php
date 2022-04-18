@@ -24,10 +24,10 @@
                     <div class="p-contact_cont">
                         <div class="p-contact_thanks">
                             <p class="p-contact_thanksTxt">お問い合わせいただきありがとうございます.<br>内容を確認した後、担当者よりご連絡いたします.</p>
-                            <p class="p-contact_thanksTxt">また、ご入力されたメールアドレス宛てに<br>完了メールが自動送信されます. <br>ご確認ください.</p>
+                            <p class="p-contact_thanksTxt">また、ご入力されたメールアドレス宛てに完了メールが自動送信されます.ご確認ください.</p>
                         </div>
                         <!-- /.p-complete-txt -->
-                        <div class="p-contact_back"><a href="#">ホームへ戻る</a></div>
+                        <div class="p-contact_back"><a href="<?php echo esc_url(home_url('/')); ?>">ホームへ戻る</a></div>
                     </div>
                     <!-- /.p-complete-cont -->
                 </div>
