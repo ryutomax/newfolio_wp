@@ -4036,15 +4036,15 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   font-size: min(6rem, 11vw);
 }
 
-.p-privacy-cont {
+.p-privacy_cont {
   max-width: 56.25rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 8rem 2rem;
   border-radius: 0.3125rem;
   background-color: #e9f2f4;
 }
 
-.p-privacy-cont h3 {
+.p-privacy_cont h3 {
   margin-bottom: 2rem;
   padding-left: 1rem;
   border-left: 0.3125rem solid #007394;
@@ -4052,16 +4052,16 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   line-height: 1.5;
 }
 
-.p-privacy-cont p,
-.p-privacy-cont li {
+.p-privacy_cont p,
+.p-privacy_cont li {
   line-height: 1.5;
 }
 
-.p-privacy-cont p {
+.p-privacy_cont p {
   margin-bottom: 2rem;
 }
 
-.p-privacy-cont li {
+.p-privacy_cont li {
   margin-bottom: 0.5rem;
   margin-left: 2rem;
   padding-left: 1em;
@@ -4070,7 +4070,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   text-indent: -1em;
 }
 
-.p-privacy-cont li:last-child {
+.p-privacy_cont li:last-child {
   margin-bottom: 2rem;
 }
 
@@ -5536,11 +5536,11 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     font-size: min(6rem, 18vw);
   }
 
-  .p-privacy-cont {
-    padding: 2rem 1rem;
+  .p-privacy_cont {
+    padding: 4rem 1rem;
   }
 
-  .p-privacy-cont h3 {
+  .p-privacy_cont h3 {
     font-size: 1.5rem;
   }
 

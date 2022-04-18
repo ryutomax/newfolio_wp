@@ -9,8 +9,8 @@
             <?php get_template_part('template_parts/breadcrumb'); ?>
 
             <section class="p-privacy c-frame_page">
-                <div class="p-privacy-inner">
-                    <div class="p-privacy-cont">
+                <div class="p-privacy_inner">
+                    <div class="p-privacy_cont">
                         <?php the_content(); ?>
                     </div>
                     <!-- /.p-complete-cont -->

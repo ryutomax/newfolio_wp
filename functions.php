@@ -7,7 +7,7 @@ function include_files() {
     wp_enqueue_style('scroll-hint', "https://unpkg.com/scroll-hint@latest/css/scroll-hint.css", array(), '1.0.0', false);
     wp_enqueue_style('style',get_theme_file_uri('/css_origin/style.css'), array(), '1.0.0', false);
     // WPのjQueryを解除
-    // wp_deregister_script('jqeury');
+    wp_deregister_script('jqeury');
     // JavaScriptファイルの読み込み
     wp_enqueue_script('my-jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array('jquery'), '3.6.0', true);
     wp_enqueue_script('scroll-hint', 'https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js', '1.0.0', true);
@@ -22,19 +22,19 @@ add_action('wp_enqueue_scripts', 'include_files');
 // ========================================
 // バリデーション
 // ========================================
-// function my_exam_validation_rule( $Validation, $data, $Data ) {
+function my_exam_validation_rule( $Validation, $data, $Data ) {
 
-// 	$Validation->set_rule( 'お名前', 'noEmpty', array( 'message' => '※お名前を入力してください。' ) );
-// 	$Validation->set_rule( 'ふりがな', 'noEmpty', array( 'message' => '※ふりがなを入力してください。' ) );
-// 	$Validation->set_rule( '会社', 'noEmpty', array( 'message' => '※会社・団体名を入力してください。' ) );
-// 	$Validation->set_rule( 'メールアドレス', 'noEmpty', array( 'message' => '※メールアドレスを入力してください。' ) );
-//     $Validation->set_rule( 'メールアドレス', 'mail', array( 'message' => '※正式な書式で入力してください' ) );
-//     $Validation->set_rule( 'ご依頼の種類', 'required', array( 'message' => '※１つ選択してください' ) );
-// 	$Validation->set_rule( 'プライバシーポリシー', 'required', array( 'message' => '※チェックを入れてください。' ) );
-// 	return $Validation;
-// }
-// // mwform_validation_mw-wp-form-OOO
-// add_filter( 'mwform_validation_mw-wp-form-22', 'my_exam_validation_rule', 10, 3 );
+	$Validation->set_rule( 'お名前', 'noEmpty', array( 'message' => '※お名前を入力してください。' ) );
+	$Validation->set_rule( 'ふりがな', 'noEmpty', array( 'message' => '※ふりがなを入力してください。' ) );
+	$Validation->set_rule( '会社', 'noEmpty', array( 'message' => '※会社・団体名を入力してください。' ) );
+	$Validation->set_rule( 'メールアドレス', 'noEmpty', array( 'message' => '※メールアドレスを入力してください。' ) );
+    $Validation->set_rule( 'メールアドレス', 'mail', array( 'message' => '※正式な書式で入力してください' ) );
+    $Validation->set_rule( 'ご依頼の種類', 'required', array( 'message' => '※１つ選択してください' ) );
+	$Validation->set_rule( 'プライバシーポリシー', 'required', array( 'message' => '※チェックを入れてください。' ) );
+	return $Validation;
+}
+// mwform_validation_mw-wp-form-OOO
+add_filter( 'mwform_validation_mw-wp-form-22', 'my_exam_validation_rule', 10, 3 );
 
 // ========================================
 // バリデーション 終了
