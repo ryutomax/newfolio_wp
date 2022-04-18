@@ -1,5 +1,3 @@
-var jqOther = jQuery.noConflict(true);
-
 // // swiper////////////////////////////////
 const mySwiper = new Swiper('.swiper-container', {
     speed: 7000,
@@ -24,7 +22,7 @@ const mySwiper = new Swiper('.swiper-container', {
 
 // スクロールヒント//////////////////////
 
-jqOther(function(){
+$(function(){
     new ScrollHint('.js-scrollable', {
         applyToParents: true,
         suggestiveShadow: true,

@@ -867,7 +867,7 @@ a.next.page-numbers::after {
 .c-secTtl_img {
   display: inline-block;
   width: 7.8125rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .c-secTtl_img img {
@@ -2252,7 +2252,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 }
 
 .p-contact_ttlImg {
-  width: 6.875rem;
+  width: 6.25rem;
 }
 
 .p-contact_thanks {
@@ -3604,7 +3604,6 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
 .p-strengths_txt {
   margin-bottom: 2rem;
-  font-weight: bold;
   font-size: 1.25rem;
 }
 
@@ -3707,7 +3706,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 }
 
 .p-works_ttlImg {
-  width: 9.375rem;
+  width: 5.625rem;
 }
 
 .p-works_txt {
@@ -3772,6 +3771,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
 .p-works_meta {
   color: #ffffff;
+  font-weight: normal;
   font-size: 1rem;
   line-height: 1.5;
   text-shadow: 2px 2px 3px #2C3848;
@@ -4213,11 +4213,11 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
 * * .is-bgShow {
   -webkit-animation-name: bgextendTxt;
-  -webkit-animation-duration: 0.8s;
-  -webkit-animation-delay: 0.8s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 0.3s;
   -webkit-animation-fill-mode: forwards;
-  animation-duration: 0.8s;
-  animation-delay: 0.8s;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
   animation-fill-mode: forwards;
   animation-name: bgextendTxt;
   opacity: 0;
@@ -4245,6 +4245,24 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
 * * .is-bgLRextend::after {
   -webkit-animation-name: bgLRextend;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #007394;
+  content: "";
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: bgLRextend;
+  /*伸びる背景色の設定*/
+}
+
+* * .is-bgLRextend2::after {
+  -webkit-animation-name: bgLRextend;
   -webkit-animation-duration: 1.5s;
   -webkit-animation-fill-mode: forwards;
   z-index: 10;
@@ -4261,27 +4279,9 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   /*伸びる背景色の設定*/
 }
 
-* * .is-bgLRextend2::after {
-  -webkit-animation-name: bgLRextend;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-  z-index: 10;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #007394;
-  content: "";
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation-name: bgLRextend;
-  /*伸びる背景色の設定*/
-}
-
 * * .is-bgLRextend3::after {
   -webkit-animation-name: bgLRextend;
-  -webkit-animation-duration: 2.5s;
+  -webkit-animation-duration: 1.75s;
   -webkit-animation-fill-mode: forwards;
   z-index: 10;
   position: absolute;
@@ -4291,7 +4291,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   height: 100%;
   background-color: #007394;
   content: "";
-  animation-duration: 2.5s;
+  animation-duration: 1.75s;
   animation-fill-mode: forwards;
   animation-name: bgLRextend;
   /*伸びる背景色の設定*/
@@ -5404,6 +5404,11 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     font-size: 1.25rem;
   }
 
+  .p-notice {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .p-service_topItem-ttl {
     position: relative;
     margin-bottom: 1.5rem;
@@ -5679,6 +5684,16 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
   .p-fv_wheelL {
     top: 0rem;
+  }
+
+  .p-notice {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .p-strengths_main {
+    font-size: 1.125rem;
+    line-height: 1.2;
   }
 
   .p-activity_cont {

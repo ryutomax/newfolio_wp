@@ -8,7 +8,7 @@
 }
 
 .p-works_ttlImg {
-    width: rem(150);
+    width: rem(90);
 }
 .p-works_txt {
     text-align: center;
@@ -83,6 +83,7 @@
 .p-works_meta {
     color: $white;
     font-size: rem(16);
+    font-weight: normal;
     line-height: 1.5;
     text-shadow: 2px 2px 3px $navy;
     &::before {
@@ -101,6 +102,9 @@
 	text-indent:-1em;
 }
 
+// =========================
+// swiper 一定スピード
+// =========================
 .p-works_inner .swiper-container .swiper-wrapper {
     transition-timing-function: linear !important;
 }

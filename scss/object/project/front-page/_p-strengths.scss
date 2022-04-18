@@ -68,7 +68,6 @@
 
 .p-strengths_txt {
     font-size: rem(20);
-    font-weight: bold;
     margin-bottom: rem(32);
 }
 
@@ -123,6 +122,10 @@
 }
 
 @include mq (sp) {
+    .p-strengths_main {
+        font-size: rem(18);
+        line-height: 1.2;
+    }
 }
 
 @include mq () {

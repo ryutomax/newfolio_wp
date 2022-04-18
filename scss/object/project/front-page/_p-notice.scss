@@ -189,9 +189,17 @@
 }
 
 @include mq (sp) {
+    .p-notice {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 
 @include mq () {
+    .p-notice {
+        padding-right: 0;
+        padding-left: 0;
+    }
 
 }
 

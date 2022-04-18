@@ -70,8 +70,8 @@
     * {
         .is-bgShow {
             animation-name: bgextendTxt;
-            animation-duration: .8s;
-            animation-delay: .8s;
+            animation-duration: 0.5s;
+            animation-delay: 0.3s;
             animation-fill-mode: forwards;
             opacity: 0;
         }
@@ -89,7 +89,7 @@
     //    /*左から右*/
     // =========================
     * {
-        @mixin bgLRextend ($duration:1.5s){
+        @mixin bgLRextend ($duration:1s){
             animation-name: bgLRextend;
             animation-duration: $duration;
             animation-fill-mode: forwards;
@@ -106,11 +106,11 @@
             background-color: $main;/*伸びる背景色の設定*/
         }
         .is-bgLRextend2::after{
-            @include bgLRextend(2s);
+            @include bgLRextend(1.5s);
             background-color: $main;/*伸びる背景色の設定*/
         }
         .is-bgLRextend3::after{
-            @include bgLRextend(2.5s);
+            @include bgLRextend(1.75s);
             background-color: $main;/*伸びる背景色の設定*/
         }
 
