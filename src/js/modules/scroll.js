@@ -86,7 +86,7 @@ function slideInAnime(){
 
     //動きの指定
     $('.js-fadeIn_shadow').each(function(){
-        const elemPos = $(this).offset().top + 100;//要素より50px下
+        const elemPos = $(this).offset().top + 100;//要素より100px下
         const scroll = $(window).scrollTop();
         const windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight){
@@ -97,7 +97,7 @@ function slideInAnime(){
     });
 
     $('.js-fadeIn_shadow_2n').each(function(){
-        const elemPos = $(this).offset().top + 100;//要素より50px下
+        const elemPos = $(this).offset().top + 100;//要素より100px下
         const scroll = $(window).scrollTop();
         const windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight){
@@ -182,7 +182,7 @@ function BgFadeAnime(){
     //テキスト出現
     //============
     $('.js-bgShow_txt_scroll').each(function(){
-        const elemPos = $(this).offset().top + 50;//要素より50px下
+        const elemPos = $(this).offset().top - 50;//要素より50px下
         const scroll = $(window).scrollTop();
         const windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight){
@@ -192,21 +192,21 @@ function BgFadeAnime(){
         }
     });
     $('.js-bgShow_txt_scroll2').each(function(){
-        const elemPos = $(this).offset().top + 50;//要素より50px下
+        const elemPos = $(this).offset().top - 50;//要素より50px下
         const scroll = $(window).scrollTop();
         const windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight){
-            $(this).addClass('is-bgShow');
+            $(this).addClass('is-bgShow2');
         } else {
             // $(this).removeClass('is-bgShow');
         }
     });
     $('.js-bgShow_txt_scroll3').each(function(){
-        const elemPos = $(this).offset().top + 50;//要素より50px下
+        const elemPos = $(this).offset().top - 50;//要素より50px下
         const scroll = $(window).scrollTop();
         const windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight){
-            $(this).addClass('is-bgShow');
+            $(this).addClass('is-bgShow3');
         } else {
             // $(this).removeClass('is-bgShow');
         }

@@ -155,9 +155,6 @@
     }
     .p-fv_copySub {
         font-size: rem(18);
-        font-weight: bold;
-        line-height: rem(40);
-        margin-bottom: rem(54);
     }
     .p-fv_wheelR,
     .p-fv_wheelL {
@@ -201,6 +198,12 @@
         font-size: max(rem(56), 7vw);
         margin-bottom: rem(48);
     }
+
+    .p-fv_copySub {
+        font-size: rem(20);
+        font-weight: bold;
+    }
+
     .p-fv_wheelR,
     .p-fv_wheelL {
         width: 45%;

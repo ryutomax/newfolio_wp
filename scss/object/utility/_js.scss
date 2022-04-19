@@ -28,8 +28,10 @@
             transform: translateY(-6px) rotate(135deg);
             width: rem(45);
         }
+        //close
         &:nth-of-type(4){
             opacity: 1;
+            transition: 2.5s;
         }
     }
     &:hover {

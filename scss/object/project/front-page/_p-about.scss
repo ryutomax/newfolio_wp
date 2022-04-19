@@ -103,7 +103,7 @@
         &:hover {
             color: $yellow;
             span {
-                right: rem(16);
+                right: rem(10);
                 color: $main;
                 @include arrowAnime;
             }
