@@ -216,11 +216,11 @@ function BgFadeAnime(){
     //マーカー
     //============
     $('.js-underL_scroll').each(function(){
-        const elemPos = $(this).offset().top + 50;//要素より50px下
+        const elemPos = $(this).offset().top - 50;//要素より50px下
         const scroll = $(window).scrollTop();
         const windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight){
-            $(this).delay(1500).queue(function() {
+            $(this).delay(750).queue(function() {
                 $(this).addClass('is-underL_scroll').dequeue();
             });
         } else {
