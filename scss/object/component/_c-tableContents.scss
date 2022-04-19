@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.ez-toc-list li {
+    &::before {
+        content: none;
+    }
+}
+
+#ez-toc-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: $bg-white;
+    border: none;
+    border-radius: rem(5);
+    box-shadow: rem(2) rem(2) rem(8) rgba(0, 0, 0, 0.1);
+    margin-bottom: rem(32);
+    padding: rem(16) rem(24);
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.ez-toc-btn {
+    background-color: $main;
+    &:focus,
+    &:hover {
+        background-color: $white;
+        .ez-toc-icon-toggle {
+            &::before {
+                color: $main;
+            }
+        }
+    }
+}
+
+//open_btn中身
+.ez-toc-icon-toggle {
+    &::before {
+        color: $white;
+        transition: 0.5s;
+    }
+}
+
+#ez-toc-container {
+    //open_btn
+    .ez-toc-btn {
+        padding: 6px 12px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: rem(4);
+        border: none;
+        font-size: 14px;
+        background-image: none;
+    }
+    //リスト
+    .ez-toc-link {
+        transition: 0.5s;
+        &:hover {
+            color: $main;
+        }
+    }
+}
+
+
+//リスト右のスペース
+#ez-toc-container.counter-decimal ul.ez-toc-list li a::before {
+    margin-right: rem(12);
+}
+
+.ez-toc-heading-3 {
+    a{
+        font-size: rem(16);
+    }
+}

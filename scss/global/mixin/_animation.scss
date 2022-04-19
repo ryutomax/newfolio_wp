@@ -14,7 +14,7 @@
     text-decoration: none;
     &::after {
         position: absolute;
-        bottom: rem(0);
+        bottom: 0;
         left: 0;
         content: '';
         width: 100%;
@@ -29,7 +29,6 @@
         transform: scale(1, 1);
     }
 }
-
 @mixin txt-shadow {
     transition: all .5s ease-in-out;
         &:hover {

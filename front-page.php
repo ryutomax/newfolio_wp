@@ -55,9 +55,8 @@
                             </p>
                             <p class="p-about_txt-bottom c-bgTxt_show js-bgLRextend_scroll">
                                 <span class="js-bgShow_txt_scroll">
-                                    パソコン一つで生き抜くスキルを身につけたいという夢を捨て切れず、<br>
-                                    大好きなWeb制作で人生を全うしようと現在に至ります.<br>
-                                    <span class="js-underL_scroll">"誠心誠意"</span>、Web制作に向き合って参る所存です.
+                                    コードで自分のやりたい事が表現できるWeb制作に感動し、<br>
+                                    Web制作と<span class="js-underL_scroll">"誠心誠意"</span>向き合い、人生を全うしようと現在に至ります.<br>
                                 </span>
                             </p>
                         </div>

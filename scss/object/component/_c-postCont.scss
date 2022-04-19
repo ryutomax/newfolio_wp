@@ -35,6 +35,9 @@
     div,p {
         line-height: 1.5;
     }
+    ul,p {
+        padding-left: rem(16);
+    }
     li {
         position: relative;
         line-height: 1.5;
@@ -50,9 +53,12 @@
     }
     a {
         display: block;
-        font-size: 1.125rem;
-        color: $d-green;
+        color: $main;
         text-decoration: underline;
+        transition: 0.5s;
+        &:hover {
+            color: $yellow;
+        }
     }
 
     img {
