@@ -11,17 +11,17 @@
     top: rem(70);
 }
 
-.p-sidebar_relation,
+.p-sidebar_post,
 .p-sidebar_cat {
     background-color: $white;
     border-radius: rem(8);
 }
 
-.p-sidebar_relation {
+.p-sidebar_post {
     margin-bottom: rem(40);
 }
 
-.p-sidebar_relationTtl,
+.p-sidebar_postTtl,
 .p-sidebar_catTtl {
     background-color: $main;
     color: $white;
@@ -32,7 +32,7 @@
     padding-bottom: rem(8);
 }
 
-.p-sidebar_relationList,
+.p-sidebar_postList,
 .p-sidebar_catList {
     padding: rem(24) rem(28);
 }
@@ -49,7 +49,7 @@
     }
 }
 
-.p-sidebar_relationItem {
+.p-sidebar_postItem {
     overflow: hidden;
     &:not(:last-child) {
         margin-bottom: rem(16);
@@ -100,7 +100,7 @@
     .p-sidebar_img {
         height: rem(200);
     }
-    .p-sidebar_relationList {
+    .p-sidebar_postList {
         padding: rem(24) 0;
     }
 }
@@ -131,12 +131,20 @@
         font-size: rem(20);
     }
 
-    .p-sidebar_relation,
+    .p-sidebar_post,
     .p-sidebar_cat {
         padding: rem(16);
     }
 
-    .p-sidebar_relationItem {
+    .p-sidebar_post {
+        margin-bottom: 0;
+    }
+    
+    .p-sidebar_cat {
+        padding-bottom: rem(80);
+    }
+
+    .p-sidebar_postItem {
         max-width: rem(450);
         width: 100%;
         margin: 0 auto;
@@ -147,10 +155,14 @@
     .p-sidebar_img {
         height: rem(300);
     }
-    .p-sidebar_relationTtl,
+    .p-sidebar_postTtl,
     .p-sidebar_catTtl {
         max-width: rem(600);
         margin: 0 auto;
+    }
+
+    .p-sidebar_postList {
+        padding: rem(64) rem(28);
     }
 
     .p-sidebar_catList {

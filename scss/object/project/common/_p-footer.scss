@@ -1,5 +1,24 @@
 @use "global" as *;
 
+.p-footer_wheelR,
+.p-footer_wheelL {
+    position: absolute;
+    filter: brightness(80%);
+    width: 400px;
+}
+
+.p-footer_wheelR {
+    animation: 18s linear infinite rotation;
+    top: 15%;
+    right: 8%;
+}
+
+.p-footer_wheelL {
+    animation: 16s linear infinite rotation;
+    top: -40%;
+    left: -12%;
+}
+
 .p-footer_navList {
     display: flex;
 }
@@ -64,31 +83,6 @@
         margin-top: rem(40);
         margin-bottom: rem(32);
     }
-}
-
-.p-fv_bgImg {
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-
-.p-footer_wheelR,
-.p-footer_wheelL {
-    position: absolute;
-    filter: brightness(80%);
-    width: 400px;
-}
-
-.p-footer_wheelR {
-    animation: 18s linear infinite rotation;
-    top: 15%;
-    right: 8%;
-}
-
-.p-footer_wheelL {
-    animation: 16s linear infinite rotation;
-    top: -40%;
-    left: -12%;
 }
 
 @include mq (sp) {

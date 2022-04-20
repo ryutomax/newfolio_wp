@@ -6,7 +6,7 @@
 
 .p-singleNews_inner {
     max-width: rem(900);
-    margin: 0 auto;
+    margin-left: auto;
     background-color: $white;
     padding: rem(128) rem(48);
 }
@@ -37,4 +37,11 @@
 }
 
 @include mq (pc) {
+    .p-singleNews {
+        padding-bottom: 0;
+    }
+    .p-singleNews_inner {
+        margin-left: auto;
+        margin: 0 auto;
+    }
 }

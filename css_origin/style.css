@@ -130,6 +130,12 @@ textarea {
 }
 
 .l-footer {
+  background-color: #f8f7f7;
+}
+
+.l-footer_wrapper {
+  width: 100%;
+  height: 100%;
   padding: 4rem 1rem;
   overflow: hidden;
   border-radius: 0 12.5rem 0 0;
@@ -662,6 +668,13 @@ a.next.page-numbers::after {
   font-size: 5.625rem;
 }
 
+.c-postThumnail {
+  max-width: 43.75rem;
+  height: 25rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
 .c-prevNext {
   margin-top: 4rem;
 }
@@ -1065,16 +1078,19 @@ a.next.page-numbers::after {
   text-align: end;
 }
 
-.p-singleBlog_thumnail {
-  max-width: 43.75rem;
-  height: 25rem;
-  margin: 0 auto;
-  margin-bottom: 2rem;
-}
-
-.p-cta {
+.p-cta::before {
+  display: block;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/CTA_bg.jpg");
+  background-position: 50% 100%;
   background-size: cover;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  content: "";
 }
 
 .p-cta_inner {
@@ -1427,6 +1443,27 @@ a.next.page-numbers::after {
   text-align: center;
 }
 
+.p-footer_wheelR,
+.p-footer_wheelL {
+  position: absolute;
+  width: 400px;
+  filter: brightness(80%);
+}
+
+.p-footer_wheelR {
+  -webkit-animation: 18s linear infinite rotation;
+  top: 15%;
+  right: 8%;
+  animation: 18s linear infinite rotation;
+}
+
+.p-footer_wheelL {
+  -webkit-animation: 16s linear infinite rotation;
+  top: -40%;
+  left: -12%;
+  animation: 16s linear infinite rotation;
+}
+
 .p-footer_navList {
   display: flex;
 }
@@ -1485,33 +1522,6 @@ a.next.page-numbers::after {
   color: #007394;
   font-size: 1.25rem;
   line-height: 3.125rem;
-}
-
-.p-fv_bgImg {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.p-footer_wheelR,
-.p-footer_wheelL {
-  position: absolute;
-  width: 400px;
-  filter: brightness(80%);
-}
-
-.p-footer_wheelR {
-  -webkit-animation: 18s linear infinite rotation;
-  top: 15%;
-  right: 8%;
-  animation: 18s linear infinite rotation;
-}
-
-.p-footer_wheelL {
-  -webkit-animation: 16s linear infinite rotation;
-  top: -40%;
-  left: -12%;
-  animation: 16s linear infinite rotation;
 }
 
 .p-fvTtl {
@@ -1855,17 +1865,17 @@ a.next.page-numbers::after {
   margin-right: auto;
 }
 
-.p-sidebar_relation,
+.p-sidebar_post,
 .p-sidebar_cat {
   border-radius: 0.5rem;
   background-color: #ffffff;
 }
 
-.p-sidebar_relation {
+.p-sidebar_post {
   margin-bottom: 2.5rem;
 }
 
-.p-sidebar_relationTtl,
+.p-sidebar_postTtl,
 .p-sidebar_catTtl {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1876,7 +1886,7 @@ a.next.page-numbers::after {
   text-align: center;
 }
 
-.p-sidebar_relationList,
+.p-sidebar_postList,
 .p-sidebar_catList {
   padding: 1.5rem 1.75rem;
 }
@@ -1891,19 +1901,19 @@ a.next.page-numbers::after {
   border-radius: 0.3125rem;
 }
 
-.p-sidebar_relationItem {
+.p-sidebar_postItem {
   overflow: hidden;
 }
 
-.p-sidebar_relationItem:not(:last-child) {
+.p-sidebar_postItem:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.p-sidebar_relationItem:hover .p-sidebar_img {
+.p-sidebar_postItem:hover .p-sidebar_img {
   transform: scale(1.1);
 }
 
-.p-sidebar_relationItem:hover .p-sidebar_metaTtl {
+.p-sidebar_postItem:hover .p-sidebar_metaTtl {
   opacity: 0.5;
 }
 
@@ -3870,7 +3880,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
 .p-contNews_inner {
   max-width: 56.25rem;
-  margin: 0 auto;
+  margin-left: auto;
   padding: 8rem 2rem;
   background-color: #ffffff;
 }
@@ -3944,7 +3954,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
 .p-singleNews_inner {
   max-width: 56.25rem;
-  margin: 0 auto;
+  margin-left: auto;
   padding: 8rem 3rem;
   background-color: #ffffff;
 }
@@ -4850,10 +4860,6 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     margin-left: auto;
   }
 
-  .p-sidebar_relation {
-    margin-bottom: 0;
-  }
-
   .p-singleBlog {
     padding-bottom: 0;
   }
@@ -5027,18 +5033,26 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     font-size: 1.25rem;
   }
 
-  .p-sidebar_relation,
+  .p-sidebar_post,
   .p-sidebar_cat {
     padding: 1rem;
   }
 
-  .p-sidebar_relationItem {
+  .p-sidebar_post {
+    margin-bottom: 0;
+  }
+
+  .p-sidebar_cat {
+    padding-bottom: 5rem;
+  }
+
+  .p-sidebar_postItem {
     width: 100%;
     max-width: 28.125rem;
     margin: 0 auto;
   }
 
-  .p-sidebar_relationItem:not(:last-child) {
+  .p-sidebar_postItem:not(:last-child) {
     margin-bottom: 2.5rem;
   }
 
@@ -5046,10 +5060,14 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     height: 18.75rem;
   }
 
-  .p-sidebar_relationTtl,
+  .p-sidebar_postTtl,
   .p-sidebar_catTtl {
     max-width: 37.5rem;
     margin: 0 auto;
+  }
+
+  .p-sidebar_postList {
+    padding: 4rem 1.75rem;
   }
 
   .p-sidebar_catList {
@@ -5182,13 +5200,31 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     font-size: 1.25rem;
   }
 
+  .p-contNews {
+    padding-bottom: 0;
+  }
+
+  .p-contNews_inner {
+    margin: 0 auto;
+    margin-left: auto;
+  }
+
+  .p-singleNews {
+    padding-bottom: 0;
+  }
+
+  .p-singleNews_inner {
+    margin: 0 auto;
+    margin-left: auto;
+  }
+
   .p-flow_wrapper {
     padding: 1rem 2rem;
   }
 }
 
 @media screen and (max-width:600px) {
-  .l-footer {
+  .l-footer_wrapper {
     padding: 4rem 2rem;
     overflow: hidden;
     border-radius: 0 9.375rem 0 0;
@@ -5233,6 +5269,10 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     margin: 0 0.625rem;
   }
 
+  .c-postThumnail {
+    height: 15.625rem;
+  }
+
   .c-secTtl {
     margin-bottom: 4rem;
   }
@@ -5275,11 +5315,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     padding: 5rem 1rem;
   }
 
-  .p-singleBlog_thumnail {
-    height: 15.625rem;
-  }
-
-  .p-cta {
+  .p-cta::before {
     background-position: 70% 0;
   }
 
@@ -5582,6 +5618,10 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     margin-bottom: 2rem;
   }
 
+  .p-contNews {
+    padding-bottom: 0;
+  }
+
   .p-contNews_itemInner {
     flex-direction: column;
     align-items: flex-start;
@@ -5763,7 +5803,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     height: 12.5rem;
   }
 
-  .p-sidebar_relationList {
+  .p-sidebar_postList {
     padding: 1.5rem 0;
   }
 
@@ -5793,6 +5833,10 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   .p-strengths_main {
     font-size: 1.125rem;
     line-height: 1.2;
+  }
+
+  .p-contNews {
+    padding-bottom: 0;
   }
 
   .p-activity_cont {

@@ -2,7 +2,7 @@
 
 .p-contNews_inner {
     max-width: rem(900);
-    margin: 0 auto;
+    margin-left: auto;
     padding: rem(128) rem(32);
     background-color: $white;
 }
@@ -73,9 +73,15 @@
 }
 
 @include mq (sp) {
+    .p-contNews {
+        padding-bottom: 0;
+    }
 }
 
 @include mq () {
+    .p-contNews {
+        padding-bottom: 0;
+    }
     .p-contNews_itemInner {
         flex-direction: column;
         align-items: flex-start;
@@ -85,7 +91,6 @@
         }
     }
     .p-contNews_date {
-        
     }
     .p-contNews_date {
         margin-bottom: rem(24);
@@ -100,4 +105,11 @@
 }
 
 @include mq (pc) {
+    .p-contNews {
+        padding-bottom: 0;
+    }
+    .p-contNews_inner {
+        margin-left: auto;
+        margin: 0 auto;
+    }
 }

@@ -36,12 +36,14 @@
                     </div>
                     <!-- /.p-singleBlog_top -->
 
-                    <figure class="p-singleBlog_thumnail js-object-fit">
+                    <figure class="p-singleBlog_thumnail c-postThumnail js-object-fit">
+
                     <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
                         <?php the_post_thumbnail( 'thumbnail' ); ?>
                     <?php else: ?><!-- アイキャッチが無い時-->
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/img/blog_thumnail.jpg'); ?>" alt="アイキャッチがない時の画像です。" />
                     <?php endif; ?>
+
                     </figure>
 
                     <div class="p-singleBlog_post c-postCont">
@@ -51,7 +53,7 @@
 
                     <!-- prevNextのテンプレートの呼び出し -->
                     <?php get_template_part('template_parts/prevNext'); ?>
-                    
+
                 </div>
                 <!-- /.p-singleBlog_inner -->
             </section>

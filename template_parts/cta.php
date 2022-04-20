@@ -1,6 +1,5 @@
-<section class="p-cta" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/CTA_bg.jpg"); ?>');">
-    <a class="p-cta_inner" href="/contact">
-        <?php  ?>
+<section class="p-cta">
+    <a class="p-cta_inner" href="<?php echo esc_url(home_url('/contact')) ?>">
         <div class="p-cta_top">
             <h3>あなたの 分身=広告塔 お作りします<br>ご気軽にどうぞ</h3>
         </div>
