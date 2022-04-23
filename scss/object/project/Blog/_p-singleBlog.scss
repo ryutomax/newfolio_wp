@@ -38,16 +38,11 @@
     font-weight: bold;
 }
 
+
 @include mq (sp) {
-    .p-singleBlog {
-        padding-bottom: 0;
-    }
 }
 
 @include mq () {
-    .p-singleBlog {
-        padding-bottom: 0;
-    }
     .p-singleBlog_inner {
         padding: rem(80) rem(16);
     }

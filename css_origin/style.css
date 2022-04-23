@@ -5311,10 +5311,6 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     margin-bottom: 2.5rem;
   }
 
-  .p-singleBlog {
-    padding-bottom: 0;
-  }
-
   .p-singleBlog_inner {
     padding: 5rem 1rem;
   }
@@ -5775,10 +5771,6 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
   .p-contBlog_card {
     width: 100%;
-  }
-
-  .p-singleBlog {
-    padding-bottom: 0;
   }
 
   .p-fvTtl_inner h2 {
