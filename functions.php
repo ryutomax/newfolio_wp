@@ -144,6 +144,6 @@ add_action('bcn_after_fill','my_static_breadcrumb_adder');
         </style>
         <?php
         }
-    add_action( 'admin_print_styles', 'my_dashboard_print_styles' );
 
+    add_action( 'admin_print_styles', 'my_dashboard_print_styles' );
 ?>
