@@ -1,28 +1,71 @@
 // ========================================
 // スムーススクロール
 // ========================================
-$(function ($) {
-    $('.js-scroll_about').on('click',function(){
-        const faqTop = $('#about').offset().top;
-        $("html,body").animate({scrollTop: faqTop-80},1000);
-    });
-    $('.js-scroll_strengths').on('click',function(){
-        const faqTop = $('#strengths').offset().top;
-        $("html,body").animate({scrollTop: faqTop-80},1000);
-    });
-    $('.js-scroll_service').on('click',function(){
-        const faqTop = $('#service').offset().top;
-        $("html,body").animate({scrollTop: faqTop-80},1000);
-    });
-    $('.js-scroll_works').on('click',function(){
-        const faqTop = $('#works').offset().top;
-        $("html,body").animate({scrollTop: faqTop-80},1000);
-    });
-    $('.js-scroll_notice').on('click',function(){
-        const faqTop = $('#notice').offset().top;
-        $("html,body").animate({scrollTop: faqTop-80},1000);
-    });
+// // #で始まるリンクを取得
+// const jsSmoothScroll = document.querySelectorAll('a[href^="#"]');
+
+// // forで回してaddEventListenerする
+// for (let i = 0; i < jsSmoothScroll.length; i++){
+//   jsSmoothScroll[i].addEventListener('click', (e) => {
+//     e.preventDefault();
+//     // href属性の取得
+//     let href = jsSmoothScroll[i].getAttribute('href');
+//     let target = document.getElementById(href.replace('#', ''));
+//     const rect = target.getBoundingClientRect().top;
+//     const offset = window.pageYOffset;
+//     // 移動先のポジション取得
+//     const position = rect + offset;
+//     // window.scrollToでスクロール
+//     window.scrollTo({
+//       top: position,
+//       behavior: 'smooth',
+//     });
+//   });
+// }
+
+const Ease = {
+  easeInOut: function (t) { return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1; }
+}
+
+const smoothScrollTriggers = [].slice.call(document.querySelectorAll('a[href^="#"]'));
+smoothScrollTriggers.forEach(function (smoothScrollTrigger) {
+  smoothScrollTrigger.addEventListener('click',  (e) => {
+    const href = smoothScrollTrigger.getAttribute('href');
+    const currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    const targetElement = document.getElementById(href.replace('#', ''));
+    if (targetElement) {
+      const targetPosition = window.pageYOffset + targetElement.getBoundingClientRect().top - 115; //高さ
+      const startTime = performance.now();
+      const loop = function (nowTime) {
+        const time = nowTime - startTime;
+        const normalizedTime = time / 1000 ; //duration time
+        if (normalizedTime < 1) {
+          window.scrollTo(0, currentPosition + ((targetPosition - currentPosition) * Ease.easeInOut(normalizedTime)));
+          requestAnimationFrame(loop);
+        } else {
+          window.scrollTo(0, targetPosition);
+        }
+      }
+      requestAnimationFrame(loop);
+    }
+  });
 });
+
+
+// $(function(){
+//   // #で始まるリンクをクリックした場合
+//   $('a[href^="#"]').click(function() {
+//     // href属性の取得
+//     const href = $(this).attr("href");
+//     // 移動先の取得（hrefが#indexならトップ$(html)に、）
+//     const target = $(href == "#index" ? 'html' : href);
+//     // 移動先のポジション取得
+//     const position = target.offset().top + -70; //高さ指定
+//     // animateでスムーススクロール
+//     $('body,html').animate({scrollTop:position}, 500, 'swing');
+//     return false;
+//   });
+// });
 // ========================================
 // スムースクロール終了
 // ========================================

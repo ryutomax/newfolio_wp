@@ -24,11 +24,17 @@
         <?php endif; ?>
             <div class="l-header_inner">
                 <div class="p-header_top">
-                    <?php if(is_front_page()): ?>
+
+                <?php if(is_front_page()): ?>
+
                     <div class="p-header_copy-home js-header-copy">
-                    <?php else: ?>
+
+                <?php else: ?>
+
                     <div class="p-header_copy js-header-copy">
-                    <?php endif; ?>
+
+                <?php endif; ?>
+
                         <h1>
                             <span>ふじみ野市でホームページ制作</span>
                             <span>Webサイト制作で集客をサポート</span>
@@ -41,11 +47,13 @@
 
                     <h1 class="p-header_logo c-logo js-header-logo">
                         <a href="<?php echo esc_url( home_url('/')); ?>" ontouchstart="">
+
                         <?php if(is_front_page()): ?>
-                        <img src="<?php echo esc_url(get_template_directory_uri() . "/img/logo/logo.png"); ?>" alt="main-logo">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . "/img/logo/logo.png"); ?>" alt="main-logo">
                         <?php else: ?>
-                        <img src="<?php echo esc_url(get_template_directory_uri() . "/img/logo/logo_bg.png"); ?>" alt="main-logo">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . "/img/logo/logo_bg.png"); ?>" alt="main-logo">
                         <?php endif; ?>
+
                         </a>
                     </h1>
 
@@ -53,19 +61,19 @@
                         <ul class="p-header_navList js-nav__open">
                             <?php if(is_front_page()): ?>
                             <li class="p-header_navItem-home js-scroll_about">
-                                <a href="#" ontouchstart="">私について</a>
+                                <a href="#about" ontouchstart="">私について</a>
                             </li>
                             <li class="p-header_navItem-home js-scroll_strengths">
-                                <a href="#" ontouchstart="">私の強み</a>
+                                <a href="#strengths" ontouchstart="">私の強み</a>
                             </li>
                             <li class="p-header_navItem-home js-scroll_service">
-                                <a href="#" ontouchstart="">サービス</a>
+                                <a href="#service" ontouchstart="">サービス</a>
                             </li>
                             <li class="p-header_navItem-home js-scroll_works">
-                                <a href="#" ontouchstart="">制作実績</a>
+                                <a href="#works" ontouchstart="">制作実績</a>
                             </li>
                             <li class="p-header_navItem-home js-scroll_notice">
-                                <a href="#" ontouchstart="">お知らせ</a>
+                                <a href="#notice" ontouchstart="">お知らせ</a>
                             </li>
 
                             <?php else: ?>
