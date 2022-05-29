@@ -66,16 +66,15 @@
     // =========================
     // Textの出現
     // =========================
-    //
     * {
         @mixin bgShow($duration: 0.5s) {
-            animation-name: bgextendTxt;
+            animation-name: bgExtendTxt;
             animation-duration: 0.1s;
             animation-delay: $duration;
             animation-fill-mode: forwards;
             opacity: 0;
         }
-        @keyframes bgextendTxt{
+        @keyframes bgExtendTxt{
             0% {
             opacity: 0;
             }
@@ -90,7 +89,7 @@
         .is-bgShow2 {
             @include bgShow (0.8s);
         }
-        
+
         .is-bgShow3 {
             @include bgShow (1.0s);
         }
