@@ -7,29 +7,31 @@
 // ======================
 // タイトル waveアニメ
 // ======================
-@keyframes wave {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-    100% {
-        transform: translate3d(0, -20px, 0);
-    }
+
+
+.js-wave {
+  display:inline-block;
+  opacity: 0;
+  letter-spacing: -0.25em;
+  transition: 0.5s;
 }
 
-.js-wave{
-    display:inline-block;
-    opacity: 0;
-    letter-spacing: -0.25em;
-    transition: 0.5s;
+@keyframes textWave {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(0, -20px);
+  }
 }
 
-.is-show__wave{
-    opacity: 1;
-    animation-name: wave;
+.is-show__wave {
+    animation-name: textWave;
     animation-duration: 0.5s;
-    animation-direction: alternate;
-    animation-iteration-count: 2;
+    animation-direction: alternate; //行って戻る
+    animation-iteration-count: 2;   //戻ってくる分
     animation-fill-mode:forwards;
+    opacity: 1;
     &:nth-of-type(2){
         animation-delay: .1s;
     }
@@ -165,6 +167,7 @@
     animation-name: underL;
     animation-duration: $duration;
     animation-fill-mode: forwards;
+    // animation-delay: 1s;
     content: "";
     position: absolute;
     left: 0;
@@ -211,11 +214,15 @@
 // Flow スライドインアニメ
 // =========================
 
-.is-fadeIn_shadow {
-    animation-name: fadeIn;
+.is-fadeIn_shadow,
+.is-fadeIn_shadow_2n {
     animation-delay: 0.5s;
     animation-duration: 3s;
     animation-fill-mode: forwards;
+}
+
+.is-fadeIn_shadow{
+    animation-name: fadeIn;
 }
 
 @keyframes fadeIn {
@@ -233,11 +240,9 @@
         transform: translateY(0);
     }
 }
+
 .is-fadeIn_shadow_2n {
     animation-name: fadeIn_2n;
-    animation-delay: 0.5s;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
 }
 
 @keyframes fadeIn_2n {

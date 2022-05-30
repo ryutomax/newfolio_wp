@@ -67,26 +67,26 @@ exports.watch = series(watchTask);
 // ========================================
 // ローカル自動ロード
 // ========================================
-function bsInit(done) {
-    bs.init({
-        proxy: "localhost:10018",       // ローカルにある「Site Domain」に合わせる
-        notify: false,                  // ブラウザ更新時に出てくる通知を非表示にする
-        open: "external",               // ローカルIPアドレスでサーバを立ち上げる
-    });
+// function bsInit(done) {
+//     bs.init({
+//         proxy: "localhost:10018",       // ローカルにある「Site Domain」に合わせる
+//         notify: false,                  // ブラウザ更新時に出てくる通知を非表示にする
+//         open: "external",               // ローカルIPアドレスでサーバを立ち上げる
+//     });
 
-        done();
-    }
+//         done();
+//     }
 
-    function bsReload(done) {
-        bs.reload();
+//     function bsReload(done) {
+//         bs.reload();
 
-        done();
-    }
+//         done();
+//     }
 
-    function watchTask(done) {
-        watch(["./**", "!./*.css"], series(bsReload));    //	監視対象とするパスはお好みで
-    }
-    exports.bs = series(bsInit, bsReload, watchTask);
+//     function watchTask(done) {
+//         watch(["./**", "!./*.css"], series(bsReload));    //	監視対象とするパスはお好みで
+//     }
+//     exports.bs = series(bsInit, bsReload, watchTask);
 
 
 // ========================================

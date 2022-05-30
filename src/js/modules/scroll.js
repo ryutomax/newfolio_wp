@@ -3,12 +3,13 @@
 // ========================================
 
 const Ease = {
-  easeInOut: (t) => { return t < 0.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1;},
+  easeInOut: (t) => {
+    return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+  },
 };
 const jsSmoothScroll = [].slice.call(document.querySelectorAll('a[href^="#"]'));
 
 jsSmoothScroll.forEach(function (scrollTrigger) {
-
   scrollTrigger.addEventListener("click", (e) => {
     //デフォルト打ち消し
     e.preventDefault();
@@ -16,7 +17,8 @@ jsSmoothScroll.forEach(function (scrollTrigger) {
 
     const href = scrollTrigger.getAttribute("href");
     const target = document.getElementById(href.replace("#", ""));
-    const current = document.documentElement.scrollTop || document.body.scrollTop;
+    const current =
+      document.documentElement.scrollTop || document.body.scrollTop;
 
     //スクロール先要素
     const offset = window.pageYOffset + target.getBoundingClientRect().top - 70;
@@ -26,7 +28,10 @@ jsSmoothScroll.forEach(function (scrollTrigger) {
       const passTime = nowTime - startTime; //経過時間を取得
       const normalizedTime = passTime / 1000; //durationTime
       if (normalizedTime < 1) {
-        window.scrollTo(0, current + (offset - current) * Ease.easeInOut(normalizedTime));
+        window.scrollTo(
+          0,
+          current + (offset - current) * Ease.easeInOut(normalizedTime)
+        );
         requestAnimationFrame(loop); //anime実行
       } else {
         window.scrollTo(0, offset);
@@ -35,7 +40,6 @@ jsSmoothScroll.forEach(function (scrollTrigger) {
     requestAnimationFrame(loop); //anime実行
   });
 });
-// });
 // ========================================
 // スムースクロール終了
 // ========================================
@@ -94,192 +98,144 @@ $(window).on("load", function () {
 // =========================
 // スライドインアニメ
 // =========================
-function slideInAnime() {
-  //動きの指定
-  $(".js-fadeIn_shadow").each(function () {
-    const elemPos = $(this).offset().top + 100; //要素より100px下
-    const scroll = $(window).scrollTop();
-    const windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass("is-fadeIn_shadow");
-    } else {
-      // $(this).removeClass('is-fadeIn_shadow');// 画面外に出たらfadeInというクラス名を外す
-    }
-  });
+const windowHeight = window.innerHeight; // 現在のブラウザの高さ
+const scroll = window.pageYOffset || document.documentElement.scrollTop;
 
-  $(".js-fadeIn_shadow_2n").each(function () {
-    const elemPos = $(this).offset().top + 100; //要素より100px下
-    const scroll = $(window).scrollTop();
-    const windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass("is-fadeIn_shadow_2n");
-    } else {
-      // $(this).removeClass('is-fadeIn_shadow_2n');// 画面外に出たらfadeInというクラス名を外す
-    }
-  });
-}
-// スクロール
-$(window).scroll(function () {
-  slideInAnime();
-});
+window.addEventListener("scroll", () => {
+  const slideInTarget = [].slice.call(document.querySelectorAll(".js-fadeIn_shadow"));
+  const slideInTarget2 = [].slice.call(document.querySelectorAll(".js-fadeIn_shadow_2n"));
 
-// ロード
-$(window).on("load", function () {
-  slideInAnime();
-});
+  for (let i = 0; i < slideInTarget.length; i++) {
+    const rect = slideInTarget[i].getBoundingClientRect().top;
+    const offset = rect + scroll;
+    if (scroll > offset - windowHeight + 150) {
+      slideInTarget[i].classList.add("is-fadeIn_shadow");
+    }
+  }
+  for (let i = 0; i < slideInTarget2.length; i++) {
+    const rect = slideInTarget2[i].getBoundingClientRect().top;
+    const offset = rect + scroll;
+    if (scroll > offset - windowHeight + 150) {
+      slideInTarget2[i].classList.add("is-fadeIn_shadow_2n");
+    }
+  }
 
-// =========================
-// タイトル Waveアニメーション
-// =========================
+  // =========================
+  // タイトル Waveアニメーション
+  // =========================
 
-function waveAnime() {
-  //動きの指定
-  $(".js-wave").each(function () {
-    const elemPos = $(this).offset().top + 50; //要素より50px下
-    const scroll = $(window).scrollTop();
-    const windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass("is-show__wave");
-    } else {
-      $(this).removeClass("is-show__wave"); // 画面外に出たらfadeInというクラス名を外す
-    }
-  });
-}
-// スクロール
-$(window).scroll(function () {
-  waveAnime();
-});
+  const waveTarget = [].slice.call(document.querySelectorAll(".js-wave"));
 
-// ロード
-$(window).on("load", function () {
-  waveAnime();
-});
+  for (let i = 0; i < waveTarget.length; i++) {
+    const rect = waveTarget[i].getBoundingClientRect().top;
+    const offset = rect + scroll;
 
-// =========================
-// テキスト BGアニメーション
-// =========================
-function BgFadeAnime() {
-  //=============
-  //背景スライドイン
-  //=============
-  $(".js-bgLRextend_scroll").each(function () {
-    const elemPos = $(this).offset().top - 50; //要素より50px下
-    const scroll = $(window).scrollTop();
-    const windowHeight = $(window).height();
-    const speed = 1500;
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass("is-bgLRextend");
+    if (scroll > offset - windowHeight + 150) {
+      waveTarget[i].classList.add("is-show__wave");
     } else {
-      // $(this).removeClass('is-bgLRextend');
+      waveTarget[i].classList.remove("is-show__wave");
     }
-  });
+  }
+  // =========================
+  // テキスト BGアニメーション
+  // =========================
+  // =============
+  // 背景スライドイン
+  // =============
+  const bgLRextendTarget = [].slice.call(document.querySelectorAll(".js-bgLRextend_scroll"));
+  const bgLRextend2Target = [].slice.call(document.querySelectorAll(".js-bgLRextend_scroll2"));
+  const bgLRextend3Target = [].slice.call(document.querySelectorAll(".js-bgLRextend_scroll3"));
 
-  $(".js-bgLRextend_scroll2").each(function () {
-    const elemPos = $(this).offset().top - 50; //要素より50px下
-    const scroll = $(window).scrollTop();
-    const windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass("is-bgLRextend2");
-    } else {
-      // $(this).removeClass('is-bgLRextend2');
-    }
-  });
-  $(".js-bgLRextend_scroll3").each(function () {
-    const elemPos = $(this).offset().top - 50; //要素より50px下
-    const scroll = $(window).scrollTop();
-    const windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass("is-bgLRextend3");
-    } else {
-      // $(this).removeClass('is-bgLRextend3');
-    }
-  });
+  for (let i = 0; i < bgLRextendTarget.length; i++) {
+    const rect = bgLRextendTarget[i].getBoundingClientRect().top;
+    const offset = rect + scroll;
 
-  //============
-  //テキスト出現
-  //============
-  $(".js-bgShow_txt_scroll").each(function () {
-    const elemPos = $(this).offset().top - 50; //要素より50px下
-    const scroll = $(window).scrollTop();
-    const windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass("is-bgShow");
-    } else {
-      // $(this).removeClass('is-bgShow');
+    if (scroll > offset - windowHeight - 50) {
+      bgLRextendTarget[i].classList.add("is-bgLRextend");
     }
-  });
-  $(".js-bgShow_txt_scroll2").each(function () {
-    const elemPos = $(this).offset().top - 50; //要素より50px下
-    const scroll = $(window).scrollTop();
-    const windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass("is-bgShow2");
-    } else {
-      // $(this).removeClass('is-bgShow');
+  }
+  for (let i = 0; i < bgLRextend2Target.length; i++) {
+    const rect = bgLRextend2Target[i].getBoundingClientRect().top;
+    const offset = rect + scroll;
+
+    if (scroll > offset - windowHeight - 50) {
+      bgLRextend2Target[i].classList.add("is-bgLRextend2");
     }
-  });
-  $(".js-bgShow_txt_scroll3").each(function () {
-    const elemPos = $(this).offset().top - 50; //要素より50px下
-    const scroll = $(window).scrollTop();
-    const windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass("is-bgShow3");
-    } else {
-      // $(this).removeClass('is-bgShow');
+  }
+  for (let i = 0; i < bgLRextend3Target.length; i++) {
+    const rect = bgLRextend3Target[i].getBoundingClientRect().top;
+    const offset = rect + scroll;
+
+    if (scroll > offset - windowHeight - 50) {
+      bgLRextend3Target[i].classList.add("is-bgLRextend3");
     }
-  });
+  }
+  // ============
+  // テキスト出現
+  // ============
+  const bgShowTxtTarget = [].slice.call(document.querySelectorAll(".js-bgShow_txt_scroll"));
+  const bgShowTxt2Target = [].slice.call(document.querySelectorAll(".js-bgShow_txt_scroll2"));
+  const bgShowTxt3Target = [].slice.call(document.querySelectorAll(".js-bgShow_txt_scroll3"));
+
+  for (let i = 0; i < bgShowTxtTarget.length; i++) {
+    const rect = bgShowTxtTarget[i].getBoundingClientRect().top;
+    const offset = rect + scroll;
+
+    if (scroll > offset - windowHeight - 50) {
+      bgShowTxtTarget[i].classList.add("is-bgShow");
+    }
+  }
+  for (let i = 0; i < bgShowTxt2Target.length; i++) {
+    const rect = bgShowTxt2Target[i].getBoundingClientRect().top;
+    const offset = rect + scroll;
+
+    if (scroll > offset - windowHeight - 50) {
+      bgShowTxt2Target[i].classList.add("is-bgShow2");
+    }
+  }
+  for (let i = 0; i < bgShowTxt3Target.length; i++) {
+    const rect = bgShowTxt3Target[i].getBoundingClientRect().top;
+    const offset = rect + scroll;
+
+    if (scroll > offset - windowHeight - 50) {
+      bgShowTxt3Target[i].classList.add("is-bgShow3");
+    }
+  }
 
   //============
   //マーカー
   //============
-  $(".js-underL_scroll").each(function () {
-    const elemPos = $(this).offset().top - 50; //要素より50px下
-    const scroll = $(window).scrollTop();
-    const windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this)
-        .delay(750)
-        .queue(function () {
-          $(this).addClass("is-underL_scroll").dequeue();
-        });
-    } else {
-      // $(this).removeClass('is-underL_scroll');
+  const underLTarget = [].slice.call(document.querySelectorAll(".js-underL_scroll"));
+  for (let i = 0; i < underLTarget.length; i++) {
+    const rect = underLTarget[i].getBoundingClientRect().top;
+    const offset = rect + scroll;
+    if (scroll > offset - windowHeight - 50) {
+      const delayFunc = () => {underLTarget[i].classList.add("is-underL_scroll")}
+      setTimeout(delayFunc, 750);
     }
-  });
-}
-// スクロール
-$(window).scroll(function () {
-  BgFadeAnime();
-});
-// 画面が読み込まれたらすぐに動かしたい場合の記述
-$(window).on("load", function () {
-  BgFadeAnime();
+  }
 });
 
-//FV アニメーション//////////////////////////////////////
-function FvBgAnime() {
-  // 背景色が伸びて出現（左から右）
-  $(".js-bgLRextend").addClass("is-bgLRextend");
-  $(".js-bgLRextend2")
-    .delay(500)
-    .queue(function () {
-      $(this).addClass("is-bgLRextend").dequeue();
-    });
+// ========================================
+// FV アニメーション
+// ========================================
+window.addEventListener('load', () => {
+  const bgLRextendTarget = [].slice.call(document.querySelectorAll(".js-bgLRextend"));
+  const bgLRextend2Target = [].slice.call(document.querySelectorAll(".js-bgLRextend2"));
+  for (let i = 0; i < bgLRextendTarget.length; i++) {
+    bgLRextendTarget[i].classList.add("is-bgLRextend");
+    setTimeout(() => {bgLRextend2Target[i].classList.add("is-bgLRextend")}, 500);
+  }
   // テキスト出現
-  $(".js-bgShow_txt").addClass("is-bgShow");
-  $(".js-bgShow_txt2")
-    .delay(500)
-    .queue(function () {
-      $(this).addClass("is-bgShow").dequeue();
-    });
+  const bgShowTxtTarget = [].slice.call(document.querySelectorAll(".js-bgShow_txt"));
+  const bgShowTxt2Target = [].slice.call(document.querySelectorAll(".js-bgShow_txt2"));
+  for (let i = 0; i < bgShowTxtTarget.length; i++) {
+    bgShowTxtTarget[i].classList.add("is-bgShow");
+    setTimeout(() => {bgShowTxt2Target[i].classList.add("is-bgShow")}, 500);
+  }
   //アンダーライン
-  $(".js-underL")
-    .delay(2000)
-    .queue(function () {
-      $(this).addClass("is-underL").dequeue();
-    });
-}
-// 画面が読み込まれたらすぐに動かしたい場合の記述
-$(window).on("load", function () {
-  FvBgAnime();
+  const underLTarget = [].slice.call(document.querySelectorAll(".js-underL"));
+  for (let i = 0; i < underLTarget.length; i++) {
+    setTimeout(() => {underLTarget[i].classList.add("is-underL")}, 2000);
+  }
 });
