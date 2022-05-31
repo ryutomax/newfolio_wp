@@ -18,9 +18,9 @@
         <?php wp_body_open(); ?>
 
         <?php if(is_front_page()): ?>
-        <header class="l-header-home js-header-scroll u-zindex_10000">
+        <header class="l-header-home js-header-scroll u-zindex_10000" id="header">
         <?php else: ?>
-        <header class="l-header js-header-scroll u-zindex_10000">
+        <header class="l-header js-header-scroll u-zindex_10000" id="header">
         <?php endif; ?>
             <div class="l-header_inner">
                 <div class="p-header_top">

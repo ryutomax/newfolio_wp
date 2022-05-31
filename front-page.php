@@ -693,8 +693,8 @@
                         <!-- /.p-notice_ttl -->
                         <div class="p-notice_cont">
                             <div class="p-notice_blog" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/top_blog.jpg"); ?>');">
-                                <div class="p-notice_blogInner js-blogFrame">
-                                    <a class="p-notice_blogTtl" href="<?php echo esc_url(home_url('/blog')); ?>">
+                                <div class="p-notice_blogInner js-noticeFrame">
+                                    <a class="p-notice_blogTtl js-noticeTtl__hover" href="<?php echo esc_url(home_url('/blog')); ?>">
                                         <h3>Blog</h3>
                                     </a>
                                     <?php
@@ -736,8 +736,8 @@
                             </div>
                             <!-- /.p-notice_blog -->
                             <div class="p-notice_news" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . "/img/top_news.jpg"); ?>');">
-                                <div class="p-notice_newsInner js-newsFrame">
-                                    <a class="p-notice_newsTtl" href="<?php echo esc_url(home_url('/news')); ?>">
+                                <div class="p-notice_newsInner js-noticeFrame2">
+                                    <a class="p-notice_newsTtl js-noticeTtl__hover2" href="<?php echo esc_url(home_url('/news')); ?>">
                                         <h3>News</h3>
                                     </a>
                                     <?php

@@ -101,13 +101,23 @@ $(function() {
 // ========================================
 // top/blog&newsのhoverアニメ
 // ========================================
-$('.p-notice_blogTtl').hover(function(){
+const elements = document.getElementsByClassName('js-noticeTtl__hover');
+const elements2 = document.getElementsByClassName('js-noticeTtl__hover2');
+Array.prototype.forEach.call(elements, (element) => {
+    element.addEventListener('mouseover', () => {
+        document.getElementsByClassName('js-noticeFrame')[0].classList.add('is_frameMove');
+    });
 
-    $('.js-blogFrame').toggleClass('is_frameMove');
-
+    element.addEventListener('mouseleave', () => {
+        document.getElementsByClassName('js-noticeFrame')[0].classList.remove('is_frameMove');
+    });
 });
-$('.p-notice_newsTtl').hover(function(){
 
-    $('.js-newsFrame').toggleClass('is_frameMove');
-
+Array.prototype.forEach.call(elements2, (element2) => {
+    element2.addEventListener('mouseover', () => {
+        document.getElementsByClassName('js-noticeFrame2')[0].classList.add('is_frameMove');
+    });
+    element2.addEventListener('mouseleave', () => {
+        document.getElementsByClassName('js-noticeFrame2')[0].classList.remove('is_frameMove');
+    });
 });

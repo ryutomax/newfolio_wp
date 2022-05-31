@@ -4714,7 +4714,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   height: 3.875rem;
 }
 
-.is-header-fc a {
+.is-header-color a {
   color: #007394;
 }
 

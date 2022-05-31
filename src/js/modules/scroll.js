@@ -48,48 +48,22 @@ jsSmoothScroll.forEach(function (scrollTrigger) {
 // ヘッダー変形
 // ========================================
 
-function FixedAnime() {
-  $(window).scroll(function () {
-    var headerH = $(".js-header-scroll").outerHeight(true); //headerの高さを取得
+window.addEventListener('scroll', () => {
+  const headerH = document.getElementsByClassName("js-header-scroll")[0].clientHeight; //headerの高さを取得
+  const scrollH = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  var header = document.getElementsByClassName("js-header-scroll")[0];
+  var headerCopy = document.getElementsByClassName("js-header-copy")[0];
+  var headerLogo = document.getElementsByClassName("js-header-logo")[0];
+  var headerBottom = document.getElementsByClassName("js-header-bottom")[0];
+  var headerColors = document.getElementsByClassName("js-header-fc");
 
-    var $header = $(".js-header-scroll");
-    var $headerCopy = $(".js-header-copy");
-    var $headerLogo = $(".js-header-logo");
-    var $headerbottom = $(".js-header-bottom");
-    var $headerfc = $(".js-header-fc");
-
-    // header高以上スクロールしたら処理
-    if ($(window).scrollTop() > headerH) {
-      $header.addClass("is-header_op07_h80_slidein");
-      $headerCopy.addClass("is-header_txtNone");
-      $headerLogo.addClass("is-header-logo");
-      $headerbottom.addClass("is-header-bottom");
-      $headerfc.addClass("is-header-fc");
-
-      // $header.removeAttr('data-aos');       //AOS削除
-    } else {
-      $header.removeClass("is-header_op07_h80_slidein");
-      $headerCopy.removeClass("is-header_txtNone");
-      $headerLogo.removeClass("is-header-logo");
-      $headerbottom.removeClass("is-header-bottom");
-      $headerfc.removeClass("is-header-fc");
-    }
+  header.classList.toggle("is-header_op07_h80_slidein", scrollH > headerH);
+  headerCopy.classList.toggle("is-header_txtNone", scrollH > headerH);
+  headerLogo.classList.toggle("is-header-logo", scrollH > headerH);
+  headerBottom.classList.toggle("is-header-bottom", scrollH > headerH);
+  Array.prototype.forEach.call(headerColors, (headerColor) => {
+    headerColor.classList.toggle("is-header-color", scrollH > headerH);
   });
-  /* ウィンドウサイズ860以上の処理を記述 */
-  $(window).on("load scroll", function () {
-    if (window.matchMedia("(min-width: 860px)").matches) {
-      var $logo = $(".js-header-h65-scroll");
-      if ($(window).scrollTop() > 200) {
-        $logo.addClass("is-header__h65");
-      } else {
-        $logo.removeClass("is-header__h65");
-      }
-    }
-  });
-}
-//スクロール途中からヘッダーの高さを変化させる関数を呼ぶ
-$(window).on("load", function () {
-  FixedAnime();
 });
 // ========================================
 // ヘッダー変形 終了
@@ -149,7 +123,6 @@ window.addEventListener("scroll", () => {
   for (let i = 0; i < bgLRextendTarget.length; i++) {
     const rect = bgLRextendTarget[i].getBoundingClientRect().top;
     const offset = rect + scroll;
-
     if (scroll > offset - windowHeight - 50) {
       bgLRextendTarget[i].classList.add("is-bgLRextend");
     }
@@ -157,7 +130,6 @@ window.addEventListener("scroll", () => {
   for (let i = 0; i < bgLRextend2Target.length; i++) {
     const rect = bgLRextend2Target[i].getBoundingClientRect().top;
     const offset = rect + scroll;
-
     if (scroll > offset - windowHeight - 50) {
       bgLRextend2Target[i].classList.add("is-bgLRextend2");
     }
@@ -165,7 +137,6 @@ window.addEventListener("scroll", () => {
   for (let i = 0; i < bgLRextend3Target.length; i++) {
     const rect = bgLRextend3Target[i].getBoundingClientRect().top;
     const offset = rect + scroll;
-
     if (scroll > offset - windowHeight - 50) {
       bgLRextend3Target[i].classList.add("is-bgLRextend3");
     }
